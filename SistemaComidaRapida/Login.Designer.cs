@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.imgLogo = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,71 +40,49 @@
             // 
             // imgLogo
             // 
-            this.imgLogo.Location = new System.Drawing.Point(12, 12);
+            resources.ApplyResources(this.imgLogo, "imgLogo");
             this.imgLogo.Name = "imgLogo";
-            this.imgLogo.Size = new System.Drawing.Size(246, 237);
-            this.imgLogo.TabIndex = 0;
             this.imgLogo.TabStop = false;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(264, 47);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Nombre de Usuario";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(264, 119);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Contraseña";
             // 
             // txtNomUsu
             // 
-            this.txtNomUsu.Location = new System.Drawing.Point(268, 80);
+            resources.ApplyResources(this.txtNomUsu, "txtNomUsu");
             this.txtNomUsu.Name = "txtNomUsu";
-            this.txtNomUsu.Size = new System.Drawing.Size(170, 20);
-            this.txtNomUsu.TabIndex = 2;
             // 
             // txtContra
             // 
-            this.txtContra.Location = new System.Drawing.Point(268, 151);
+            resources.ApplyResources(this.txtContra, "txtContra");
             this.txtContra.Name = "txtContra";
-            this.txtContra.PasswordChar = '*';
-            this.txtContra.Size = new System.Drawing.Size(170, 20);
-            this.txtContra.TabIndex = 2;
             // 
             // btnIniciarSesion
             // 
-            this.btnIniciarSesion.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIniciarSesion.Location = new System.Drawing.Point(302, 201);
+            resources.ApplyResources(this.btnIniciarSesion, "btnIniciarSesion");
             this.btnIniciarSesion.Name = "btnIniciarSesion";
-            this.btnIniciarSesion.Size = new System.Drawing.Size(102, 23);
-            this.btnIniciarSesion.TabIndex = 3;
-            this.btnIniciarSesion.Text = "Iniciar Sesión";
             this.btnIniciarSesion.UseVisualStyleBackColor = true;
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(456, 261);
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.btnIniciarSesion);
             this.Controls.Add(this.txtContra);
             this.Controls.Add(this.txtNomUsu);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.imgLogo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Login";
-            this.Text = "Iniciar Sesión";
-            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
