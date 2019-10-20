@@ -2167,6 +2167,9 @@
         X4R/SX2iqk5n0H2VXq5VNGiipDa7MrUtf//Z
 </value>
   </data>
+  <data name="imgLogo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-1, -1</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

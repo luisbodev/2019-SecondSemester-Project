@@ -33,7 +33,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNomUsu = new System.Windows.Forms.TextBox();
-            this.txtContra = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
             this.SuspendLayout();
@@ -59,16 +60,28 @@
             resources.ApplyResources(this.txtNomUsu, "txtNomUsu");
             this.txtNomUsu.Name = "txtNomUsu";
             // 
-            // txtContra
+            // label3
             // 
-            resources.ApplyResources(this.txtContra, "txtContra");
-            this.txtContra.Name = "txtContra";
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
+            // textBox1
+            // 
+            resources.ApplyResources(this.textBox1, "textBox1");
+            this.textBox1.Name = "textBox1";
+            this.textBox1.UseSystemPasswordChar = true;
             // 
             // btnIniciarSesion
             // 
+            this.btnIniciarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
+            this.btnIniciarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnIniciarSesion.FlatAppearance.BorderSize = 0;
+            this.btnIniciarSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btnIniciarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             resources.ApplyResources(this.btnIniciarSesion, "btnIniciarSesion");
+            this.btnIniciarSesion.ForeColor = System.Drawing.Color.White;
             this.btnIniciarSesion.Name = "btnIniciarSesion";
-            this.btnIniciarSesion.UseVisualStyleBackColor = true;
+            this.btnIniciarSesion.UseVisualStyleBackColor = false;
             // 
             // Login
             // 
@@ -76,8 +89,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.btnIniciarSesion);
-            this.Controls.Add(this.txtContra);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtNomUsu);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.imgLogo);
@@ -95,7 +109,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNomUsu;
-        private System.Windows.Forms.TextBox txtContra;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnIniciarSesion;
     }
 }
