@@ -1,6 +1,6 @@
 ﻿namespace SistemaComidaRapida
 {
-    partial class Cocinero
+    partial class frmCocinero
     {
         /// <summary>
         /// Required designer variable.
@@ -52,14 +52,14 @@
             this.btnTerminado.Text = "Terminado";
             this.btnTerminado.UseVisualStyleBackColor = true;
             // 
-            // Cocinero
+            // frmCocinero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(751, 453);
             this.Controls.Add(this.btnTerminado);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Cocinero";
+            this.Name = "frmCocinero";
             this.Text = "Cocinero";
             this.ResumeLayout(false);
 

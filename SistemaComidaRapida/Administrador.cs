@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SistemaComidaRapida
 {
-    public partial class Administrador : Form
+    public partial class frmAdministrador : Form
     {
-        public Administrador()
+        public frmAdministrador()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace SistemaComidaRapida
 {
-    partial class Administrador
+    partial class frmAdministrador
     {
         /// <summary>
         /// Required designer variable.
@@ -74,7 +74,7 @@
             this.btnHisClientes.Text = "Historial Clientes";
             this.btnHisClientes.UseVisualStyleBackColor = true;
             // 
-            // Administrador
+            // frmAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -83,7 +83,7 @@
             this.Controls.Add(this.btnHisPedi);
             this.Controls.Add(this.btnVerMenu);
             this.Controls.Add(this.btnListaEmp);
-            this.Name = "Administrador";
+            this.Name = "frmAdministrador";
             this.Text = "Administrador";
             this.ResumeLayout(false);
 

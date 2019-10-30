@@ -16,7 +16,7 @@ namespace SistemaComidaRapida
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Cajero());
+            Application.Run(new frmLogin());
         }
     }
 }

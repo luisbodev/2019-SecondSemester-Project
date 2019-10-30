@@ -1,6 +1,6 @@
 ﻿namespace SistemaComidaRapida
 {
-    partial class Login
+    partial class frmLogin
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.imgLogo = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -36,6 +36,7 @@
             this.txtContraUs = new System.Windows.Forms.TextBox();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.txtNomUsu = new System.Windows.Forms.TextBox();
+            this.lblError = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,17 +78,25 @@
             this.btnIniciarSesion.ForeColor = System.Drawing.Color.White;
             this.btnIniciarSesion.Name = "btnIniciarSesion";
             this.btnIniciarSesion.UseVisualStyleBackColor = false;
+            this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
             // 
             // txtNomUsu
             // 
             resources.ApplyResources(this.txtNomUsu, "txtNomUsu");
             this.txtNomUsu.Name = "txtNomUsu";
             // 
-            // Login
+            // lblError
+            // 
+            resources.ApplyResources(this.lblError, "lblError");
+            this.lblError.ForeColor = System.Drawing.Color.Red;
+            this.lblError.Name = "lblError";
+            // 
+            // frmLogin
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnIniciarSesion);
             this.Controls.Add(this.txtContraUs);
             this.Controls.Add(this.txtNomUsu);
@@ -96,7 +105,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.imgLogo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "Login";
+            this.Name = "frmLogin";
+            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -112,6 +122,7 @@
         private System.Windows.Forms.TextBox txtContraUs;
         private System.Windows.Forms.Button btnIniciarSesion;
         private System.Windows.Forms.TextBox txtNomUsu;
+        private System.Windows.Forms.Label lblError;
     }
 }
 

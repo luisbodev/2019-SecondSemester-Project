@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SistemaComidaRapida
 {
-    public partial class Cajero : Form
+    public partial class frmCajero : Form
     {
-        public Cajero()
+        public frmCajero()
         {
             InitializeComponent();
         }
