@@ -32,10 +32,10 @@
             this.imgLogo = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtNomUsu = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtContraUs = new System.Windows.Forms.TextBox();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
+            this.txtNomUsu = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,21 +55,16 @@
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
             // 
-            // txtNomUsu
-            // 
-            resources.ApplyResources(this.txtNomUsu, "txtNomUsu");
-            this.txtNomUsu.Name = "txtNomUsu";
-            // 
             // label3
             // 
             resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
             // 
-            // textBox1
+            // txtContraUs
             // 
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.Name = "textBox1";
-            this.textBox1.UseSystemPasswordChar = true;
+            resources.ApplyResources(this.txtContraUs, "txtContraUs");
+            this.txtContraUs.Name = "txtContraUs";
+            this.txtContraUs.UseSystemPasswordChar = true;
             // 
             // btnIniciarSesion
             // 
@@ -83,13 +78,18 @@
             this.btnIniciarSesion.Name = "btnIniciarSesion";
             this.btnIniciarSesion.UseVisualStyleBackColor = false;
             // 
+            // txtNomUsu
+            // 
+            resources.ApplyResources(this.txtNomUsu, "txtNomUsu");
+            this.txtNomUsu.Name = "txtNomUsu";
+            // 
             // Login
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.btnIniciarSesion);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtContraUs);
             this.Controls.Add(this.txtNomUsu);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -108,10 +108,10 @@
         private System.Windows.Forms.PictureBox imgLogo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtNomUsu;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtContraUs;
         private System.Windows.Forms.Button btnIniciarSesion;
+        private System.Windows.Forms.TextBox txtNomUsu;
     }
 }
 

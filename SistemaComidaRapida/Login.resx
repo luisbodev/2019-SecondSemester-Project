@@ -2253,30 +2253,6 @@
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="txtNomUsu.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Trebuchet MS, 11.25pt, style=Bold</value>
-  </data>
-  <data name="txtNomUsu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>268, 70</value>
-  </data>
-  <data name="txtNomUsu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 25</value>
-  </data>
-  <data name="txtNomUsu.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;txtNomUsu.Name" xml:space="preserve">
-    <value>txtNomUsu</value>
-  </data>
-  <data name="&gt;&gt;txtNomUsu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtNomUsu.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txtNomUsu.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2310,28 +2286,28 @@
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="textBox1.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="txtContraUs.Font" type="System.Drawing.Font, System.Drawing">
     <value>Trebuchet MS, 11.25pt, style=Bold</value>
   </data>
-  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="txtContraUs.Location" type="System.Drawing.Point, System.Drawing">
     <value>268, 140</value>
   </data>
-  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtContraUs.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 25</value>
   </data>
-  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtContraUs.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
-    <value>textBox1</value>
+  <data name="&gt;&gt;txtContraUs.Name" xml:space="preserve">
+    <value>txtContraUs</value>
   </data>
-  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtContraUs.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtContraUs.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtContraUs.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="btnIniciarSesion.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
@@ -2366,6 +2342,30 @@
   </data>
   <data name="&gt;&gt;btnIniciarSesion.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="txtNomUsu.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 11.25pt, style=Bold</value>
+  </data>
+  <data name="txtNomUsu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 70</value>
+  </data>
+  <data name="txtNomUsu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 25</value>
+  </data>
+  <data name="txtNomUsu.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;txtNomUsu.Name" xml:space="preserve">
+    <value>txtNomUsu</value>
+  </data>
+  <data name="&gt;&gt;txtNomUsu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtNomUsu.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtNomUsu.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
