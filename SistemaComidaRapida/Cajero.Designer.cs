@@ -44,30 +44,30 @@
             this.panelBottom = new System.Windows.Forms.Panel();
             this.panelTime = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.dtgMenu = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.panelBuscar = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.checkCombos = new System.Windows.Forms.CheckBox();
             this.checkBebidas = new System.Windows.Forms.CheckBox();
             this.checkPlatos = new System.Windows.Forms.CheckBox();
             this.panelOrden = new System.Windows.Forms.Panel();
+            this.btnEnviarCocina = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnExtras = new System.Windows.Forms.Button();
+            this.dtgOrden = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.dtgMenu = new System.Windows.Forms.DataGridView();
-            this.dtgOrden = new System.Windows.Forms.DataGridView();
-            this.btnExtras = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnEnviarCocina = new System.Windows.Forms.Button();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.panelTop.SuspendLayout();
             this.panelTopRight.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelBottom.SuspendLayout();
             this.panelTime.SuspendLayout();
             this.panelMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgMenu)).BeginInit();
             this.panelBuscar.SuspendLayout();
             this.panelOrden.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgOrden)).BeginInit();
             this.SuspendLayout();
             // 
@@ -214,6 +214,15 @@
             this.panelMenu.Size = new System.Drawing.Size(884, 719);
             this.panelMenu.TabIndex = 8;
             // 
+            // dtgMenu
+            // 
+            this.dtgMenu.BackgroundColor = System.Drawing.Color.White;
+            this.dtgMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgMenu.Location = new System.Drawing.Point(12, 36);
+            this.dtgMenu.Name = "dtgMenu";
+            this.dtgMenu.Size = new System.Drawing.Size(639, 617);
+            this.dtgMenu.TabIndex = 7;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -238,6 +247,25 @@
             this.panelBuscar.Name = "panelBuscar";
             this.panelBuscar.Size = new System.Drawing.Size(127, 719);
             this.panelBuscar.TabIndex = 6;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
+            this.label4.Location = new System.Drawing.Point(33, 36);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 18);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Buscar";
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txtBuscar.Location = new System.Drawing.Point(3, 58);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(121, 25);
+            this.txtBuscar.TabIndex = 4;
             // 
             // checkCombos
             // 
@@ -289,6 +317,71 @@
             this.panelOrden.Size = new System.Drawing.Size(532, 719);
             this.panelOrden.TabIndex = 9;
             // 
+            // btnEnviarCocina
+            // 
+            this.btnEnviarCocina.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
+            this.btnEnviarCocina.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEnviarCocina.FlatAppearance.BorderSize = 0;
+            this.btnEnviarCocina.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btnEnviarCocina.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnEnviarCocina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnviarCocina.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
+            this.btnEnviarCocina.ForeColor = System.Drawing.Color.White;
+            this.btnEnviarCocina.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnEnviarCocina.Location = new System.Drawing.Point(116, 670);
+            this.btnEnviarCocina.Name = "btnEnviarCocina";
+            this.btnEnviarCocina.Size = new System.Drawing.Size(266, 43);
+            this.btnEnviarCocina.TabIndex = 8;
+            this.btnEnviarCocina.Text = "Enviar a Cocina";
+            this.btnEnviarCocina.UseVisualStyleBackColor = false;
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
+            this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModificar.FlatAppearance.BorderSize = 0;
+            this.btnModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
+            this.btnModificar.ForeColor = System.Drawing.Color.White;
+            this.btnModificar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnModificar.Location = new System.Drawing.Point(116, 618);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(102, 35);
+            this.btnModificar.TabIndex = 7;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = false;
+            // 
+            // btnExtras
+            // 
+            this.btnExtras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
+            this.btnExtras.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExtras.FlatAppearance.BorderSize = 0;
+            this.btnExtras.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btnExtras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnExtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExtras.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
+            this.btnExtras.ForeColor = System.Drawing.Color.White;
+            this.btnExtras.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnExtras.Location = new System.Drawing.Point(279, 618);
+            this.btnExtras.Name = "btnExtras";
+            this.btnExtras.Size = new System.Drawing.Size(102, 35);
+            this.btnExtras.TabIndex = 6;
+            this.btnExtras.Text = "Extras";
+            this.btnExtras.UseVisualStyleBackColor = false;
+            // 
+            // dtgOrden
+            // 
+            this.dtgOrden.BackgroundColor = System.Drawing.Color.White;
+            this.dtgOrden.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgOrden.Location = new System.Drawing.Point(6, 36);
+            this.dtgOrden.Name = "dtgOrden";
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
+            this.dtgOrden.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgOrden.Size = new System.Drawing.Size(514, 560);
+            this.dtgOrden.TabIndex = 4;
+            // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
@@ -311,99 +404,6 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Orden";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // dtgMenu
-            // 
-            this.dtgMenu.BackgroundColor = System.Drawing.Color.White;
-            this.dtgMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgMenu.Location = new System.Drawing.Point(12, 36);
-            this.dtgMenu.Name = "dtgMenu";
-            this.dtgMenu.Size = new System.Drawing.Size(723, 617);
-            this.dtgMenu.TabIndex = 7;
-            // 
-            // dtgOrden
-            // 
-            this.dtgOrden.BackgroundColor = System.Drawing.Color.White;
-            this.dtgOrden.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgOrden.Location = new System.Drawing.Point(6, 36);
-            this.dtgOrden.Name = "dtgOrden";
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
-            this.dtgOrden.RowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtgOrden.Size = new System.Drawing.Size(514, 560);
-            this.dtgOrden.TabIndex = 4;
-            // 
-            // btnExtras
-            // 
-            this.btnExtras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
-            this.btnExtras.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExtras.FlatAppearance.BorderSize = 0;
-            this.btnExtras.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.btnExtras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.btnExtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExtras.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
-            this.btnExtras.ForeColor = System.Drawing.Color.White;
-            this.btnExtras.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnExtras.Location = new System.Drawing.Point(279, 618);
-            this.btnExtras.Name = "btnExtras";
-            this.btnExtras.Size = new System.Drawing.Size(102, 35);
-            this.btnExtras.TabIndex = 6;
-            this.btnExtras.Text = "Extras";
-            this.btnExtras.UseVisualStyleBackColor = false;
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
-            this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModificar.FlatAppearance.BorderSize = 0;
-            this.btnModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.btnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
-            this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnModificar.Location = new System.Drawing.Point(116, 618);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(102, 35);
-            this.btnModificar.TabIndex = 7;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = false;
-            // 
-            // btnEnviarCocina
-            // 
-            this.btnEnviarCocina.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
-            this.btnEnviarCocina.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEnviarCocina.FlatAppearance.BorderSize = 0;
-            this.btnEnviarCocina.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.btnEnviarCocina.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.btnEnviarCocina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnviarCocina.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
-            this.btnEnviarCocina.ForeColor = System.Drawing.Color.White;
-            this.btnEnviarCocina.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnEnviarCocina.Location = new System.Drawing.Point(116, 670);
-            this.btnEnviarCocina.Name = "btnEnviarCocina";
-            this.btnEnviarCocina.Size = new System.Drawing.Size(266, 43);
-            this.btnEnviarCocina.TabIndex = 8;
-            this.btnEnviarCocina.Text = "Enviar a Cocina";
-            this.btnEnviarCocina.UseVisualStyleBackColor = false;
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txtBuscar.Location = new System.Drawing.Point(3, 58);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(121, 25);
-            this.txtBuscar.TabIndex = 4;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
-            this.label4.Location = new System.Drawing.Point(33, 36);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 18);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Buscar";
             // 
             // Cajero
             // 
@@ -433,11 +433,11 @@
             this.panelTime.PerformLayout();
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgMenu)).EndInit();
             this.panelBuscar.ResumeLayout(false);
             this.panelBuscar.PerformLayout();
             this.panelOrden.ResumeLayout(false);
             this.panelOrden.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgOrden)).EndInit();
             this.ResumeLayout(false);
 
