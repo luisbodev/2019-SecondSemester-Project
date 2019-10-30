@@ -59,6 +59,7 @@
             this.dtgOrden = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelTop.SuspendLayout();
             this.panelTopRight.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -80,7 +81,7 @@
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1422, 60);
+            this.panelTop.Size = new System.Drawing.Size(1370, 60);
             this.panelTop.TabIndex = 4;
             // 
             // label1
@@ -101,7 +102,7 @@
             this.panelTopRight.Controls.Add(this.labelTipodeCuenta);
             this.panelTopRight.Controls.Add(this.labelUsuario);
             this.panelTopRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelTopRight.Location = new System.Drawing.Point(1222, 0);
+            this.panelTopRight.Location = new System.Drawing.Point(1170, 0);
             this.panelTopRight.Name = "panelTopRight";
             this.panelTopRight.Size = new System.Drawing.Size(200, 60);
             this.panelTopRight.TabIndex = 10;
@@ -187,9 +188,9 @@
             this.panelBottom.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panelBottom.Controls.Add(this.panelTime);
             this.panelBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelBottom.Location = new System.Drawing.Point(0, 779);
+            this.panelBottom.Location = new System.Drawing.Point(0, 709);
             this.panelBottom.Name = "panelBottom";
-            this.panelBottom.Size = new System.Drawing.Size(1422, 40);
+            this.panelBottom.Size = new System.Drawing.Size(1370, 40);
             this.panelBottom.TabIndex = 7;
             // 
             // panelTime
@@ -205,13 +206,14 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.Transparent;
+            this.panelMenu.Controls.Add(this.button1);
             this.panelMenu.Controls.Add(this.dtgMenu);
             this.panelMenu.Controls.Add(this.label2);
             this.panelMenu.Controls.Add(this.panelBuscar);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 60);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(884, 719);
+            this.panelMenu.Size = new System.Drawing.Size(884, 649);
             this.panelMenu.TabIndex = 8;
             // 
             // dtgMenu
@@ -245,7 +247,7 @@
             this.panelBuscar.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelBuscar.Location = new System.Drawing.Point(757, 0);
             this.panelBuscar.Name = "panelBuscar";
-            this.panelBuscar.Size = new System.Drawing.Size(127, 719);
+            this.panelBuscar.Size = new System.Drawing.Size(127, 649);
             this.panelBuscar.TabIndex = 6;
             // 
             // label4
@@ -312,9 +314,9 @@
             this.panelOrden.Controls.Add(this.button3);
             this.panelOrden.Controls.Add(this.label3);
             this.panelOrden.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelOrden.Location = new System.Drawing.Point(890, 60);
+            this.panelOrden.Location = new System.Drawing.Point(838, 60);
             this.panelOrden.Name = "panelOrden";
-            this.panelOrden.Size = new System.Drawing.Size(532, 719);
+            this.panelOrden.Size = new System.Drawing.Size(532, 649);
             this.panelOrden.TabIndex = 9;
             // 
             // btnEnviarCocina
@@ -405,12 +407,21 @@
             this.label3.Text = "Orden";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(593, -2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Cajero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
-            this.ClientSize = new System.Drawing.Size(1422, 819);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.panelOrden);
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panelBottom);
@@ -418,7 +429,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1438, 858);
-            this.MinimumSize = new System.Drawing.Size(1438, 858);
+            this.MinimumSize = new System.Drawing.Size(1364, 726);
             this.Name = "Cajero";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
@@ -472,5 +483,6 @@
         private System.Windows.Forms.Button btnExtras;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
     }
 }
