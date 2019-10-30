@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cajero));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelTop = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelTopRight = new System.Windows.Forms.Panel();
@@ -59,7 +59,6 @@
             this.dtgOrden = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.panelTop.SuspendLayout();
             this.panelTopRight.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -206,7 +205,6 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.Transparent;
-            this.panelMenu.Controls.Add(this.button1);
             this.panelMenu.Controls.Add(this.dtgMenu);
             this.panelMenu.Controls.Add(this.label2);
             this.panelMenu.Controls.Add(this.panelBuscar);
@@ -379,8 +377,8 @@
             this.dtgOrden.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgOrden.Location = new System.Drawing.Point(6, 36);
             this.dtgOrden.Name = "dtgOrden";
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
-            this.dtgOrden.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
+            this.dtgOrden.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgOrden.Size = new System.Drawing.Size(514, 560);
             this.dtgOrden.TabIndex = 4;
             // 
@@ -406,15 +404,6 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Orden";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(593, -2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // Cajero
             // 
@@ -483,6 +472,5 @@
         private System.Windows.Forms.Button btnExtras;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
     }
 }
