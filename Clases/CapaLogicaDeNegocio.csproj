@@ -43,6 +43,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TransacAutenticacion.cs" />
+    <Compile Include="TransacMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CapaDeAccesoDatos\CapaDeAccesoDatos.csproj">
