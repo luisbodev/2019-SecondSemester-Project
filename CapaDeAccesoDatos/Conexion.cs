@@ -10,7 +10,8 @@ namespace CapaDeAccesoDatos
 {
     class Conexion
     {
-        public SqlConnection conex = new SqlConnection("Data source =DESKTOP-4CJHEF7\\SQLEXPRESS; Initial catalog = ComidaRapida; Integrated Security=True");
+        //public SqlConnection conex = new SqlConnection("Data source =DESKTOP-4CJHEF7\\SQLEXPRESS; Initial catalog = ComidaRapida; Integrated Security=True");
+        public SqlConnection conex = new SqlConnection("Data source =DESKTOP-2BQP3OM\\SQLEXPRESS; Initial catalog = ComidaRapida; Integrated Security=True");
 
         public void abrir_conexion()
         {
