@@ -41,7 +41,7 @@ namespace SistemaComidaRapida
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
-           if (MessageBox.Show("¿Está seguro que quiere cerrar Seción?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes) this.Close();
+           if (MessageBox.Show("¿Está seguro que quiere cerrar Sesión?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes) this.Close();
         }
 
         private void btnCerrarT_Click(object sender, EventArgs e) //Cerrar la ventana Para que funcione el deslogeo
