@@ -16,5 +16,13 @@ namespace SistemaComidaRapida
         {
             InitializeComponent();
         }
+
+        private void btnVerMenu_Click(object sender, EventArgs e)
+        {
+            frmDatosMenu dmn = new frmDatosMenu();
+            this.Hide();
+            dmn.Show();
+
+        }
     }
 }
