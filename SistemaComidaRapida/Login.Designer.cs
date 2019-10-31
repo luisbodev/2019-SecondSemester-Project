@@ -37,6 +37,7 @@
             this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.txtNomUsu = new System.Windows.Forms.TextBox();
             this.lblError = new System.Windows.Forms.Label();
+            this.btnSalir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,11 +92,25 @@
             this.lblError.ForeColor = System.Drawing.Color.Red;
             this.lblError.Name = "lblError";
             // 
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.btnSalir, "btnSalir");
+            this.btnSalir.ForeColor = System.Drawing.Color.White;
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // frmLogin
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnIniciarSesion);
             this.Controls.Add(this.txtContraUs);
@@ -123,6 +138,7 @@
         private System.Windows.Forms.Button btnIniciarSesion;
         private System.Windows.Forms.TextBox txtNomUsu;
         private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.Button btnSalir;
     }
 }
 

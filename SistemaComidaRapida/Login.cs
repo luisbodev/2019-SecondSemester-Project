@@ -48,28 +48,33 @@ namespace SistemaComidaRapida
 
             if (validLogin == true)
             {
+                
                 MessageBox.Show("¡Ha ingresado correctamente!");
                 if (cadena == "admi")
                 {
                     frmAdministrador adm = new frmAdministrador();
+                    adm.Show();
+                    //this.Close();
+                    adm.FormClosed += desLoguear; //Funcion de deslogeo-----------------------------------
                     this.Hide();
-                    adm.ShowDialog();
-                    this.Close();
 
                 }
                 else if (cadena == "caje")
                 {
                     frmCajero caje = new frmCajero();
+                    caje.Show();
+                    //this.Close();
+                    caje.FormClosed += desLoguear; //Funcion de deslogeo-----------------------------------
                     this.Hide();
-                    caje.ShowDialog();
-                    this.Close();
                 }
                 else if (cadena == "chef")
                 {
                     frmCocinero chef = new frmCocinero();
                     this.Hide();
                     chef.ShowDialog();
-                    this.Close();
+                    //this.Close();
+
+                    chef.FormClosed += desLoguear; //Funcion de deslogeo-----------------------------------
                 }
 
                 
@@ -81,7 +86,7 @@ namespace SistemaComidaRapida
                 txtNomUsu.Clear();
                 txtNomUsu.Focus();
 
-                MessageBox.Show("Error al iniciar cesion");
+                MessageBox.Show("Contraneña o Usuario no validos");
             }
 
             //_______________________________________________________________
@@ -89,10 +94,29 @@ namespace SistemaComidaRapida
 
 
 
+        }
 
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
+        private void desLoguear( object sender, FormClosedEventArgs e) //Funcion para desloguear
+        {
+            txtContraUs.Clear();
+            txtNomUsu.Clear();
+            lblError.Visible = false;
+
+            this.Show();
+            txtNomUsu.Focus();
 
         }
+
+
+
+
+
+
     }
 }
 

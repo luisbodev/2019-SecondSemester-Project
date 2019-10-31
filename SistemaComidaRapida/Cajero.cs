@@ -39,6 +39,20 @@ namespace SistemaComidaRapida
           
         }
 
-        
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+           if (MessageBox.Show("¿Está seguro que quiere cerrar Seción?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes) this.Close();
+        }
+
+        private void btnCerrarT_Click(object sender, EventArgs e) //Cerrar la ventana Para que funcione el deslogeo
+        {
+            if(MessageBox.Show("¿En realidad desea Cerrar la aplicación?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            Application.Exit();
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

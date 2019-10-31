@@ -63,7 +63,7 @@ namespace CapaDeAccesoDatos
 
         public bool verificar(string usuario, string contrasena)
         {
-            int resultado = -1;
+            
 
             SqlConnection con = new SqlConnection();
             try

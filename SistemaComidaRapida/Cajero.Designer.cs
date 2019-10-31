@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCajero));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelTop = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelTopRight = new System.Windows.Forms.Panel();
@@ -59,6 +59,8 @@
             this.dtgOrden = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnCerrarT = new System.Windows.Forms.Button();
+            this.btnMinimizar = new System.Windows.Forms.Button();
             this.panelTop.SuspendLayout();
             this.panelTopRight.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -74,6 +76,8 @@
             // panelTop
             // 
             this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(39)))), ((int)(((byte)(67)))));
+            this.panelTop.Controls.Add(this.labelTipodeCuenta);
+            this.panelTop.Controls.Add(this.labelUsuario);
             this.panelTop.Controls.Add(this.label1);
             this.panelTop.Controls.Add(this.panelTopRight);
             this.panelTop.Controls.Add(this.pictureBox1);
@@ -97,9 +101,9 @@
             // 
             // panelTopRight
             // 
+            this.panelTopRight.Controls.Add(this.btnMinimizar);
             this.panelTopRight.Controls.Add(this.btnCerrarSesion);
-            this.panelTopRight.Controls.Add(this.labelTipodeCuenta);
-            this.panelTopRight.Controls.Add(this.labelUsuario);
+            this.panelTopRight.Controls.Add(this.btnCerrarT);
             this.panelTopRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelTopRight.Location = new System.Drawing.Point(1170, 0);
             this.panelTopRight.Name = "panelTopRight";
@@ -116,18 +120,19 @@
             this.btnCerrarSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnCerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(150, 10);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(22, 17);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(38, 37);
             this.btnCerrarSesion.TabIndex = 1;
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // labelTipodeCuenta
             // 
             this.labelTipodeCuenta.AutoSize = true;
             this.labelTipodeCuenta.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
             this.labelTipodeCuenta.ForeColor = System.Drawing.Color.White;
-            this.labelTipodeCuenta.Location = new System.Drawing.Point(88, 26);
+            this.labelTipodeCuenta.Location = new System.Drawing.Point(1131, 32);
             this.labelTipodeCuenta.Name = "labelTipodeCuenta";
             this.labelTipodeCuenta.Size = new System.Drawing.Size(55, 20);
             this.labelTipodeCuenta.TabIndex = 0;
@@ -139,7 +144,7 @@
             this.labelUsuario.AutoSize = true;
             this.labelUsuario.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
             this.labelUsuario.ForeColor = System.Drawing.Color.White;
-            this.labelUsuario.Location = new System.Drawing.Point(36, 9);
+            this.labelUsuario.Location = new System.Drawing.Point(1079, 12);
             this.labelUsuario.Name = "labelUsuario";
             this.labelUsuario.Size = new System.Drawing.Size(107, 20);
             this.labelUsuario.TabIndex = 0;
@@ -211,7 +216,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 60);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(884, 649);
+            this.panelMenu.Size = new System.Drawing.Size(838, 649);
             this.panelMenu.TabIndex = 8;
             // 
             // dtgMenu
@@ -220,7 +225,7 @@
             this.dtgMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgMenu.Location = new System.Drawing.Point(12, 36);
             this.dtgMenu.Name = "dtgMenu";
-            this.dtgMenu.Size = new System.Drawing.Size(639, 617);
+            this.dtgMenu.Size = new System.Drawing.Size(639, 566);
             this.dtgMenu.TabIndex = 7;
             // 
             // label2
@@ -228,7 +233,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
-            this.label2.Location = new System.Drawing.Point(0, -2);
+            this.label2.Location = new System.Drawing.Point(12, -2);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 35);
             this.label2.TabIndex = 0;
@@ -243,9 +248,9 @@
             this.panelBuscar.Controls.Add(this.checkBebidas);
             this.panelBuscar.Controls.Add(this.checkPlatos);
             this.panelBuscar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelBuscar.Location = new System.Drawing.Point(757, 0);
+            this.panelBuscar.Location = new System.Drawing.Point(671, 0);
             this.panelBuscar.Name = "panelBuscar";
-            this.panelBuscar.Size = new System.Drawing.Size(127, 649);
+            this.panelBuscar.Size = new System.Drawing.Size(167, 649);
             this.panelBuscar.TabIndex = 6;
             // 
             // label4
@@ -253,7 +258,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
-            this.label4.Location = new System.Drawing.Point(33, 36);
+            this.label4.Location = new System.Drawing.Point(16, 47);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 18);
             this.label4.TabIndex = 5;
@@ -262,7 +267,7 @@
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txtBuscar.Location = new System.Drawing.Point(3, 58);
+            this.txtBuscar.Location = new System.Drawing.Point(19, 68);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(121, 25);
             this.txtBuscar.TabIndex = 4;
@@ -272,7 +277,7 @@
             this.checkCombos.AutoSize = true;
             this.checkCombos.Font = new System.Drawing.Font("Trebuchet MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkCombos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
-            this.checkCombos.Location = new System.Drawing.Point(23, 122);
+            this.checkCombos.Location = new System.Drawing.Point(19, 106);
             this.checkCombos.Name = "checkCombos";
             this.checkCombos.Size = new System.Drawing.Size(87, 26);
             this.checkCombos.TabIndex = 3;
@@ -284,7 +289,7 @@
             this.checkBebidas.AutoSize = true;
             this.checkBebidas.Font = new System.Drawing.Font("Trebuchet MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.checkBebidas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
-            this.checkBebidas.Location = new System.Drawing.Point(23, 150);
+            this.checkBebidas.Location = new System.Drawing.Point(19, 129);
             this.checkBebidas.Name = "checkBebidas";
             this.checkBebidas.Size = new System.Drawing.Size(88, 26);
             this.checkBebidas.TabIndex = 3;
@@ -296,7 +301,7 @@
             this.checkPlatos.AutoSize = true;
             this.checkPlatos.Font = new System.Drawing.Font("Trebuchet MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.checkPlatos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
-            this.checkPlatos.Location = new System.Drawing.Point(23, 178);
+            this.checkPlatos.Location = new System.Drawing.Point(19, 157);
             this.checkPlatos.Name = "checkPlatos";
             this.checkPlatos.Size = new System.Drawing.Size(75, 26);
             this.checkPlatos.TabIndex = 3;
@@ -346,7 +351,7 @@
             this.btnModificar.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
             this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnModificar.Location = new System.Drawing.Point(116, 618);
+            this.btnModificar.Location = new System.Drawing.Point(116, 602);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(102, 35);
             this.btnModificar.TabIndex = 7;
@@ -364,7 +369,7 @@
             this.btnExtras.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
             this.btnExtras.ForeColor = System.Drawing.Color.White;
             this.btnExtras.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnExtras.Location = new System.Drawing.Point(279, 618);
+            this.btnExtras.Location = new System.Drawing.Point(332, 602);
             this.btnExtras.Name = "btnExtras";
             this.btnExtras.Size = new System.Drawing.Size(102, 35);
             this.btnExtras.TabIndex = 6;
@@ -377,8 +382,8 @@
             this.dtgOrden.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgOrden.Location = new System.Drawing.Point(6, 36);
             this.dtgOrden.Name = "dtgOrden";
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
-            this.dtgOrden.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
+            this.dtgOrden.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgOrden.Size = new System.Drawing.Size(514, 560);
             this.dtgOrden.TabIndex = 4;
             // 
@@ -398,12 +403,46 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
-            this.label3.Location = new System.Drawing.Point(0, -2);
+            this.label3.Location = new System.Drawing.Point(20, -2);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 35);
             this.label3.TabIndex = 0;
             this.label3.Text = "Orden";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnCerrarT
+            // 
+            this.btnCerrarT.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrarT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrarT.BackgroundImage")));
+            this.btnCerrarT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCerrarT.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarT.FlatAppearance.BorderSize = 0;
+            this.btnCerrarT.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnCerrarT.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnCerrarT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarT.Location = new System.Drawing.Point(163, 7);
+            this.btnCerrarT.Name = "btnCerrarT";
+            this.btnCerrarT.Size = new System.Drawing.Size(25, 33);
+            this.btnCerrarT.TabIndex = 2;
+            this.btnCerrarT.UseVisualStyleBackColor = false;
+            this.btnCerrarT.Click += new System.EventHandler(this.btnCerrarT_Click);
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.BackColor = System.Drawing.Color.Transparent;
+            this.btnMinimizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.BackgroundImage")));
+            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimizar.FlatAppearance.BorderSize = 0;
+            this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimizar.Location = new System.Drawing.Point(128, 7);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(25, 33);
+            this.btnMinimizar.TabIndex = 11;
+            this.btnMinimizar.UseVisualStyleBackColor = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
             // frmCajero
             // 
@@ -411,11 +450,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
             this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ControlBox = false;
             this.Controls.Add(this.panelOrden);
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panelBottom);
             this.Controls.Add(this.panelTop);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1438, 858);
             this.MinimumSize = new System.Drawing.Size(1364, 726);
@@ -426,7 +466,6 @@
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
             this.panelTopRight.ResumeLayout(false);
-            this.panelTopRight.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelBottom.ResumeLayout(false);
             this.panelTime.ResumeLayout(false);
@@ -472,5 +511,7 @@
         private System.Windows.Forms.Button btnExtras;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnMinimizar;
+        private System.Windows.Forms.Button btnCerrarT;
     }
 }
