@@ -51,8 +51,9 @@
             this.btnVerMenu.Name = "btnVerMenu";
             this.btnVerMenu.Size = new System.Drawing.Size(130, 23);
             this.btnVerMenu.TabIndex = 0;
-            this.btnVerMenu.Text = "Ver Menú";
+            this.btnVerMenu.Text = "Ver o Editar Menú ";
             this.btnVerMenu.UseVisualStyleBackColor = true;
+            this.btnVerMenu.Click += new System.EventHandler(this.btnVerMenu_Click);
             // 
             // btnHisPedi
             // 

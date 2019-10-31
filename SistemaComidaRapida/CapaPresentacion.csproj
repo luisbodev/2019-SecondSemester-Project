@@ -64,6 +64,12 @@
     <Compile Include="Cocinero.Designer.cs">
       <DependentUpon>Cocinero.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatosMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatosMenu.Designer.cs">
+      <DependentUpon>DatosMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cocinero.resx">
       <DependentUpon>Cocinero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatosMenu.resx">
+      <DependentUpon>DatosMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.es-419.resx">
       <DependentUpon>Login.cs</DependentUpon>

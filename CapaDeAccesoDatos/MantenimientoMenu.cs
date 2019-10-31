@@ -12,8 +12,7 @@ namespace CapaDeAccesoDatos
     {
 
         //Agregar Menú
-        public class MantenimientoAlumno
-        {
+        
             string sql;
             Conexion conn = new Conexion();
             SqlCommand cmd;
@@ -29,51 +28,51 @@ namespace CapaDeAccesoDatos
                 if (p == "")
                     this.sql = "select * from " + tabla;
                 else
-                    this.sql = "select * from " + tabla + " where Nombre like '%" + p + "%' or Apellido like '%" + p + "%'";
+                    this.sql = "select * from " + tabla + " where nombre like '%" + p + "%'";// or Apellido like '%" + p + "%'
                 try
-                {
-                    conn.abrir_conexion();
-                    adap = new SqlDataAdapter(this.sql, conn.conex);
-                    adap.Fill(datos);
-                }
-                catch (Exception e)
-                {
-                    error = "Error " + e.ToString();
-                }
-                finally
-                {
-                    conn.cerrar_conexion();
+                    {
+                        conn.abrir_conexion();
+                        adap = new SqlDataAdapter(this.sql, conn.conex);
+                        adap.Fill(datos);
+                    }
+                    catch (Exception e)
+                    {
+                        error = "Error " + e.ToString();
+                    }
+                    finally
+                    {
+                        conn.cerrar_conexion();
+                    }
+
+                    return datos;
                 }
 
-                return datos;
-            }
+                //Agregar Menú
 
-            //Agregar Menú
-
-            public string agregar(Menu m)
-            {
-                cmd = new SqlCommand(string.Format("Insert Into menu(descripcion, precio, nombre) Values('{0}', '{1}', '{2}')", m.Descipcion, m.Precio, m.Nombre), conn.conex);
-                try
+                public string agregarMenu(Menu m)
                 {
-                    conn.abrir_conexion();
-                    respuesta = cmd.ExecuteNonQuery();
+                    cmd = new SqlCommand(string.Format("Insert Into menu(descripcion, precio, nombre) Values('{0}', '{1}', '{2}')", m.Descipcion, m.Precio, m.Nombre), conn.conex);
+                    try
+                    {
+                        conn.abrir_conexion();
+                        respuesta = cmd.ExecuteNonQuery();
+                    }
+                    catch (Exception e)
+                    {
+                        error = "Error " + e.Message;
+                    }
+                    finally
+                    {
+                        conn.cerrar_conexion();
+                    }
+                    return "" + respuesta;
                 }
-                catch (Exception e)
-                {
-                    error = "Error " + e.Message;
-                }
-                finally
-                {
-                    conn.cerrar_conexion();
-                }
-                return "" + respuesta;
-            }
 
             //Modificar Menú --------------------------------------------
 
-            public string modificar(Menu m)
+            public string modificarMenu(Menu m)
             {
-                cmd = new SqlCommand(string.Format("Update alumnos set descripcion = '{0}', precio = '{1}', nombre = '{2}' where idMenu= '{3}'", m.Descipcion, m.Precio, m.Nombre, m.IdMenu), conn.conex);
+                cmd = new SqlCommand(string.Format("Update menu set descripcion = '{0}', precio = '{1}', nombre = '{2}' where idMenu= '{3}'", m.Descipcion, m.Precio, m.Nombre, m.IdMenu), conn.conex);
                 try
                 {
                     conn.abrir_conexion();
@@ -91,9 +90,9 @@ namespace CapaDeAccesoDatos
                 return "" + respuesta;
             }
 
-            public string eliminar(Menu m)
+            public string eliminarMenu(Menu m)
             {
-                cmd = new SqlCommand(string.Format("Delete from Alumnos where Id = '{0}'", m.IdMenu), conn.conex);
+                cmd = new SqlCommand(string.Format("Delete from menu where idMenu = '{0}'", m.IdMenu), conn.conex);
                 try
                 {
                     conn.abrir_conexion();
@@ -112,4 +111,4 @@ namespace CapaDeAccesoDatos
             }
         }
     }
-}
+
