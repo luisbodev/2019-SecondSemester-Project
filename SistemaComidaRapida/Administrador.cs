@@ -20,13 +20,13 @@ namespace SistemaComidaRapida
 
         
 
-        private void menuToolStripMenuItem1_Click(object sender, EventArgs e)
+       
+
+        private void menuToolStripMenuItem1_Click_1(object sender, EventArgs e)
         {
             frmDatosMenu crudmenu = new frmDatosMenu();//Mostrar Crud Menu  
             crudmenu.MdiParent = this;
             crudmenu.Show();
-            
-
         }
     }
 }

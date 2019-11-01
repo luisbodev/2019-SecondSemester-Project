@@ -142,8 +142,8 @@
             // 
             this.menuStripAdmin.BackColor = System.Drawing.Color.White;
             this.menuStripAdmin.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.modificarToolStripMenuItem,
-            this.verToolStripMenuItem});
+            this.verToolStripMenuItem,
+            this.modificarToolStripMenuItem});
             this.menuStripAdmin.Location = new System.Drawing.Point(0, 60);
             this.menuStripAdmin.Name = "menuStripAdmin";
             this.menuStripAdmin.Size = new System.Drawing.Size(1005, 28);
@@ -174,6 +174,7 @@
             this.menuToolStripMenuItem1.Name = "menuToolStripMenuItem1";
             this.menuToolStripMenuItem1.Size = new System.Drawing.Size(153, 24);
             this.menuToolStripMenuItem1.Text = "Menu";
+            this.menuToolStripMenuItem1.Click += new System.EventHandler(this.menuToolStripMenuItem1_Click_1);
             // 
             // historialToolStripMenuItem
             // 

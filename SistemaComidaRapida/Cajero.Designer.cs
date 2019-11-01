@@ -255,6 +255,7 @@
             // 
             // dtgMenu
             // 
+            this.dtgMenu.AllowUserToOrderColumns = true;
             this.dtgMenu.BackgroundColor = System.Drawing.Color.White;
             this.dtgMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgMenu.Location = new System.Drawing.Point(12, 36);
