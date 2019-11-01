@@ -102,5 +102,52 @@ namespace SistemaComidaRapida
             txtPrec.Text = dgvAlumnos.CurrentRow.Cells[2].Value.ToString();
             txtNom.Text = dgvAlumnos.CurrentRow.Cells[3].Value.ToString();
         }
+
+        private void txtPrec_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            validarNumeros(e);
+        
+        }
+
+      
+        void validarNumeros(KeyPressEventArgs e)
+
+        {
+
+            if (e.KeyChar >= 48 && e.KeyChar <= 57)
+
+            {
+
+                e.Handled = false;
+
+            }
+
+            else if (e.KeyChar == 8)
+
+            {
+
+                e.Handled = false;
+
+            }
+
+            else if (e.KeyChar == '.')
+
+            {
+
+            if(txtPrec.Text.IndexOf(".")>0) {
+                    e.Handled = true;
+                }
+            else {
+                    e.Handled = false;
+                }
+            }
+
+            else{
+                e.Handled = true;
+            }
+
+        }
+
     }
 }

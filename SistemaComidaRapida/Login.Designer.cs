@@ -36,7 +36,6 @@
             this.txtContraUs = new System.Windows.Forms.TextBox();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.txtNomUsu = new System.Windows.Forms.TextBox();
-            this.lblError = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
             this.SuspendLayout();
@@ -86,12 +85,6 @@
             resources.ApplyResources(this.txtNomUsu, "txtNomUsu");
             this.txtNomUsu.Name = "txtNomUsu";
             // 
-            // lblError
-            // 
-            resources.ApplyResources(this.lblError, "lblError");
-            this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Name = "lblError";
-            // 
             // btnSalir
             // 
             this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
@@ -111,7 +104,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnIniciarSesion);
             this.Controls.Add(this.txtContraUs);
             this.Controls.Add(this.txtNomUsu);
@@ -137,7 +129,6 @@
         private System.Windows.Forms.TextBox txtContraUs;
         private System.Windows.Forms.Button btnIniciarSesion;
         private System.Windows.Forms.TextBox txtNomUsu;
-        private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.Button btnSalir;
     }
 }

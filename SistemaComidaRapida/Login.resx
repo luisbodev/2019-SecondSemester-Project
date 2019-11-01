@@ -2191,7 +2191,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;imgLogo.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>7</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2221,7 +2221,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2251,7 +2251,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2284,7 +2284,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="txtContraUs.Font" type="System.Drawing.Font, System.Drawing">
     <value>Trebuchet MS, 11.25pt, style=Bold</value>
@@ -2308,7 +2308,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtContraUs.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="btnIniciarSesion.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -2341,7 +2341,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnIniciarSesion.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="txtNomUsu.Font" type="System.Drawing.Font, System.Drawing">
     <value>Trebuchet MS, 11.25pt, style=Bold</value>
@@ -2365,43 +2365,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtNomUsu.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="lblError.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblError.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt, style=Italic</value>
-  </data>
-  <data name="lblError.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="lblError.Location" type="System.Drawing.Point, System.Drawing">
-    <value>276, 168</value>
-  </data>
-  <data name="lblError.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 13</value>
-  </data>
-  <data name="lblError.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="lblError.Text" xml:space="preserve">
-    <value>Error Message</value>
-  </data>
-  <data name="lblError.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;lblError.Name" xml:space="preserve">
-    <value>lblError</value>
-  </data>
-  <data name="&gt;&gt;lblError.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblError.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lblError.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="btnSalir.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>

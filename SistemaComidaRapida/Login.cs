@@ -46,29 +46,32 @@ namespace SistemaComidaRapida
 
 
 
-            if (validLogin == true)
-            {
-                
-                MessageBox.Show("¡Ha ingresado correctamente!");
-                if (cadena == "admi")
-                {
+            if (validLogin == true ){
+                if (cadena == "admi"){
                     frmAdministrador adm = new frmAdministrador();
+                    adm.menuStripAdmin.Visible = true;
+                    adm.menuStrip2.Visible = false;
                     adm.Show();
+                    
                     //this.Close();
                     adm.FormClosed += desLoguear; //Funcion de deslogeo-----------------------------------
                     this.Hide();
+                 }
+                else if (cadena == "caje"){ 
+                    frmAdministrador adm = new frmAdministrador();
+                    adm.menuStripAdmin.Visible = false;
+                    adm.menuStrip2.Visible = true;
+                    adm.Show();
 
-                }
-                else if (cadena == "caje")
-                {
-                    frmCajero caje = new frmCajero();
-                    caje.Show();
+
+                    //frmCajero caje = new frmCajero();
+
+                    //caje.Show();
                     //this.Close();
-                    caje.FormClosed += desLoguear; //Funcion de deslogeo-----------------------------------
+                    //caje.FormClosed += desLoguear; //Funcion de deslogeo-----------------------------------
                     this.Hide();
                 }
-                else if (cadena == "chef")
-                {
+                else if (cadena == "chef"){
                     frmCocinero chef = new frmCocinero();
                     this.Hide();
                     chef.ShowDialog();
@@ -79,14 +82,12 @@ namespace SistemaComidaRapida
 
                 
             }
-            else
-            {
-
+            else{
                 txtContraUs.Clear();
                 txtNomUsu.Clear();
                 txtNomUsu.Focus();
 
-                MessageBox.Show("Contraneña o Usuario no validos");
+                MessageBox.Show("Usuario o Contraseña no validos", "Error",MessageBoxButtons.OK ,MessageBoxIcon.Error);
             }
 
             //_______________________________________________________________
@@ -105,7 +106,7 @@ namespace SistemaComidaRapida
         {
             txtContraUs.Clear();
             txtNomUsu.Clear();
-            lblError.Visible = false;
+            
 
             this.Show();
             txtNomUsu.Focus();

@@ -12,6 +12,7 @@ namespace SistemaComidaRapida
 {
     public partial class frmAdministrador : Form
     {
+        
         public frmAdministrador()
         {
             InitializeComponent();
@@ -19,8 +20,14 @@ namespace SistemaComidaRapida
 
         private void btnVerMenu_Click(object sender, EventArgs e)
         {
-            frmDatosMenu dmn = new frmDatosMenu();
-            this.Hide();
+            frmDatosMenu dmn = new frmDatosMenu();//Mostrar Menu
+            dmn.Show();
+
+        }
+
+        private void menuToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmDatosMenu dmn = new frmDatosMenu();//Mostrar Menu
             dmn.Show();
 
         }

@@ -125,6 +125,7 @@
             this.txtPrec.Name = "txtPrec";
             this.txtPrec.Size = new System.Drawing.Size(176, 24);
             this.txtPrec.TabIndex = 27;
+            this.txtPrec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrec_KeyPress);
             // 
             // txtNom
             // 
