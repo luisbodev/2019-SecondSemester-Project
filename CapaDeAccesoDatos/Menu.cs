@@ -11,9 +11,10 @@ namespace CapaDeAccesoDatos
   
 
         private int idMenu;
+        private string nombre;
         private string descipcion;
         private double precio;
-        private string nombre;
+        
 
         public int IdMenu
         {
@@ -73,7 +74,7 @@ namespace CapaDeAccesoDatos
 
         }
 
-        public Menu(int pIdMenu, string pDescripcion, double pPrecio, string pNombre)
+        public Menu(int pIdMenu, string pNombre, string pDescripcion, double pPrecio)
         {
             this.IdMenu = pIdMenu;
             this.Descipcion = pDescripcion;

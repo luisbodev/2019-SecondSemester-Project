@@ -51,7 +51,7 @@ namespace CapaDeAccesoDatos
 
                 public string agregarMenu(Menu m)
                 {
-                    cmd = new SqlCommand(string.Format("Insert Into menu(descripcion, precio, nombre) Values('{0}', '{1}', '{2}')", m.Descipcion, m.Precio, m.Nombre), conn.conex);
+                    cmd = new SqlCommand(string.Format("Insert Into menu(nombre, descripcion, precio) Values('{0}', '{1}', '{2}')", m.Nombre, m.Descipcion, m.Precio), conn.conex);
                     try
                     {
                         conn.abrir_conexion();
@@ -72,7 +72,7 @@ namespace CapaDeAccesoDatos
 
             public string modificarMenu(Menu m)
             {
-                cmd = new SqlCommand(string.Format("Update menu set descripcion = '{0}', precio = '{1}', nombre = '{2}' where idMenu= '{3}'", m.Descipcion, m.Precio, m.Nombre, m.IdMenu), conn.conex);
+                cmd = new SqlCommand(string.Format("Update menu set nombre = '{0}', descripcion = '{1}', precio = '{2}' where idMenu= '{3}'", m.Descipcion, m.Precio, m.Nombre, m.IdMenu), conn.conex);
                 try
                 {
                     conn.abrir_conexion();

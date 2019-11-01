@@ -26,17 +26,17 @@ namespace Clases
         }
 
         //Agregar menu
-        public string agregar_menu(string descripcion, string precio, string nombre)
+        public string agregar_menu(string nombre,string descripcion, string precio)
         {
-            Menu m = new Menu(1, descripcion, double.Parse(precio), nombre);
+            Menu m = new Menu(1, nombre, descripcion, double.Parse(precio));
             return obje.agregarMenu(m);
         }
 
         //Modificar menu
 
-        public string modificar_menu(string idMenu, string descripcion, string precio, string nombre)
+        public string modificar_menu(string idMenu, string nombre, string descripcion, string precio)
         {
-            Menu m = new Menu(int.Parse(idMenu), descripcion, double.Parse(precio), nombre);
+            Menu m = new Menu(int.Parse(idMenu), nombre, descripcion, double.Parse(precio));
             return obje.modificarMenu(m);
         }
 
@@ -44,7 +44,7 @@ namespace Clases
 
         public string eliminar_menu(string idMenu)
         {
-            Menu m = new Menu(int.Parse(idMenu), "",0.0, "");
+            Menu m = new Menu(int.Parse(idMenu), "", "",0.0);
             return obje.eliminarMenu(m);
         }
 

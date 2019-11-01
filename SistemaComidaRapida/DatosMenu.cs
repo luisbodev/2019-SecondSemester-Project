@@ -36,7 +36,7 @@ namespace SistemaComidaRapida
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            respuesta = obje.agregar_menu(txtDesc.Text, txtPrec.Text, txtNom.Text);
+            respuesta = obje.agregar_menu(txtNom.Text,txtDesc.Text, txtPrec.Text);
             btnAgregar.Enabled = false;
             llenar();
             if (respuesta == "1")
@@ -59,7 +59,7 @@ namespace SistemaComidaRapida
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            respuesta = obje.modificar_menu(txtIdMenu.Text, txtDesc.Text, txtPrec.Text, txtNom.Text);
+            respuesta = obje.modificar_menu(txtNom.Text,txtIdMenu.Text, txtDesc.Text, txtPrec.Text);
             llenar();
             if (respuesta == "1")
             {
@@ -98,9 +98,10 @@ namespace SistemaComidaRapida
         private void dgvAlumnos_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             txtIdMenu.Text = dgvAlumnos.CurrentRow.Cells[0].Value.ToString();
-            txtDesc.Text = dgvAlumnos.CurrentRow.Cells[1].Value.ToString();
-            txtPrec.Text = dgvAlumnos.CurrentRow.Cells[2].Value.ToString();
-            txtNom.Text = dgvAlumnos.CurrentRow.Cells[3].Value.ToString();
+            txtNom.Text = dgvAlumnos.CurrentRow.Cells[1].Value.ToString();
+            txtDesc.Text = dgvAlumnos.CurrentRow.Cells[2].Value.ToString();
+            txtPrec.Text = dgvAlumnos.CurrentRow.Cells[3].Value.ToString();
+            
         }
 
         private void txtPrec_KeyPress(object sender, KeyPressEventArgs e)
