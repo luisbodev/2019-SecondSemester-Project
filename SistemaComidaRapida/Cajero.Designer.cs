@@ -30,10 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCajero));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelTop = new System.Windows.Forms.Panel();
-            this.labelTipodeCuenta = new System.Windows.Forms.Label();
-            this.labelUsuario = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelTopRight = new System.Windows.Forms.Panel();
             this.btnMinimizar = new System.Windows.Forms.Button();
@@ -61,6 +59,8 @@
             this.dtgOrden = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.labelTipodeCuenta = new System.Windows.Forms.Label();
+            this.labelUsuario = new System.Windows.Forms.Label();
             this.panelTop.SuspendLayout();
             this.panelTopRight.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -76,40 +76,14 @@
             // panelTop
             // 
             this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(39)))), ((int)(((byte)(67)))));
-            this.panelTop.Controls.Add(this.labelTipodeCuenta);
-            this.panelTop.Controls.Add(this.labelUsuario);
             this.panelTop.Controls.Add(this.label1);
             this.panelTop.Controls.Add(this.panelTopRight);
             this.panelTop.Controls.Add(this.pictureBox1);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1370, 60);
+            this.panelTop.Size = new System.Drawing.Size(1428, 60);
             this.panelTop.TabIndex = 4;
-            // 
-            // labelTipodeCuenta
-            // 
-            this.labelTipodeCuenta.AutoSize = true;
-            this.labelTipodeCuenta.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.labelTipodeCuenta.ForeColor = System.Drawing.Color.White;
-            this.labelTipodeCuenta.Location = new System.Drawing.Point(1131, 32);
-            this.labelTipodeCuenta.Name = "labelTipodeCuenta";
-            this.labelTipodeCuenta.Size = new System.Drawing.Size(55, 20);
-            this.labelTipodeCuenta.TabIndex = 0;
-            this.labelTipodeCuenta.Text = "Cajero";
-            this.labelTipodeCuenta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelUsuario
-            // 
-            this.labelUsuario.AutoSize = true;
-            this.labelUsuario.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.labelUsuario.ForeColor = System.Drawing.Color.White;
-            this.labelUsuario.Location = new System.Drawing.Point(1079, 12);
-            this.labelUsuario.Name = "labelUsuario";
-            this.labelUsuario.Size = new System.Drawing.Size(107, 20);
-            this.labelUsuario.TabIndex = 0;
-            this.labelUsuario.Text = "Usuario: LuisB";
-            this.labelUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -125,13 +99,15 @@
             // 
             // panelTopRight
             // 
+            this.panelTopRight.Controls.Add(this.labelTipodeCuenta);
+            this.panelTopRight.Controls.Add(this.labelUsuario);
             this.panelTopRight.Controls.Add(this.btnMinimizar);
             this.panelTopRight.Controls.Add(this.btnCerrarSesion);
             this.panelTopRight.Controls.Add(this.btnCerrarT);
             this.panelTopRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelTopRight.Location = new System.Drawing.Point(1170, 0);
+            this.panelTopRight.Location = new System.Drawing.Point(1069, 0);
             this.panelTopRight.Name = "panelTopRight";
-            this.panelTopRight.Size = new System.Drawing.Size(200, 60);
+            this.panelTopRight.Size = new System.Drawing.Size(359, 60);
             this.panelTopRight.TabIndex = 10;
             // 
             // btnMinimizar
@@ -144,7 +120,7 @@
             this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.Location = new System.Drawing.Point(128, 7);
+            this.btnMinimizar.Location = new System.Drawing.Point(287, 3);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(25, 33);
             this.btnMinimizar.TabIndex = 11;
@@ -161,7 +137,7 @@
             this.btnCerrarSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnCerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(22, 17);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(159, 12);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(38, 37);
             this.btnCerrarSesion.TabIndex = 1;
@@ -178,7 +154,7 @@
             this.btnCerrarT.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnCerrarT.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnCerrarT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarT.Location = new System.Drawing.Point(163, 7);
+            this.btnCerrarT.Location = new System.Drawing.Point(322, 3);
             this.btnCerrarT.Name = "btnCerrarT";
             this.btnCerrarT.Size = new System.Drawing.Size(25, 33);
             this.btnCerrarT.TabIndex = 2;
@@ -226,9 +202,9 @@
             this.panelBottom.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panelBottom.Controls.Add(this.panelTime);
             this.panelBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelBottom.Location = new System.Drawing.Point(0, 709);
+            this.panelBottom.Location = new System.Drawing.Point(0, 808);
             this.panelBottom.Name = "panelBottom";
-            this.panelBottom.Size = new System.Drawing.Size(1370, 40);
+            this.panelBottom.Size = new System.Drawing.Size(1428, 40);
             this.panelBottom.TabIndex = 7;
             // 
             // panelTime
@@ -250,7 +226,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 60);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(838, 649);
+            this.panelMenu.Size = new System.Drawing.Size(838, 748);
             this.panelMenu.TabIndex = 8;
             // 
             // dtgMenu
@@ -259,7 +235,7 @@
             this.dtgMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgMenu.Location = new System.Drawing.Point(12, 36);
             this.dtgMenu.Name = "dtgMenu";
-            this.dtgMenu.Size = new System.Drawing.Size(639, 566);
+            this.dtgMenu.Size = new System.Drawing.Size(639, 665);
             this.dtgMenu.TabIndex = 7;
             // 
             // label2
@@ -284,7 +260,7 @@
             this.panelBuscar.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelBuscar.Location = new System.Drawing.Point(671, 0);
             this.panelBuscar.Name = "panelBuscar";
-            this.panelBuscar.Size = new System.Drawing.Size(167, 649);
+            this.panelBuscar.Size = new System.Drawing.Size(167, 748);
             this.panelBuscar.TabIndex = 6;
             // 
             // label4
@@ -351,9 +327,9 @@
             this.panelOrden.Controls.Add(this.button3);
             this.panelOrden.Controls.Add(this.label3);
             this.panelOrden.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelOrden.Location = new System.Drawing.Point(838, 60);
+            this.panelOrden.Location = new System.Drawing.Point(896, 60);
             this.panelOrden.Name = "panelOrden";
-            this.panelOrden.Size = new System.Drawing.Size(532, 649);
+            this.panelOrden.Size = new System.Drawing.Size(532, 748);
             this.panelOrden.TabIndex = 9;
             // 
             // btnEnviarCocina
@@ -367,7 +343,7 @@
             this.btnEnviarCocina.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
             this.btnEnviarCocina.ForeColor = System.Drawing.Color.White;
             this.btnEnviarCocina.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnEnviarCocina.Location = new System.Drawing.Point(116, 670);
+            this.btnEnviarCocina.Location = new System.Drawing.Point(137, 658);
             this.btnEnviarCocina.Name = "btnEnviarCocina";
             this.btnEnviarCocina.Size = new System.Drawing.Size(266, 43);
             this.btnEnviarCocina.TabIndex = 8;
@@ -416,8 +392,8 @@
             this.dtgOrden.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgOrden.Location = new System.Drawing.Point(6, 36);
             this.dtgOrden.Name = "dtgOrden";
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
-            this.dtgOrden.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
+            this.dtgOrden.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgOrden.Size = new System.Drawing.Size(514, 560);
             this.dtgOrden.TabIndex = 4;
             // 
@@ -444,12 +420,36 @@
             this.label3.Text = "Orden";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // labelTipodeCuenta
+            // 
+            this.labelTipodeCuenta.AutoSize = true;
+            this.labelTipodeCuenta.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.labelTipodeCuenta.ForeColor = System.Drawing.Color.White;
+            this.labelTipodeCuenta.Location = new System.Drawing.Point(98, 29);
+            this.labelTipodeCuenta.Name = "labelTipodeCuenta";
+            this.labelTipodeCuenta.Size = new System.Drawing.Size(55, 20);
+            this.labelTipodeCuenta.TabIndex = 12;
+            this.labelTipodeCuenta.Text = "Cajero";
+            this.labelTipodeCuenta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelUsuario
+            // 
+            this.labelUsuario.AutoSize = true;
+            this.labelUsuario.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.labelUsuario.ForeColor = System.Drawing.Color.White;
+            this.labelUsuario.Location = new System.Drawing.Point(46, 9);
+            this.labelUsuario.Name = "labelUsuario";
+            this.labelUsuario.Size = new System.Drawing.Size(107, 20);
+            this.labelUsuario.TabIndex = 13;
+            this.labelUsuario.Text = "Usuario: LuisB";
+            this.labelUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmCajero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1428, 848);
             this.ControlBox = false;
             this.Controls.Add(this.panelOrden);
             this.Controls.Add(this.panelMenu);
@@ -457,15 +457,14 @@
             this.Controls.Add(this.panelTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(1438, 858);
-            this.MinimumSize = new System.Drawing.Size(1364, 726);
             this.Name = "frmCajero";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = " ";
+            this.Text = " Cajero";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Cajero_Load);
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
             this.panelTopRight.ResumeLayout(false);
+            this.panelTopRight.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelBottom.ResumeLayout(false);
             this.panelTime.ResumeLayout(false);
@@ -487,9 +486,7 @@
         private System.Windows.Forms.Label labelHora;
         private System.Windows.Forms.Label labelFecha;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label labelUsuario;
         private System.Windows.Forms.Panel panelBottom;
-        private System.Windows.Forms.Label labelTipodeCuenta;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel panelBuscar;
@@ -513,5 +510,7 @@
         private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Button btnCerrarT;
         public System.Windows.Forms.Panel panelTop;
+        private System.Windows.Forms.Label labelTipodeCuenta;
+        private System.Windows.Forms.Label labelUsuario;
     }
 }
