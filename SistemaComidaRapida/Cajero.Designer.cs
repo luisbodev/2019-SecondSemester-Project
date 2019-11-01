@@ -30,10 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCajero));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelTop = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelTopRight = new System.Windows.Forms.Panel();
+            this.labelTipodeCuenta = new System.Windows.Forms.Label();
+            this.labelUsuario = new System.Windows.Forms.Label();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnCerrarT = new System.Windows.Forms.Button();
@@ -59,8 +61,6 @@
             this.dtgOrden = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.labelTipodeCuenta = new System.Windows.Forms.Label();
-            this.labelUsuario = new System.Windows.Forms.Label();
             this.panelTop.SuspendLayout();
             this.panelTopRight.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -109,6 +109,30 @@
             this.panelTopRight.Name = "panelTopRight";
             this.panelTopRight.Size = new System.Drawing.Size(359, 60);
             this.panelTopRight.TabIndex = 10;
+            // 
+            // labelTipodeCuenta
+            // 
+            this.labelTipodeCuenta.AutoSize = true;
+            this.labelTipodeCuenta.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.labelTipodeCuenta.ForeColor = System.Drawing.Color.White;
+            this.labelTipodeCuenta.Location = new System.Drawing.Point(98, 29);
+            this.labelTipodeCuenta.Name = "labelTipodeCuenta";
+            this.labelTipodeCuenta.Size = new System.Drawing.Size(55, 20);
+            this.labelTipodeCuenta.TabIndex = 12;
+            this.labelTipodeCuenta.Text = "Cajero";
+            this.labelTipodeCuenta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelUsuario
+            // 
+            this.labelUsuario.AutoSize = true;
+            this.labelUsuario.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.labelUsuario.ForeColor = System.Drawing.Color.White;
+            this.labelUsuario.Location = new System.Drawing.Point(46, 9);
+            this.labelUsuario.Name = "labelUsuario";
+            this.labelUsuario.Size = new System.Drawing.Size(107, 20);
+            this.labelUsuario.TabIndex = 13;
+            this.labelUsuario.Text = "Usuario: LuisB";
+            this.labelUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnMinimizar
             // 
@@ -231,6 +255,7 @@
             // 
             // dtgMenu
             // 
+            this.dtgMenu.AllowUserToOrderColumns = true;
             this.dtgMenu.BackgroundColor = System.Drawing.Color.White;
             this.dtgMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgMenu.Location = new System.Drawing.Point(12, 36);
@@ -392,8 +417,8 @@
             this.dtgOrden.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgOrden.Location = new System.Drawing.Point(6, 36);
             this.dtgOrden.Name = "dtgOrden";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
-            this.dtgOrden.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
+            this.dtgOrden.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgOrden.Size = new System.Drawing.Size(514, 560);
             this.dtgOrden.TabIndex = 4;
             // 
@@ -419,30 +444,6 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Orden";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelTipodeCuenta
-            // 
-            this.labelTipodeCuenta.AutoSize = true;
-            this.labelTipodeCuenta.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.labelTipodeCuenta.ForeColor = System.Drawing.Color.White;
-            this.labelTipodeCuenta.Location = new System.Drawing.Point(98, 29);
-            this.labelTipodeCuenta.Name = "labelTipodeCuenta";
-            this.labelTipodeCuenta.Size = new System.Drawing.Size(55, 20);
-            this.labelTipodeCuenta.TabIndex = 12;
-            this.labelTipodeCuenta.Text = "Cajero";
-            this.labelTipodeCuenta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelUsuario
-            // 
-            this.labelUsuario.AutoSize = true;
-            this.labelUsuario.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.labelUsuario.ForeColor = System.Drawing.Color.White;
-            this.labelUsuario.Location = new System.Drawing.Point(46, 9);
-            this.labelUsuario.Name = "labelUsuario";
-            this.labelUsuario.Size = new System.Drawing.Size(107, 20);
-            this.labelUsuario.TabIndex = 13;
-            this.labelUsuario.Text = "Usuario: LuisB";
-            this.labelUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmCajero
             // 
