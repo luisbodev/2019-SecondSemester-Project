@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.menuStripAdmin = new System.Windows.Forms.MenuStrip();
-            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.otromenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaDeEmpleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,7 +40,6 @@
             this.historialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripAdmin.SuspendLayout();
-            this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStripAdmin
@@ -50,27 +47,11 @@
             this.menuStripAdmin.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.verToolStripMenuItem,
             this.modificarToolStripMenuItem});
-            this.menuStripAdmin.Location = new System.Drawing.Point(0, 24);
+            this.menuStripAdmin.Location = new System.Drawing.Point(0, 0);
             this.menuStripAdmin.Name = "menuStripAdmin";
             this.menuStripAdmin.Size = new System.Drawing.Size(1025, 24);
             this.menuStripAdmin.TabIndex = 1;
             this.menuStripAdmin.Text = "menuStrip1";
-            // 
-            // menuStrip2
-            // 
-            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.otromenuToolStripMenuItem});
-            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(1025, 24);
-            this.menuStrip2.TabIndex = 2;
-            this.menuStrip2.Text = "menuStrip2";
-            // 
-            // otromenuToolStripMenuItem
-            // 
-            this.otromenuToolStripMenuItem.Name = "otromenuToolStripMenuItem";
-            this.otromenuToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
-            this.otromenuToolStripMenuItem.Text = "otromenu";
             // 
             // verToolStripMenuItem
             // 
@@ -121,26 +102,26 @@
             // empleadosToolStripMenuItem
             // 
             this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
-            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.empleadosToolStripMenuItem.Text = "Empleados";
             // 
             // menuToolStripMenuItem1
             // 
             this.menuToolStripMenuItem1.Name = "menuToolStripMenuItem1";
-            this.menuToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.menuToolStripMenuItem1.Size = new System.Drawing.Size(132, 22);
             this.menuToolStripMenuItem1.Text = "Menu";
             this.menuToolStripMenuItem1.Click += new System.EventHandler(this.menuToolStripMenuItem1_Click);
             // 
             // historialToolStripMenuItem
             // 
             this.historialToolStripMenuItem.Name = "historialToolStripMenuItem";
-            this.historialToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.historialToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.historialToolStripMenuItem.Text = "Historial";
             // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             // 
             // frmAdministrador
@@ -149,7 +130,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1025, 519);
             this.Controls.Add(this.menuStripAdmin);
-            this.Controls.Add(this.menuStrip2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStripAdmin;
@@ -160,8 +140,6 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStripAdmin.ResumeLayout(false);
             this.menuStripAdmin.PerformLayout();
-            this.menuStrip2.ResumeLayout(false);
-            this.menuStrip2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,8 +147,6 @@
 
         #endregion
         public System.Windows.Forms.MenuStrip menuStripAdmin;
-        public System.Windows.Forms.MenuStrip menuStrip2;
-        private System.Windows.Forms.ToolStripMenuItem otromenuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listaDeEmpleadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;

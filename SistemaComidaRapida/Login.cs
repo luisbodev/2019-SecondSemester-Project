@@ -50,7 +50,6 @@ namespace SistemaComidaRapida
                 if (cadena == "admi"){
                     frmAdministrador adm = new frmAdministrador();
                     adm.menuStripAdmin.Visible = true;
-                    adm.menuStrip2.Visible = false;
                     adm.Show();
                     
                     //this.Close();
@@ -58,17 +57,16 @@ namespace SistemaComidaRapida
                     this.Hide();
                  }
                 else if (cadena == "caje"){ 
-                    frmAdministrador adm = new frmAdministrador();
+                    /*frmAdministrador adm = new frmAdministrador();
                     adm.menuStripAdmin.Visible = false;
                     adm.menuStrip2.Visible = true;
-                    adm.Show();
+                    adm.Show();*/
 
 
-                    //frmCajero caje = new frmCajero();
-
-                    //caje.Show();
+                    frmCajero caje = new frmCajero();
+                    caje.Show();
                     //this.Close();
-                    //caje.FormClosed += desLoguear; //Funcion de deslogeo-----------------------------------
+                    caje.FormClosed += desLoguear; //Funcion de deslogeo-----------------------------------
                     this.Hide();
                 }
                 else if (cadena == "chef"){
