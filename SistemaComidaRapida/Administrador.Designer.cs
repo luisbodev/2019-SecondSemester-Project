@@ -124,9 +124,9 @@
             this.labelUsuario.ForeColor = System.Drawing.Color.White;
             this.labelUsuario.Location = new System.Drawing.Point(152, 7);
             this.labelUsuario.Name = "labelUsuario";
-            this.labelUsuario.Size = new System.Drawing.Size(107, 20);
+            this.labelUsuario.Size = new System.Drawing.Size(98, 20);
             this.labelUsuario.TabIndex = 0;
-            this.labelUsuario.Text = "Usuario: LuisB";
+            this.labelUsuario.Text = "Usuario: Luis";
             this.labelUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelUsuario.Click += new System.EventHandler(this.labelUsuario_Click);
             // 
