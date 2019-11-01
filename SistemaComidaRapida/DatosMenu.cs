@@ -105,9 +105,7 @@ namespace SistemaComidaRapida
 
         private void txtPrec_KeyPress(object sender, KeyPressEventArgs e)
         {
-
             validarNumeros(e);
-        
         }
 
       
@@ -116,7 +114,6 @@ namespace SistemaComidaRapida
         {
 
             if (e.KeyChar >= 48 && e.KeyChar <= 57)
-
             {
 
                 e.Handled = false;
@@ -131,23 +128,26 @@ namespace SistemaComidaRapida
 
             }
 
-            else if (e.KeyChar == '.')
-
-            {
-
-            if(txtPrec.Text.IndexOf(".")>0) {
+            else if (e.KeyChar == '.'){
+                if(txtPrec.Text.IndexOf(".")==0) {
                     e.Handled = true;
                 }
-            else {
-                    e.Handled = false;
+                else if(txtPrec.Text.IndexOf(".")>0) {
+                        e.Handled = true;
+                    }
+                else {
+                        e.Handled = false;
+                    }
                 }
-            }
-
             else{
                 e.Handled = true;
             }
 
         }
 
+        private void txtPrec_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

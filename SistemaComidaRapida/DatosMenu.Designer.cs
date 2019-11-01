@@ -215,6 +215,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAgregar);
             this.Name = "frmDatosMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Actualizar Menú";
             this.Load += new System.EventHandler(this.frmDatosMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).EndInit();

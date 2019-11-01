@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnListaEmp = new System.Windows.Forms.Button();
-            this.btnVerMenu = new System.Windows.Forms.Button();
-            this.btnHisPedi = new System.Windows.Forms.Button();
-            this.btnHisClientes = new System.Windows.Forms.Button();
             this.menuStripAdmin = new System.Windows.Forms.MenuStrip();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.otromenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,47 +44,6 @@
             this.menuStripAdmin.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnListaEmp
-            // 
-            this.btnListaEmp.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
-            this.btnListaEmp.Location = new System.Drawing.Point(206, 132);
-            this.btnListaEmp.Name = "btnListaEmp";
-            this.btnListaEmp.Size = new System.Drawing.Size(130, 23);
-            this.btnListaEmp.TabIndex = 0;
-            this.btnListaEmp.Text = "Lista de Empleados";
-            this.btnListaEmp.UseVisualStyleBackColor = true;
-            // 
-            // btnVerMenu
-            // 
-            this.btnVerMenu.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
-            this.btnVerMenu.Location = new System.Drawing.Point(206, 199);
-            this.btnVerMenu.Name = "btnVerMenu";
-            this.btnVerMenu.Size = new System.Drawing.Size(130, 23);
-            this.btnVerMenu.TabIndex = 0;
-            this.btnVerMenu.Text = "Ver o Editar Menú ";
-            this.btnVerMenu.UseVisualStyleBackColor = true;
-            this.btnVerMenu.Click += new System.EventHandler(this.btnVerMenu_Click);
-            // 
-            // btnHisPedi
-            // 
-            this.btnHisPedi.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
-            this.btnHisPedi.Location = new System.Drawing.Point(206, 266);
-            this.btnHisPedi.Name = "btnHisPedi";
-            this.btnHisPedi.Size = new System.Drawing.Size(130, 23);
-            this.btnHisPedi.TabIndex = 0;
-            this.btnHisPedi.Text = "Historial de Pedidos";
-            this.btnHisPedi.UseVisualStyleBackColor = true;
-            // 
-            // btnHisClientes
-            // 
-            this.btnHisClientes.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
-            this.btnHisClientes.Location = new System.Drawing.Point(206, 333);
-            this.btnHisClientes.Name = "btnHisClientes";
-            this.btnHisClientes.Size = new System.Drawing.Size(130, 23);
-            this.btnHisClientes.TabIndex = 0;
-            this.btnHisClientes.Text = "Historial Clientes";
-            this.btnHisClientes.UseVisualStyleBackColor = true;
             // 
             // menuStripAdmin
             // 
@@ -193,10 +148,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1025, 519);
-            this.Controls.Add(this.btnHisClientes);
-            this.Controls.Add(this.btnHisPedi);
-            this.Controls.Add(this.btnVerMenu);
-            this.Controls.Add(this.btnListaEmp);
             this.Controls.Add(this.menuStripAdmin);
             this.Controls.Add(this.menuStrip2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
@@ -217,11 +168,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnListaEmp;
-        private System.Windows.Forms.Button btnVerMenu;
-        private System.Windows.Forms.Button btnHisPedi;
-        private System.Windows.Forms.Button btnHisClientes;
         public System.Windows.Forms.MenuStrip menuStripAdmin;
         public System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem otromenuToolStripMenuItem;

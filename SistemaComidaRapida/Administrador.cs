@@ -18,17 +18,14 @@ namespace SistemaComidaRapida
             InitializeComponent();
         }
 
-        private void btnVerMenu_Click(object sender, EventArgs e)
-        {
-            frmDatosMenu dmn = new frmDatosMenu();//Mostrar Menu
-            dmn.Show();
-
-        }
+        
 
         private void menuToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmDatosMenu dmn = new frmDatosMenu();//Mostrar Menu
-            dmn.Show();
+            frmDatosMenu crudmenu = new frmDatosMenu();//Mostrar Crud Menu  
+            crudmenu.MdiParent = this;
+            crudmenu.Show();
+            
 
         }
     }
