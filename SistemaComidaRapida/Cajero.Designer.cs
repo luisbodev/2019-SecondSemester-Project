@@ -30,10 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCajero));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelTop = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelTopRight = new System.Windows.Forms.Panel();
+            this.labelTipodeCuenta = new System.Windows.Forms.Label();
+            this.labelUsuario = new System.Windows.Forms.Label();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnCerrarT = new System.Windows.Forms.Button();
@@ -59,8 +61,6 @@
             this.dtgOrden = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.labelTipodeCuenta = new System.Windows.Forms.Label();
-            this.labelUsuario = new System.Windows.Forms.Label();
             this.panelTop.SuspendLayout();
             this.panelTopRight.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -82,7 +82,7 @@
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1428, 60);
+            this.panelTop.Size = new System.Drawing.Size(1386, 60);
             this.panelTop.TabIndex = 4;
             // 
             // label1
@@ -105,10 +105,34 @@
             this.panelTopRight.Controls.Add(this.btnCerrarSesion);
             this.panelTopRight.Controls.Add(this.btnCerrarT);
             this.panelTopRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelTopRight.Location = new System.Drawing.Point(1069, 0);
+            this.panelTopRight.Location = new System.Drawing.Point(1027, 0);
             this.panelTopRight.Name = "panelTopRight";
             this.panelTopRight.Size = new System.Drawing.Size(359, 60);
             this.panelTopRight.TabIndex = 10;
+            // 
+            // labelTipodeCuenta
+            // 
+            this.labelTipodeCuenta.AutoSize = true;
+            this.labelTipodeCuenta.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.labelTipodeCuenta.ForeColor = System.Drawing.Color.White;
+            this.labelTipodeCuenta.Location = new System.Drawing.Point(98, 29);
+            this.labelTipodeCuenta.Name = "labelTipodeCuenta";
+            this.labelTipodeCuenta.Size = new System.Drawing.Size(55, 20);
+            this.labelTipodeCuenta.TabIndex = 12;
+            this.labelTipodeCuenta.Text = "Cajero";
+            this.labelTipodeCuenta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelUsuario
+            // 
+            this.labelUsuario.AutoSize = true;
+            this.labelUsuario.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.labelUsuario.ForeColor = System.Drawing.Color.White;
+            this.labelUsuario.Location = new System.Drawing.Point(46, 9);
+            this.labelUsuario.Name = "labelUsuario";
+            this.labelUsuario.Size = new System.Drawing.Size(107, 20);
+            this.labelUsuario.TabIndex = 13;
+            this.labelUsuario.Text = "Usuario: LuisB";
+            this.labelUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnMinimizar
             // 
@@ -202,9 +226,9 @@
             this.panelBottom.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panelBottom.Controls.Add(this.panelTime);
             this.panelBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelBottom.Location = new System.Drawing.Point(0, 808);
+            this.panelBottom.Location = new System.Drawing.Point(0, 748);
             this.panelBottom.Name = "panelBottom";
-            this.panelBottom.Size = new System.Drawing.Size(1428, 40);
+            this.panelBottom.Size = new System.Drawing.Size(1386, 40);
             this.panelBottom.TabIndex = 7;
             // 
             // panelTime
@@ -226,7 +250,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 60);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(838, 748);
+            this.panelMenu.Size = new System.Drawing.Size(838, 688);
             this.panelMenu.TabIndex = 8;
             // 
             // dtgMenu
@@ -260,7 +284,7 @@
             this.panelBuscar.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelBuscar.Location = new System.Drawing.Point(671, 0);
             this.panelBuscar.Name = "panelBuscar";
-            this.panelBuscar.Size = new System.Drawing.Size(167, 748);
+            this.panelBuscar.Size = new System.Drawing.Size(167, 688);
             this.panelBuscar.TabIndex = 6;
             // 
             // label4
@@ -327,9 +351,9 @@
             this.panelOrden.Controls.Add(this.button3);
             this.panelOrden.Controls.Add(this.label3);
             this.panelOrden.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelOrden.Location = new System.Drawing.Point(896, 60);
+            this.panelOrden.Location = new System.Drawing.Point(854, 60);
             this.panelOrden.Name = "panelOrden";
-            this.panelOrden.Size = new System.Drawing.Size(532, 748);
+            this.panelOrden.Size = new System.Drawing.Size(532, 688);
             this.panelOrden.TabIndex = 9;
             // 
             // btnEnviarCocina
@@ -392,8 +416,8 @@
             this.dtgOrden.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgOrden.Location = new System.Drawing.Point(6, 36);
             this.dtgOrden.Name = "dtgOrden";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
-            this.dtgOrden.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
+            this.dtgOrden.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgOrden.Size = new System.Drawing.Size(514, 560);
             this.dtgOrden.TabIndex = 4;
             // 
@@ -420,36 +444,12 @@
             this.label3.Text = "Orden";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelTipodeCuenta
-            // 
-            this.labelTipodeCuenta.AutoSize = true;
-            this.labelTipodeCuenta.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.labelTipodeCuenta.ForeColor = System.Drawing.Color.White;
-            this.labelTipodeCuenta.Location = new System.Drawing.Point(98, 29);
-            this.labelTipodeCuenta.Name = "labelTipodeCuenta";
-            this.labelTipodeCuenta.Size = new System.Drawing.Size(55, 20);
-            this.labelTipodeCuenta.TabIndex = 12;
-            this.labelTipodeCuenta.Text = "Cajero";
-            this.labelTipodeCuenta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelUsuario
-            // 
-            this.labelUsuario.AutoSize = true;
-            this.labelUsuario.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.labelUsuario.ForeColor = System.Drawing.Color.White;
-            this.labelUsuario.Location = new System.Drawing.Point(46, 9);
-            this.labelUsuario.Name = "labelUsuario";
-            this.labelUsuario.Size = new System.Drawing.Size(107, 20);
-            this.labelUsuario.TabIndex = 13;
-            this.labelUsuario.Text = "Usuario: LuisB";
-            this.labelUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // frmCajero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
-            this.ClientSize = new System.Drawing.Size(1428, 848);
+            this.ClientSize = new System.Drawing.Size(1386, 788);
             this.ControlBox = false;
             this.Controls.Add(this.panelOrden);
             this.Controls.Add(this.panelMenu);
