@@ -28,5 +28,15 @@ namespace SistemaComidaRapida
             crudmenu.MdiParent = this;
             crudmenu.Show();
         }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Está seguro que quiere cerrar Sesión?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes) this.Close();
+        }
+
+        private void labelUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
