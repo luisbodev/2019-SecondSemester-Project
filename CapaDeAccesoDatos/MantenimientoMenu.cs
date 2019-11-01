@@ -28,7 +28,7 @@ namespace CapaDeAccesoDatos
                 if (p == "")
                     this.sql = "select * from " + tabla;
                 else
-                    this.sql = "select * from " + tabla + " where nombre like '%" + p + "%'";// or Apellido like '%" + p + "%'
+                    this.sql = "select * from " + tabla + " where nombre like '%" + p + "%' or idMenu like '%" + p + "%'";// or Apellido like '%" + p + "%'
                 try
                     {
                         conn.abrir_conexion();
@@ -72,7 +72,7 @@ namespace CapaDeAccesoDatos
 
             public string modificarMenu(Menu m)
             {
-                cmd = new SqlCommand(string.Format("Update menu set nombre = '{0}', descripcion = '{1}', precio = '{2}' where idMenu= '{3}'", m.Descipcion, m.Precio, m.Nombre, m.IdMenu), conn.conex);
+                cmd = new SqlCommand(string.Format("Update menu set nombre = '{0}', descripcion = '{1}', precio = '{2}' where idMenu= '{3}'", m.Nombre, m.Descipcion, m.Precio, m.IdMenu), conn.conex);
                 try
                 {
                     conn.abrir_conexion();
