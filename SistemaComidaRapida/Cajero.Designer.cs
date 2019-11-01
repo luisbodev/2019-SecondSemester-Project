@@ -30,7 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCajero));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelTop = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelTopRight = new System.Windows.Forms.Panel();
@@ -46,7 +51,6 @@
             this.panelBottom = new System.Windows.Forms.Panel();
             this.panelTime = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.dtgMenu = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.panelBuscar = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -58,19 +62,20 @@
             this.btnEnviarCocina = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnExtras = new System.Windows.Forms.Button();
-            this.dtgOrden = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.dgvMenu = new System.Windows.Forms.DataGridView();
+            this.dgvOrden = new System.Windows.Forms.DataGridView();
             this.panelTop.SuspendLayout();
             this.panelTopRight.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelBottom.SuspendLayout();
             this.panelTime.SuspendLayout();
             this.panelMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgMenu)).BeginInit();
             this.panelBuscar.SuspendLayout();
             this.panelOrden.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgOrden)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrden)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTop
@@ -244,7 +249,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.Transparent;
-            this.panelMenu.Controls.Add(this.dtgMenu);
+            this.panelMenu.Controls.Add(this.dgvMenu);
             this.panelMenu.Controls.Add(this.label2);
             this.panelMenu.Controls.Add(this.panelBuscar);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -252,16 +257,6 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(838, 688);
             this.panelMenu.TabIndex = 8;
-            // 
-            // dtgMenu
-            // 
-            this.dtgMenu.AllowUserToOrderColumns = true;
-            this.dtgMenu.BackgroundColor = System.Drawing.Color.White;
-            this.dtgMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgMenu.Location = new System.Drawing.Point(12, 36);
-            this.dtgMenu.Name = "dtgMenu";
-            this.dtgMenu.Size = new System.Drawing.Size(639, 665);
-            this.dtgMenu.TabIndex = 7;
             // 
             // label2
             // 
@@ -291,11 +286,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Trebuchet MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
             this.label4.Location = new System.Drawing.Point(16, 47);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 18);
+            this.label4.Size = new System.Drawing.Size(59, 22);
             this.label4.TabIndex = 5;
             this.label4.Text = "Buscar";
             // 
@@ -312,7 +307,7 @@
             this.checkCombos.AutoSize = true;
             this.checkCombos.Font = new System.Drawing.Font("Trebuchet MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkCombos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
-            this.checkCombos.Location = new System.Drawing.Point(19, 106);
+            this.checkCombos.Location = new System.Drawing.Point(18, 106);
             this.checkCombos.Name = "checkCombos";
             this.checkCombos.Size = new System.Drawing.Size(87, 26);
             this.checkCombos.TabIndex = 3;
@@ -324,7 +319,7 @@
             this.checkBebidas.AutoSize = true;
             this.checkBebidas.Font = new System.Drawing.Font("Trebuchet MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.checkBebidas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
-            this.checkBebidas.Location = new System.Drawing.Point(19, 129);
+            this.checkBebidas.Location = new System.Drawing.Point(18, 132);
             this.checkBebidas.Name = "checkBebidas";
             this.checkBebidas.Size = new System.Drawing.Size(88, 26);
             this.checkBebidas.TabIndex = 3;
@@ -336,7 +331,7 @@
             this.checkPlatos.AutoSize = true;
             this.checkPlatos.Font = new System.Drawing.Font("Trebuchet MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.checkPlatos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
-            this.checkPlatos.Location = new System.Drawing.Point(19, 157);
+            this.checkPlatos.Location = new System.Drawing.Point(18, 158);
             this.checkPlatos.Name = "checkPlatos";
             this.checkPlatos.Size = new System.Drawing.Size(75, 26);
             this.checkPlatos.TabIndex = 3;
@@ -345,10 +340,10 @@
             // 
             // panelOrden
             // 
+            this.panelOrden.Controls.Add(this.dgvOrden);
             this.panelOrden.Controls.Add(this.btnEnviarCocina);
             this.panelOrden.Controls.Add(this.btnModificar);
             this.panelOrden.Controls.Add(this.btnExtras);
-            this.panelOrden.Controls.Add(this.dtgOrden);
             this.panelOrden.Controls.Add(this.button3);
             this.panelOrden.Controls.Add(this.label3);
             this.panelOrden.Dock = System.Windows.Forms.DockStyle.Right;
@@ -368,7 +363,7 @@
             this.btnEnviarCocina.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
             this.btnEnviarCocina.ForeColor = System.Drawing.Color.White;
             this.btnEnviarCocina.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnEnviarCocina.Location = new System.Drawing.Point(137, 658);
+            this.btnEnviarCocina.Location = new System.Drawing.Point(137, 642);
             this.btnEnviarCocina.Name = "btnEnviarCocina";
             this.btnEnviarCocina.Size = new System.Drawing.Size(266, 43);
             this.btnEnviarCocina.TabIndex = 8;
@@ -386,7 +381,7 @@
             this.btnModificar.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
             this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnModificar.Location = new System.Drawing.Point(116, 602);
+            this.btnModificar.Location = new System.Drawing.Point(120, 589);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(102, 35);
             this.btnModificar.TabIndex = 7;
@@ -404,23 +399,12 @@
             this.btnExtras.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
             this.btnExtras.ForeColor = System.Drawing.Color.White;
             this.btnExtras.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnExtras.Location = new System.Drawing.Point(332, 602);
+            this.btnExtras.Location = new System.Drawing.Point(332, 589);
             this.btnExtras.Name = "btnExtras";
             this.btnExtras.Size = new System.Drawing.Size(102, 35);
             this.btnExtras.TabIndex = 6;
             this.btnExtras.Text = "Extras";
             this.btnExtras.UseVisualStyleBackColor = false;
-            // 
-            // dtgOrden
-            // 
-            this.dtgOrden.BackgroundColor = System.Drawing.Color.White;
-            this.dtgOrden.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgOrden.Location = new System.Drawing.Point(6, 36);
-            this.dtgOrden.Name = "dtgOrden";
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
-            this.dtgOrden.RowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtgOrden.Size = new System.Drawing.Size(514, 560);
-            this.dtgOrden.TabIndex = 4;
             // 
             // button3
             // 
@@ -444,6 +428,88 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Orden";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dgvMenu
+            // 
+            this.dgvMenu.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(39)))), ((int)(((byte)(67)))));
+            this.dgvMenu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvMenu.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMenu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvMenu.ColumnHeadersHeight = 35;
+            this.dgvMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMenu.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvMenu.EnableHeadersVisualStyles = false;
+            this.dgvMenu.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
+            this.dgvMenu.Location = new System.Drawing.Point(12, 36);
+            this.dgvMenu.Name = "dgvMenu";
+            this.dgvMenu.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMenu.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvMenu.RowHeadersVisible = false;
+            this.dgvMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvMenu.Size = new System.Drawing.Size(635, 609);
+            this.dgvMenu.TabIndex = 34;
+            // 
+            // dgvOrden
+            // 
+            this.dgvOrden.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(39)))), ((int)(((byte)(67)))));
+            this.dgvOrden.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvOrden.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvOrden.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.dgvOrden.ColumnHeadersHeight = 35;
+            this.dgvOrden.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvOrden.DefaultCellStyle = dataGridViewCellStyle11;
+            this.dgvOrden.EnableHeadersVisualStyles = false;
+            this.dgvOrden.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
+            this.dgvOrden.Location = new System.Drawing.Point(10, 36);
+            this.dgvOrden.Name = "dgvOrden";
+            this.dgvOrden.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvOrden.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            this.dgvOrden.RowHeadersVisible = false;
+            this.dgvOrden.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvOrden.Size = new System.Drawing.Size(510, 528);
+            this.dgvOrden.TabIndex = 35;
             // 
             // frmCajero
             // 
@@ -472,12 +538,12 @@
             this.panelTime.PerformLayout();
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgMenu)).EndInit();
             this.panelBuscar.ResumeLayout(false);
             this.panelBuscar.PerformLayout();
             this.panelOrden.ResumeLayout(false);
             this.panelOrden.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgOrden)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrden)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -501,8 +567,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dtgMenu;
-        private System.Windows.Forms.DataGridView dtgOrden;
         private System.Windows.Forms.Button btnEnviarCocina;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnExtras;
@@ -513,5 +577,7 @@
         public System.Windows.Forms.Panel panelTop;
         private System.Windows.Forms.Label labelTipodeCuenta;
         private System.Windows.Forms.Label labelUsuario;
+        private System.Windows.Forms.DataGridView dgvMenu;
+        private System.Windows.Forms.DataGridView dgvOrden;
     }
 }

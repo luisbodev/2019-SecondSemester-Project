@@ -19,16 +19,7 @@ namespace SistemaComidaRapida
 
         private void Cajero_Load(object sender, EventArgs e)
         {
-            Size desktopSize = System.Windows.Forms.SystemInformation.PrimaryMonitorSize; //Captura el Tamaño del Monitor
-            /*int desktopWidth5 = desktopSize.Width / 6;
-            panelMenu.Width = desktopWidth5 * 4;
-            dtgMenu.Width = (desktopWidth5 * 3) - 25;
-            dtgOrden.Width = (desktopWidth5 * 2) - 25;
-            panelBuscar.Width = desktopWidth5;
-            panelOrden.Width = desktopWidth5*2;*/
-
-            
-
+            Size desktopSize = System.Windows.Forms.SystemInformation.PrimaryMonitorSize; //Captura el Tamaño del Monitor     
             Int32 ancho = (this.Width - panelTime.Width) / 2;
             panelTime.Location = new Point(ancho, panelTime.Location.Y);
 

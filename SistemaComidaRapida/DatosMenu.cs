@@ -59,7 +59,7 @@ namespace SistemaComidaRapida
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            respuesta = obje.modificar_menu(txtNom.Text,txtIdMenu.Text, txtDesc.Text, txtPrec.Text);
+            respuesta = obje.modificar_menu(txtIdMenu.Text, txtNom.Text, txtDesc.Text, txtPrec.Text);
             llenar();
             if (respuesta == "1")
             {
