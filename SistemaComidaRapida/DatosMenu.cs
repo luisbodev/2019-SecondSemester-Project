@@ -145,10 +145,5 @@ namespace SistemaComidaRapida
             }
 
         }
-
-        private void txtPrec_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
