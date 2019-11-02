@@ -38,5 +38,12 @@ namespace SistemaComidaRapida
         {
 
         }
+
+        private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDatosEmpleado frmDE = new frmDatosEmpleado();
+            frmDE.MdiParent = this;
+            frmDE.Show();
+        }
     }
 }

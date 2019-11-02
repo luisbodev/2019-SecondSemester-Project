@@ -64,5 +64,19 @@ namespace CapaDeAccesoDatos
                 rol = value;
             }
         }
+
+
+        public Usuario()
+        {
+
+        }
+
+        public Usuario(string pNusuario, int pIdEmpleado, string pContrasena, string pRol )
+        {
+            this.Nusuario = pNusuario;
+            this.IdEmpleado = pIdEmpleado;
+            this.Contrasena = pContrasena;
+            this.Rol = pRol;
+        }
     }
 }

@@ -6,25 +6,57 @@ using System.Threading.Tasks;
 
 namespace CapaDeAccesoDatos
 {
-    class Empleado
+    public class Empleado
     {
 
 
-        private int integer;
+
+        private int idEmpleado;
+        private string nombreEmpleado;
+        private string apellidoEmpleado;
         private string duiEmpleado;
         private string cargo;
-        private string nombre;
 
-        public int Integer
+        public int IdEmpleado
         {
             get
             {
-                return integer;
+                return idEmpleado;
             }
 
             set
             {
-                integer = value;
+                idEmpleado = value;
+            }
+        }
+
+        public string NombreEmpleado
+        {
+            get
+            {
+                return nombreEmpleado;
+            }
+
+            set
+            {
+                nombreEmpleado = value;
+            }
+        }
+
+
+
+
+
+        public string Cargo
+        {
+            get
+            {
+                return cargo;
+            }
+
+            set
+            {
+                cargo = value;
             }
         }
 
@@ -41,30 +73,33 @@ namespace CapaDeAccesoDatos
             }
         }
 
-        public string Cargo
+        public string ApellidoEmpleado
         {
             get
             {
-                return cargo;
+                return apellidoEmpleado;
             }
 
             set
             {
-                cargo = value;
+                apellidoEmpleado = value;
             }
         }
 
-        public string Nombre
+        public Empleado()
         {
-            get
-            {
-                return nombre;
-            }
 
-            set
-            {
-                nombre = value;
-            }
         }
+
+        public Empleado(int pIdEmpleado, string pNombreEmpleado, string pApellidoEmpleado, string pDuiEmpleado, string pCargo)
+        {
+            this.IdEmpleado = pIdEmpleado;
+            this.NombreEmpleado = pNombreEmpleado;
+            this.ApellidoEmpleado = pApellidoEmpleado;
+            this.DuiEmpleado = pDuiEmpleado;
+            this.Cargo = pCargo;     
+        }
+
+
     }
 }

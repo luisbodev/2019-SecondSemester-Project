@@ -44,7 +44,9 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="Empleado.cs" />
+    <Compile Include="MantenimientoEmpleado.cs" />
     <Compile Include="MantenimientoMenu.cs" />
+    <Compile Include="MantenimientoUsuario.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
