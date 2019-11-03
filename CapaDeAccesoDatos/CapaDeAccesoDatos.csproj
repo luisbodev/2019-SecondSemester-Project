@@ -42,8 +42,10 @@
   <ItemGroup>
     <Compile Include="Autenticacion.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="Cliente.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="Empleado.cs" />
+    <Compile Include="MantenimientoCliente.cs" />
     <Compile Include="MantenimientoEmpleado.cs" />
     <Compile Include="MantenimientoMenu.cs" />
     <Compile Include="MantenimientoUsuario.cs" />

@@ -38,7 +38,7 @@ namespace Clases
 
         public string eliminar_Empleado(string idEmpleado)
         {
-            Empleado a = new Empleado(int.Parse(idEmpleado), "", "", "", "");
+            Empleado a = new Empleado(int.Parse(idEmpleado),"", "", "", "");
             return obj.eliminar(a);
         }
     }
