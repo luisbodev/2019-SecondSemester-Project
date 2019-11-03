@@ -8,33 +8,35 @@ using System.Data.SqlClient;
 
 namespace CapaDeAccesoDatos
 {
-    class MantenimientoDetalleOrden
+    public class MantenimientoDetOrden
     {
         string sql;
         Conexion conn = new Conexion();
         SqlCommand cmd;
         string error;
-        int respuesta = 0;
+        int res = 0;
 
-        //Mostrar Informacion DetallePedido
-        public DataTable mostrarDetallePedido(string tabla){
+        public DataTable mostrarDetalleOrden(string tabla, string p)
+        {
             DataTable datos = new DataTable();
-            SqlDataAdapter adap;
-            this.sql = "select * from " + tabla;
-            
-            try {
+            SqlDataAdapter adapt;
+
+            this.sql = "select * from " + tabla + " where noOrden =" + p;
+            try
+            {
                 conn.abrir_conexion();
-                adap = new SqlDataAdapter(this.sql, conn.conex);
-                adap.Fill(datos);
+                adapt = new SqlDataAdapter(this.sql, conn.conex);
+                adapt.Fill(datos);
             }
-            catch(Exception e) {
+            catch (Exception e)
+            {
                 error = "Error " + e.ToString();
-            } 
-            finally {
+            }
+            finally
+            {
                 conn.cerrar_conexion();
             }
             return datos;
-                
         }
     }
 }

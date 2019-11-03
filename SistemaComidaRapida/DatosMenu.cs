@@ -145,5 +145,10 @@ namespace SistemaComidaRapida
             }
 
         }
+
+        private void dgvAlumnos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -44,8 +44,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TransacAutenticacion.cs" />
     <Compile Include="TransacCliente.cs" />
+    <Compile Include="TransacDetalleOrden.cs" />
     <Compile Include="TransacEmpleado.cs" />
     <Compile Include="TransacMenu.cs" />
+    <Compile Include="TransacOrden.cs" />
     <Compile Include="TransacUsuario.cs" />
   </ItemGroup>
   <ItemGroup>
