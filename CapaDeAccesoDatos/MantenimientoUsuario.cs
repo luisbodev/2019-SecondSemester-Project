@@ -50,7 +50,7 @@ namespace CapaDeAccesoDatos
         //Insertar datos
         public string agregarUsuario(Usuario u)//Creamos el objeto alumno = a 
         {
-            cmd = new SqlCommand(string.Format("Insert Into usuario(usuario, idEmpleado, contasena, rol)  values('{0}','{1}','{2}','{3}')",
+            cmd = new SqlCommand(string.Format("Insert Into usuario(usuario, idEmpleado, contrasena, rol)  values('{0}','{1}','{2}','{3}')",
             u.Nusuario, u.IdEmpleado,  u.Contrasena, u.Rol), conn.conex);
 
             try
@@ -73,7 +73,7 @@ namespace CapaDeAccesoDatos
 
         public string modificar(Usuario u)
         {
-            cmd = new SqlCommand(string.Format("Update usuario set usuario = '{0}', contrasena = '{2}', rol = '{3}' where idEmpleado ='{4}'",
+            cmd = new SqlCommand(string.Format("Update usuario set usuario = '{0}', contrasena = '{1}', rol = '{2}' where idEmpleado ='{3}'",
                 u.Nusuario, u.Contrasena, u.Rol, u.IdEmpleado), conn.conex);
 
             try
@@ -95,7 +95,7 @@ namespace CapaDeAccesoDatos
 
         public string eliminar(Usuario u)
         {
-            cmd = new SqlCommand(string.Format("Delete from usuarios where idEmpleado = '{1}'", u.IdEmpleado), conn.conex);
+            cmd = new SqlCommand(string.Format("Delete from usuario where idEmpleado = '{0}'", u.IdEmpleado), conn.conex);
 
             try
             {
