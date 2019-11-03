@@ -45,5 +45,12 @@ namespace SistemaComidaRapida
             frmDE.MdiParent = this;
             frmDE.Show();
         }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DatosCliente frmCli = new DatosCliente();
+            frmCli.MdiParent = this;
+            frmCli.Show();
+        }
     }
 }
