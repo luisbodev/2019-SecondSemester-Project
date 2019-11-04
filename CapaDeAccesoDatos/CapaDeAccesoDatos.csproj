@@ -44,12 +44,16 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Conexion.cs" />
+    <Compile Include="DetalleOrden.cs" />
     <Compile Include="Empleado.cs" />
     <Compile Include="MantenimientoCliente.cs" />
+    <Compile Include="MantenimientoDetOrden.cs" />
     <Compile Include="MantenimientoEmpleado.cs" />
     <Compile Include="MantenimientoMenu.cs" />
+    <Compile Include="MantenimientoOrden.cs" />
     <Compile Include="MantenimientoUsuario.cs" />
     <Compile Include="Menu.cs" />
+    <Compile Include="Orden.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usuario.cs" />

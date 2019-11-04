@@ -52,5 +52,12 @@ namespace SistemaComidaRapida
             frmCli.MdiParent = this;
             frmCli.Show();
         }
+
+        private void historialToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDatosOrdenes frmOrd = new frmDatosOrdenes();
+            frmOrd.MdiParent = this;
+            frmOrd.Show();
+        }
     }
 }

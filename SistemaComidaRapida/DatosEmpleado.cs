@@ -129,6 +129,11 @@ namespace SistemaComidaRapida
 
             txtIdUsuario.Text = dgvEmpleado.CurrentRow.Cells[0].Value.ToString();
             txtRol.Text = dgvEmpleado.CurrentRow.Cells[4].Value.ToString();
+            txtUser.Clear();
+            txtPass.Clear();
+            txtsena.Clear();
+            txtRol.Clear();
+            txtsena.Enabled = true;
         }
 
         private void btnCrearUsuario_Click(object sender, EventArgs e)
@@ -163,6 +168,7 @@ namespace SistemaComidaRapida
             txtApellido.Text = dgbEmpleado200.CurrentRow.Cells[2].Value.ToString();
             mskDui.Text = dgbEmpleado200.CurrentRow.Cells[3].Value.ToString();
             cmbCargo.Text = dgbEmpleado200.CurrentRow.Cells[4].Value.ToString();
+            
         }
 
         private void btnUnuevo_Click(object sender, EventArgs e)
@@ -218,6 +224,8 @@ namespace SistemaComidaRapida
             txtIdUsuario.Text = dgvUsuario.CurrentRow.Cells[1].Value.ToString();
             txtPass.Text = dgvUsuario.CurrentRow.Cells[2].Value.ToString();
             txtRol.Text = dgvUsuario.CurrentRow.Cells[3].Value.ToString();
+
+            txtsena.Enabled = false;
         }
     }
 }

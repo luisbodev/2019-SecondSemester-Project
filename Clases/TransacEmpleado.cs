@@ -12,6 +12,7 @@ namespace Clases
     {
         MantenimientoEmpleado obj = new MantenimientoEmpleado();
 
+
         public DataTable mostrar_Empleado()
         {
             return obj.mostrar("empleado", "");//select * from>>>>>>>>>>>>>>>>>>>>>>>>>>alumnos
