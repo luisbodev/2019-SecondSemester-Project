@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 namespace CapaDeAccesoDatos
 {
-    class DetalleOrden
+    public class DetalleOrden
     {
         private int noOrden;
         private int idMenu;
         private string extra;
         private int cantidad;
         private double precioUnidad;
-        private double descuento;
         private double total;
 
         public int NoOrden
@@ -81,19 +80,6 @@ namespace CapaDeAccesoDatos
             }
         }
 
-        public double Descuento
-        {
-            get
-            {
-                return descuento;
-            }
-
-            set
-            {
-                descuento = value;
-            }
-        }
-
         public double Total
         {
             get
@@ -111,13 +97,12 @@ namespace CapaDeAccesoDatos
 
         }
 
-        public DetalleOrden(int pNoOrden, int pIdMenu, string pExtra, int pCantidad, double pPrecioUnidad, double pDescuento, double pTotal) {
+        public DetalleOrden(int pNoOrden, int pIdMenu, string pExtra, int pCantidad, double pPrecioUnidad, double pTotal) {
             this.NoOrden = pNoOrden;
             this.IdMenu = pIdMenu;
             this.Extra = pExtra;
             this.Cantidad = pCantidad;
             this.PrecioUnidad = pPrecioUnidad;
-            this.Descuento = pDescuento;
             this.Total = pTotal;
         }
     }

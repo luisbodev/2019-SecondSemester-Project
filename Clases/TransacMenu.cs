@@ -18,6 +18,11 @@ namespace Clases
             return obje.mostrarMenu("menu", "");
         }
 
+        //Mostrar MenuOrden
+        public DataTable mostrar_menuOrden() {
+            return obje.mostrarMenuOrden("menu","");
+        }
+
         //Buscar menu
 
         public DataTable buscar_menu(string p)

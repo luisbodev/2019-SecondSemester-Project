@@ -38,5 +38,24 @@ namespace CapaDeAccesoDatos
             }
             return datos;
         }
+        //Agregar DetalleOrden
+            public string agregarPlatoDetalle(DetalleOrden d)
+            {
+                cmd = new SqlCommand(string.Format("Insert Into detalle_orden(noOden, idMenu, extra, cantidad, precioUnidad, total) Values('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')", d.NoOrden, d.IdMenu,d.Extra,d.Cantidad,d.PrecioUnidad,d.Total), conn.conex);
+                try
+                {
+                    conn.abrir_conexion();
+                    res = cmd.ExecuteNonQuery();
+                }
+                catch (Exception e)
+                {
+                    error = "Error " + e.Message;
+                }
+                finally
+                {
+                    conn.cerrar_conexion();
+                }
+                return "" + res;
+            }
     }
 }

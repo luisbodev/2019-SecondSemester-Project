@@ -20,6 +20,7 @@ namespace SistemaComidaRapida
         
         TransacMenu objMenu = new TransacMenu();
         TransacOrden objOrden = new TransacOrden();
+        TransacDetalleOrden objDtaOrde = new TransacDetalleOrden();
 
         
         String res = "";   
@@ -29,8 +30,12 @@ namespace SistemaComidaRapida
         }
 
         //Llenar Formulario
-        public void llenar() {
-            dgvMenu.DataSource = objMenu.mostrar_menu();
+        public void llenarMenu() {
+            dgvMenu.DataSource = objMenu.mostrar_menuOrden();
+        }
+        //Mostrar Orden Actual
+        public void llenarOrden() {
+            dgvDetalleOrden.DataSource = objDtaOrde.mostrar_detOrdenEspe(txtNoOrden.Text);
         }
 
         private void Cajero_Load(object sender, EventArgs e)
@@ -41,7 +46,7 @@ namespace SistemaComidaRapida
             labelFecha.Text = DateTime.Now.ToShortDateString();
             labelHora.Text = DateTime.Now.ToShortTimeString();
 
-            llenar();
+            llenarMenu();
 
             
             labelUsuario.Text ="Usuario: " + this.userEmp;
@@ -79,10 +84,6 @@ namespace SistemaComidaRapida
 
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         private void dgvMenu_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -90,19 +91,27 @@ namespace SistemaComidaRapida
             txtNombre.Text = dgvMenu.CurrentRow.Cells[1].Value.ToString();
             txtPrecio.Text = dgvMenu.CurrentRow.Cells[3].Value.ToString();
             txtDesc.Text = dgvMenu.CurrentRow.Cells[2].Value.ToString();
-
+            if(!(txtId.Text=="" || txtNoOrden.Text=="")) {
+                btnAgregar.Enabled = true;
+            }
+            else {
+                btnAgregar.Enabled = false;
+            }
         }
 
         private void btnAgregar_Click_1(object sender, EventArgs e)
-        {   
-            
-
-            
+        {
+            double total;
+            total = double.Parse(txtPrecio.Text) * double.Parse(txtCantidad.Text);
+            res = objDtaOrde.agregar_platoDetalle(txtNoOrden.Text, txtId.Text, txtExtra.Text, txtCantidad.Text, txtPrecio.Text, total.ToString());
+            btnAgregar.Enabled = false;
+            llenarOrden();
             txtId.Clear();
             txtNombre.Clear();
             txtPrecio.Clear();
             txtDesc.Clear();
             txtCantidad.Value=1;
+           
 
 
         }

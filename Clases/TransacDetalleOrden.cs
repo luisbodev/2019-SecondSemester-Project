@@ -19,5 +19,10 @@ namespace Clases
         public DataTable mostrar_detOrdenEspe(string p) {
             return obj.mostrarDetalleOrden("detalle_orden", p);
         }
+        //Agregar 
+        public string agregar_platoDetalle(string noOrden, string idMenu, string extra, string cantidad, string precioUnidad, string total) {
+            DetalleOrden d = new DetalleOrden(int.Parse(noOrden), int.Parse(idMenu), extra, int.Parse(cantidad), double.Parse(precioUnidad), double.Parse(total));
+            return obj.agregarPlatoDetalle(d);
+        }
     }
 }

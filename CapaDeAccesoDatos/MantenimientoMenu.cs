@@ -46,10 +46,44 @@ namespace CapaDeAccesoDatos
 
                     return datos;
                 }
+                //Mostrar MenuOrden
+                public DataTable mostrarMenuOrden(string tabla, string p)
+                {
+                    DataTable datos = new DataTable();
+                    SqlDataAdapter adap;
+                    if (p == "")
+                    {
+                        this.sql = "select m.idMenu as 'ID', m.nombre as 'Nombre', m.descripcion as 'Descripción', m.precio as 'Precio', c.nombreCate as 'Categoría'" +
+                        "from " + tabla + " m " +
+                        "inner join categoria c on c.idCategoria = m.idCategoria";
+                    }
+                    else {
+                        this.sql = "select m.idMenu as 'ID', m.nombre as 'Nombre', m.descripcion as 'Descripción', m.precio as 'Precio', c.nombreCate as 'Categoría'" +
+                        "from " + tabla + " m " +
+                        "inner join categoria c on c.idCategoria = m.idCategoria" +
+                        "where m.nombre = " + p;
+                    }
+                try
+                {
+                    conn.abrir_conexion();
+                    adap = new SqlDataAdapter(this.sql, conn.conex);
+                    adap.Fill(datos);
+                }
+                catch (Exception e)
+                {
+                    error = "Error " + e.ToString();
+                }
+                finally
+                {
+                    conn.cerrar_conexion();
+                }
 
-                //Agregar Menú
+                    return datos;
+                }
 
-                public string agregarMenu(Menu m)
+        //Agregar Menú
+
+        public string agregarMenu(Menu m)
                 {
                     cmd = new SqlCommand(string.Format("Insert Into menu(nombre, descripcion, precio) Values('{0}', '{1}', '{2}')", m.Nombre, m.Descipcion, m.Precio), conn.conex);
                     try
