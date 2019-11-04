@@ -95,7 +95,7 @@ namespace CapaDeAccesoDatos
 
         public string eliminar(Usuario u)
         {
-            cmd = new SqlCommand(string.Format("Delete from usuario where idEmpleado = '{0}'", u.IdEmpleado), conn.conex);
+            cmd = new SqlCommand(string.Format("Delete from usuario where usuario = '{0}'", u.Nusuario), conn.conex);
 
             try
             {
