@@ -131,34 +131,41 @@ namespace SistemaComidaRapida
             txtRol.Text = dgvEmpleado.CurrentRow.Cells[4].Value.ToString();
             txtUser.Clear();
             txtPass.Clear();
-            txtsena.Clear();
-            txtRol.Clear();
-            txtsena.Enabled = true;
+
+            btnUeliminar.Enabled = false;
+            btnUmodificar.Enabled = false;
+            btnCrearUsuario.Enabled = false;
+            //txtRol.Clear();
+
         }
 
         private void btnCrearUsuario_Click(object sender, EventArgs e)
         {
             //_-Agregar Usuario.  .Substring(0, 3)
             llenar();
-
-            if(txtPass.Text == txtsena.Text)
+            if(txtIdUsuario.Text != "")
             {
-                respuestaE = objU.agregar_Usuario(txtUser.Text, txtIdUsuario.Text, txtPass.Text, txtRol.Text.Substring(0, 4));
-                btnAgregar.Enabled = false;
-                llenar();
-                if (respuestaE == "1")
-                {
-                    MessageBox.Show("Registro Insertado Correctamente");
-                }
-                else
-                    MessageBox.Show("Datono Incertado" + respuestaE);
+               
+                    
+                        respuestaE = objU.agregar_Usuario(txtUser.Text, txtIdUsuario.Text, txtPass.Text, txtRol.Text.Substring(0, 4));
+                        btnAgregar.Enabled = false;
+                        llenar();
+                        if (respuestaE == "1")
+                        {
+                            MessageBox.Show("Registro Insertado Correctamente");
+                        }
+                        else
+                            MessageBox.Show("Datono Incertado" + respuestaE);
+                   
+                      
+                        
+                    
             }
             else
             {
-                MessageBox.Show("Las contraseñas no coinciden, intentelo de nuevo");
-                txtPass.Clear();
-                txtsena.Clear();
+                MessageBox.Show("Primero seleccione un Empleado, en la tabla, para crearle el usuario");
             }
+
         }
 
         private void dgbEmpleado200_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -173,7 +180,7 @@ namespace SistemaComidaRapida
 
         private void btnUnuevo_Click(object sender, EventArgs e)
         {
-            txtsena.Clear();
+            
             txtRol.Clear();
             txtUser.Clear();
             txtPass.Clear();
@@ -184,17 +191,18 @@ namespace SistemaComidaRapida
         {
             if (MessageBox.Show("¿Está seguro de Eliminar el registro?", "Eliminar Registro", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                respuestaE = objU.eliminar_Usuario(txtIdUsuario.Text);
-                txtsena.Clear();
+                respuestaE = objU.eliminar_Usuario(txtUser.Text);
+               
+                
                 txtRol.Clear();
                 txtUser.Clear();
                 txtPass.Clear();
                 txtIdUsuario.Clear();
                 llenar();
                 if (respuestaE == "1")
-                    MessageBox.Show("Registro Eliminado Correctamente");
+                { MessageBox.Show("Registro Eliminado Correctamente");}    
                 else
-                    MessageBox.Show("Registro No eliminado" + respuestaE);
+                { MessageBox.Show("Registro No eliminado" + respuestaE);}
             }
         }
 
@@ -225,7 +233,11 @@ namespace SistemaComidaRapida
             txtPass.Text = dgvUsuario.CurrentRow.Cells[2].Value.ToString();
             txtRol.Text = dgvUsuario.CurrentRow.Cells[3].Value.ToString();
 
-            txtsena.Enabled = false;
+            btnUeliminar.Enabled = true;
+            btnUmodificar.Enabled = true;
+            btnCrearUsuario.Enabled = false;
+
+
         }
     }
 }

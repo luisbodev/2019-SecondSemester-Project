@@ -39,9 +39,9 @@ namespace Clases
        
 
 
-        public string eliminar_Usuario(string idEmpleado)
+        public string eliminar_Usuario(string Usuario)
         {
-            Usuario a = new Usuario("",int.Parse(idEmpleado), "", "");
+            Usuario a = new Usuario(Usuario,0, "", "");
             return obj.eliminar(a);
         }
     }
