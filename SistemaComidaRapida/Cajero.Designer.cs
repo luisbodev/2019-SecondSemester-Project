@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCajero));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelTop = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelTopRight = new System.Windows.Forms.Panel();
@@ -57,20 +57,24 @@
             this.btnExtras = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtNombreCliente = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtIdCliente = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtNoOrden = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.checkPlatos = new System.Windows.Forms.CheckBox();
             this.checkBebidas = new System.Windows.Forms.CheckBox();
             this.checkCombos = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.dgvMenu = new System.Windows.Forms.DataGridView();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.NumericUpDown();
             this.txtDesc = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.txtCategoria = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
@@ -79,14 +83,10 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtNoOrden = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtIdCliente = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtNombreCliente = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnSelecCliente = new System.Windows.Forms.Button();
             this.panelTop.SuspendLayout();
             this.panelTopRight.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -269,9 +269,9 @@
             // 
             // panelOrden
             // 
+            this.panelOrden.Controls.Add(this.btnSelecCliente);
             this.panelOrden.Controls.Add(this.dgvOrden);
             this.panelOrden.Controls.Add(this.btnEnviarCocina);
-            this.panelOrden.Controls.Add(this.button1);
             this.panelOrden.Controls.Add(this.btnModificar);
             this.panelOrden.Controls.Add(this.btnExtras);
             this.panelOrden.Controls.Add(this.button3);
@@ -293,37 +293,37 @@
             this.dgvOrden.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(39)))), ((int)(((byte)(67)))));
             this.dgvOrden.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvOrden.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvOrden.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvOrden.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvOrden.ColumnHeadersHeight = 35;
             this.dgvOrden.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvOrden.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvOrden.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvOrden.EnableHeadersVisualStyles = false;
             this.dgvOrden.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
             this.dgvOrden.Location = new System.Drawing.Point(10, 125);
             this.dgvOrden.Name = "dgvOrden";
             this.dgvOrden.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvOrden.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvOrden.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvOrden.RowHeadersVisible = false;
             this.dgvOrden.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvOrden.Size = new System.Drawing.Size(510, 458);
@@ -346,6 +346,7 @@
             this.btnEnviarCocina.TabIndex = 8;
             this.btnEnviarCocina.Text = "Enviar a Cocina";
             this.btnEnviarCocina.UseVisualStyleBackColor = false;
+            this.btnEnviarCocina.Click += new System.EventHandler(this.btnEnviarCocina_Click);
             // 
             // btnModificar
             // 
@@ -406,6 +407,66 @@
             this.label3.Text = "Orden";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // txtNombreCliente
+            // 
+            this.txtNombreCliente.Enabled = false;
+            this.txtNombreCliente.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txtNombreCliente.Location = new System.Drawing.Point(260, 94);
+            this.txtNombreCliente.Name = "txtNombreCliente";
+            this.txtNombreCliente.Size = new System.Drawing.Size(260, 25);
+            this.txtNombreCliente.TabIndex = 48;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Trebuchet MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
+            this.label14.Location = new System.Drawing.Point(185, 96);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(69, 22);
+            this.label14.TabIndex = 45;
+            this.label14.Text = "Nombre";
+            // 
+            // txtIdCliente
+            // 
+            this.txtIdCliente.Enabled = false;
+            this.txtIdCliente.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txtIdCliente.Location = new System.Drawing.Point(275, 63);
+            this.txtIdCliente.Name = "txtIdCliente";
+            this.txtIdCliente.Size = new System.Drawing.Size(89, 25);
+            this.txtIdCliente.TabIndex = 48;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Trebuchet MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
+            this.label13.Location = new System.Drawing.Point(185, 66);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(86, 22);
+            this.label13.TabIndex = 45;
+            this.label13.Text = "Id CLiente";
+            // 
+            // txtNoOrden
+            // 
+            this.txtNoOrden.Enabled = false;
+            this.txtNoOrden.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txtNoOrden.Location = new System.Drawing.Point(209, 32);
+            this.txtNoOrden.Name = "txtNoOrden";
+            this.txtNoOrden.Size = new System.Drawing.Size(161, 25);
+            this.txtNoOrden.TabIndex = 48;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Trebuchet MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
+            this.label12.Location = new System.Drawing.Point(116, 34);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(87, 22);
+            this.label12.TabIndex = 45;
+            this.label12.Text = "No. Orden";
+            // 
             // checkPlatos
             // 
             this.checkPlatos.AutoSize = true;
@@ -464,37 +525,37 @@
             this.dgvMenu.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(39)))), ((int)(((byte)(67)))));
             this.dgvMenu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvMenu.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMenu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMenu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvMenu.ColumnHeadersHeight = 35;
             this.dgvMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMenu.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMenu.DefaultCellStyle = dataGridViewCellStyle11;
             this.dgvMenu.EnableHeadersVisualStyles = false;
             this.dgvMenu.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
             this.dgvMenu.Location = new System.Drawing.Point(12, 36);
             this.dgvMenu.Name = "dgvMenu";
             this.dgvMenu.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMenu.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMenu.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvMenu.RowHeadersVisible = false;
             this.dgvMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMenu.Size = new System.Drawing.Size(631, 609);
@@ -532,37 +593,6 @@
             this.panelMenu.Size = new System.Drawing.Size(838, 755);
             this.panelMenu.TabIndex = 8;
             // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txtBuscar.Location = new System.Drawing.Point(43, 694);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(189, 25);
-            this.txtBuscar.TabIndex = 35;
-            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Trebuchet MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
-            this.label9.Location = new System.Drawing.Point(50, 663);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(59, 22);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "Buscar";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
-            this.label2.Location = new System.Drawing.Point(245, 670);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 22);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Categoría";
-            // 
             // txtCantidad
             // 
             this.txtCantidad.BackColor = System.Drawing.Color.White;
@@ -599,6 +629,7 @@
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
             this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregar.Enabled = false;
             this.btnAgregar.FlatAppearance.BorderSize = 0;
             this.btnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -633,6 +664,19 @@
             this.txtCategoria.Name = "txtCategoria";
             this.txtCategoria.Size = new System.Drawing.Size(161, 25);
             this.txtCategoria.TabIndex = 47;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
+            this.label11.Location = new System.Drawing.Point(12, 3);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(81, 35);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Menú";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtId
             // 
@@ -716,96 +760,55 @@
             this.label4.TabIndex = 45;
             this.label4.Text = "Id";
             // 
-            // label11
+            // txtBuscar
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
-            this.label11.Location = new System.Drawing.Point(12, 3);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(81, 35);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Menú";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtBuscar.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txtBuscar.Location = new System.Drawing.Point(43, 694);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(189, 25);
+            this.txtBuscar.TabIndex = 35;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
-            // label12
+            // label9
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Trebuchet MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
-            this.label12.Location = new System.Drawing.Point(116, 34);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(87, 22);
-            this.label12.TabIndex = 45;
-            this.label12.Text = "No. Orden";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Trebuchet MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
+            this.label9.Location = new System.Drawing.Point(50, 663);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(59, 22);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "Buscar";
             // 
-            // txtNoOrden
+            // label2
             // 
-            this.txtNoOrden.Enabled = false;
-            this.txtNoOrden.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txtNoOrden.Location = new System.Drawing.Point(209, 32);
-            this.txtNoOrden.Name = "txtNoOrden";
-            this.txtNoOrden.Size = new System.Drawing.Size(161, 25);
-            this.txtNoOrden.TabIndex = 48;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
+            this.label2.Location = new System.Drawing.Point(245, 670);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(84, 22);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Categoría";
             // 
-            // label13
+            // btnSelecCliente
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Trebuchet MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
-            this.label13.Location = new System.Drawing.Point(185, 66);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(86, 22);
-            this.label13.TabIndex = 45;
-            this.label13.Text = "Id CLiente";
-            // 
-            // txtIdCliente
-            // 
-            this.txtIdCliente.Enabled = false;
-            this.txtIdCliente.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txtIdCliente.Location = new System.Drawing.Point(275, 63);
-            this.txtIdCliente.Name = "txtIdCliente";
-            this.txtIdCliente.Size = new System.Drawing.Size(89, 25);
-            this.txtIdCliente.TabIndex = 48;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Trebuchet MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
-            this.label14.Location = new System.Drawing.Point(185, 96);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(69, 22);
-            this.label14.TabIndex = 45;
-            this.label14.Text = "Nombre";
-            // 
-            // txtNombreCliente
-            // 
-            this.txtNombreCliente.Enabled = false;
-            this.txtNombreCliente.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txtNombreCliente.Location = new System.Drawing.Point(260, 94);
-            this.txtNombreCliente.Name = "txtNombreCliente";
-            this.txtNombreCliente.Size = new System.Drawing.Size(260, 25);
-            this.txtNombreCliente.TabIndex = 48;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button1.Location = new System.Drawing.Point(58, 66);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 52);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Seleccionar Cliente";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnSelecCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
+            this.btnSelecCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSelecCliente.FlatAppearance.BorderSize = 0;
+            this.btnSelecCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btnSelecCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnSelecCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelecCliente.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
+            this.btnSelecCliente.ForeColor = System.Drawing.Color.White;
+            this.btnSelecCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnSelecCliente.Location = new System.Drawing.Point(62, 67);
+            this.btnSelecCliente.Name = "btnSelecCliente";
+            this.btnSelecCliente.Size = new System.Drawing.Size(102, 52);
+            this.btnSelecCliente.TabIndex = 49;
+            this.btnSelecCliente.Text = "Seleccionar Cliente";
+            this.btnSelecCliente.UseVisualStyleBackColor = false;
+            this.btnSelecCliente.Click += new System.EventHandler(this.btnSelecCliente_Click);
             // 
             // frmCajero
             // 
@@ -888,12 +891,12 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtNombreCliente;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtIdCliente;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtNoOrden;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button btnSelecCliente;
     }
 }

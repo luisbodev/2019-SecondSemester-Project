@@ -13,6 +13,7 @@ namespace SistemaComidaRapida
 {
     public partial class frmCajero : Form
     {
+        
         TransacMenu objMenu = new TransacMenu();
         String res = "";   
         public frmCajero()
@@ -82,17 +83,33 @@ namespace SistemaComidaRapida
         }
 
         private void btnAgregar_Click_1(object sender, EventArgs e)
-        {
+        {   
+            
+
+            
             txtId.Clear();
             txtNombre.Clear();
             txtPrecio.Clear();
             txtDesc.Clear();
             txtCantidad.Value=1;
+
+
         }
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             dgvMenu.DataSource = objMenu.buscar_menu(txtBuscar.Text);
+        }
+
+        private void btnEnviarCocina_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSelecCliente_Click(object sender, EventArgs e)
+        {
+            frmSeleccionarCliente selecClie = new frmSeleccionarCliente();
+            selecClie.ShowDialog();
         }
     }
 }

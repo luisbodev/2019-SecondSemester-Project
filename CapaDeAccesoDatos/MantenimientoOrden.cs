@@ -86,6 +86,7 @@ namespace CapaDeAccesoDatos
             return datos;
 
         }
+        //Agregar Orden
         public string agregarOrden(Orden o)
         {
             cmd = new SqlCommand(string.Format("Insert Into orden(idEmpleado, fecha, idCliente, total) Values('{0}', '{1}', '{2}', '{3}')", o.IdEmpleado, o.Fecha,o.IdCliente,o.Total), conn.conex);
