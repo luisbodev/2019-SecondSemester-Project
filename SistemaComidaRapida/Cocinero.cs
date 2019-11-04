@@ -12,6 +12,7 @@ namespace SistemaComidaRapida
 {
     public partial class frmCocinero : Form
     {
+        public string userEmp;
         public frmCocinero()
         {
             InitializeComponent();

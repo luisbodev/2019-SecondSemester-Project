@@ -13,7 +13,7 @@ namespace CapaDeAccesoDatos
         string sql;
         Conexion conn = new Conexion();
         SqlCommand cmd;
-        string error;
+        string error, res;
         int respuesta = 0;
 
         //Mostrar Orden
@@ -61,6 +61,28 @@ namespace CapaDeAccesoDatos
             return datos;
 
         }
+        //Mostrar Id Emp
+        public string mostrarIdEmpleado(string tabla, string p)
+        {
+
+            this.sql = "select e.idEmpleado from " + tabla + " e inner join usuario u on u.idEmpleado = e.idEmpleado and u.usuario = '" + p + "'";
+            try
+            {
+                conn.abrir_conexion();
+                SqlCommand com = new SqlCommand(sql, conn.conex);
+                res = com.ExecuteScalar().ToString();
+            }
+            catch (Exception e)
+            {
+                error = "Error " + e.Message;
+            }
+            finally
+            {
+                conn.cerrar_conexion();
+            }
+            return res;
+
+        }
         //Mostrar Cliente
         public DataTable mostrarCliente(string tabla, string p)
         {
@@ -87,12 +109,15 @@ namespace CapaDeAccesoDatos
 
         }
         //Agregar Orden
-        public string agregarOrden(Orden o)
+       public string agregarOrden(Orden o)
         {
-            cmd = new SqlCommand(string.Format("Insert Into orden(idEmpleado, fecha, idCliente, total) Values('{0}', '{1}', '{2}', '{3}')", o.IdEmpleado, o.Fecha,o.IdCliente,o.Total), conn.conex);
+             cmd = new SqlCommand(string.Format("Insert Into orden(idEmpleado, fecha, idCliente, total) Values('{0}', '{1}', '{2}', '{3}')", o.IdEmpleado, o.Fecha,o.IdCliente,o.Total), conn.conex);
+            
         try{
            conn.abrir_conexion();
            respuesta = cmd.ExecuteNonQuery();
+           SqlCommand com = new SqlCommand(sql, conn.conex);
+           res = com.ExecuteScalar().ToString();
             }
         catch (Exception e){
                 error = "Error " + e.Message;
@@ -101,6 +126,28 @@ namespace CapaDeAccesoDatos
                 conn.cerrar_conexion();
             }
         return "" + respuesta;
+        }
+        //Seleccionar ultima orden
+        public string mostrarUltOrden(string tabla)
+        {
+
+            this.sql = "select top 1 noOrden from " + tabla + " order by noOrden desc; ";
+            try
+            {
+                conn.abrir_conexion();
+                SqlCommand com = new SqlCommand(sql, conn.conex);
+                res = com.ExecuteScalar().ToString();
+            }
+            catch (Exception e)
+            {
+                error = "Error " + e.Message;
+            }
+            finally
+            {
+                conn.cerrar_conexion();
+            }
+            return res;
+
         }
 
     }

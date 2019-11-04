@@ -14,6 +14,8 @@ namespace SistemaComidaRapida
 {
     public partial class frmLogin : Form
     {
+        
+
         public frmLogin()
         {
             InitializeComponent();
@@ -26,8 +28,9 @@ namespace SistemaComidaRapida
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
+            
             TransacAutenticacion obj = new TransacAutenticacion();
-
+            
 
 
 
@@ -47,8 +50,10 @@ namespace SistemaComidaRapida
 
 
             if (validLogin == true ){
+                
                 if (cadena == "admi"){
                     frmAdministrador adm = new frmAdministrador();
+                    adm.userEmp = txtNomUsu.Text;
                     adm.menuStripAdmin.Visible = true;
                     adm.Show();
                     
@@ -64,6 +69,7 @@ namespace SistemaComidaRapida
 
 
                     frmCajero caje = new frmCajero();
+                    caje.userEmp = txtNomUsu.Text;
                     caje.Show();
                     //this.Close();
                     caje.FormClosed += desLoguear; //Funcion de deslogeo-----------------------------------
@@ -71,13 +77,13 @@ namespace SistemaComidaRapida
                 }
                 else if (cadena == "chef"){
                     frmCocinero chef = new frmCocinero();
+                    chef.userEmp = txtNomUsu.Text;
                     this.Hide();
                     chef.ShowDialog();
                     //this.Close();
 
                     chef.FormClosed += desLoguear; //Funcion de deslogeo-----------------------------------
                 }
-
                 
             }
             else{

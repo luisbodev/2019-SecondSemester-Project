@@ -128,8 +128,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtContraUs;
         private System.Windows.Forms.Button btnIniciarSesion;
-        private System.Windows.Forms.TextBox txtNomUsu;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.TextBox txtNomUsu;
     }
 }
 

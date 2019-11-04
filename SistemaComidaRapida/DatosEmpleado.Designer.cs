@@ -45,6 +45,9 @@
             this.txtIdUsuario = new System.Windows.Forms.TextBox();
             this.txtRol = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.txtsena = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dgbEmpleado200 = new System.Windows.Forms.DataGridView();
@@ -65,8 +68,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.txtUbuscar = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.btnUnuevo = new System.Windows.Forms.Button();
@@ -74,6 +75,8 @@
             this.btnUeliminar = new System.Windows.Forms.Button();
             this.btnCrearUsuario = new System.Windows.Forms.Button();
             this.dgvEmpleado = new System.Windows.Forms.DataGridView();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -175,12 +178,12 @@
             // txtRol
             // 
             this.txtRol.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txtRol.Location = new System.Drawing.Point(62, 239);
+            this.txtRol.Location = new System.Drawing.Point(57, 313);
             this.txtRol.MaxLength = 4;
             this.txtRol.Name = "txtRol";
             this.txtRol.Size = new System.Drawing.Size(114, 25);
             this.txtRol.TabIndex = 63;
-            this.txtRol.TextChanged += new System.EventHandler(this.txtRol_TextChanged);
+            this.txtRol.Visible = false;
             // 
             // label6
             // 
@@ -192,6 +195,37 @@
             this.label6.Size = new System.Drawing.Size(92, 20);
             this.label6.TabIndex = 65;
             this.label6.Text = "IDEmpleado";
+            // 
+            // txtsena
+            // 
+            this.txtsena.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txtsena.Location = new System.Drawing.Point(114, 237);
+            this.txtsena.Name = "txtsena";
+            this.txtsena.Size = new System.Drawing.Size(114, 25);
+            this.txtsena.TabIndex = 67;
+            this.txtsena.UseSystemPasswordChar = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(12, 222);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(78, 20);
+            this.label9.TabIndex = 66;
+            this.label9.Text = "Confirmar";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(21, 242);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(87, 20);
+            this.label10.TabIndex = 68;
+            this.label10.Text = "Contraseña";
             // 
             // tabControl1
             // 
@@ -464,10 +498,13 @@
             this.tabPage2.Controls.Add(this.btnUeliminar);
             this.tabPage2.Controls.Add(this.txtUser);
             this.tabPage2.Controls.Add(this.btnCrearUsuario);
+            this.tabPage2.Controls.Add(this.label10);
             this.tabPage2.Controls.Add(this.dgvUsuario);
             this.tabPage2.Controls.Add(this.label8);
+            this.tabPage2.Controls.Add(this.txtsena);
             this.tabPage2.Controls.Add(this.dgvEmpleado);
             this.tabPage2.Controls.Add(this.Contraseña);
+            this.tabPage2.Controls.Add(this.label9);
             this.tabPage2.Controls.Add(this.txtPass);
             this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Controls.Add(this.txtIdUsuario);
@@ -478,28 +515,6 @@
             this.tabPage2.Size = new System.Drawing.Size(1226, 425);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Usuario";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(804, 20);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(347, 20);
-            this.label13.TabIndex = 75;
-            this.label13.Text = "Seleccione Usuario para modificarlo o eliminarlo";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(344, 20);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(293, 20);
-            this.label12.TabIndex = 74;
-            this.label12.Text = "Seleccione Empleado Para Crear Usuario";
             // 
             // txtUbuscar
             // 
@@ -622,6 +637,28 @@
             this.dgvEmpleado.TabIndex = 48;
             this.dgvEmpleado.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvEmpleado_CellMouseClick);
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(344, 20);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(274, 20);
+            this.label12.TabIndex = 74;
+            this.label12.Text = "Seleccione Cliente Para Crear Usuario";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(804, 20);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(347, 20);
+            this.label13.TabIndex = 75;
+            this.label13.Text = "Seleccione Usuario para modificarlo o eliminarlo";
+            // 
             // frmDatosEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -653,6 +690,9 @@
         private System.Windows.Forms.TextBox txtIdUsuario;
         private System.Windows.Forms.TextBox txtRol;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtsena;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label label5;

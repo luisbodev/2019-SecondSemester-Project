@@ -13,8 +13,15 @@ namespace SistemaComidaRapida
 {
     public partial class frmCajero : Form
     {
+        public string id_cliente, nombre_cliente, userEmp, idEmp, noOrden;
+        DateTime fecha;
+        
+
         
         TransacMenu objMenu = new TransacMenu();
+        TransacOrden objOrden = new TransacOrden();
+
+        
         String res = "";   
         public frmCajero()
         {
@@ -35,6 +42,10 @@ namespace SistemaComidaRapida
             labelHora.Text = DateTime.Now.ToShortTimeString();
 
             llenar();
+
+            
+            labelUsuario.Text ="Usuario: " + this.userEmp;
+            idEmp = objOrden.mostrar_IdEmpleado(this.userEmp);
         }
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
@@ -108,8 +119,27 @@ namespace SistemaComidaRapida
 
         private void btnSelecCliente_Click(object sender, EventArgs e)
         {
-            frmSeleccionarCliente selecClie = new frmSeleccionarCliente();
+            DatosCliente selecClie = new DatosCliente();
+            selecClie.btnSelecClie.Visible = true;
+            selecClie.btnModificar.Visible = false;
+            selecClie.btnEliminar.Visible = false;
             selecClie.ShowDialog();
+            txtIdCliente.Text = selecClie.idCliente;
+            txtNombreCliente.Text = selecClie.nombre;
+
+            fecha = DateTime.Today;
+            double total = 0;
+            res = objOrden.agrega_orden(idEmp, fecha.ToString(), txtIdCliente.Text, total.ToString());
+            if (res == "1")
+            {
+                MessageBox.Show("Orden Creada Exitosamente");
+                noOrden = objOrden.mostrar_ultOrden();
+                txtNoOrden.Text = noOrden;
+            }
+            else
+            {
+                MessageBox.Show("Fallo en crear orden " + res);
+            }
         }
     }
 }

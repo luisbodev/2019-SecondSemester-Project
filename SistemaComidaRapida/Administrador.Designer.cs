@@ -122,12 +122,12 @@
             this.labelUsuario.AutoSize = true;
             this.labelUsuario.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
             this.labelUsuario.ForeColor = System.Drawing.Color.White;
-            this.labelUsuario.Location = new System.Drawing.Point(152, 7);
+            this.labelUsuario.Location = new System.Drawing.Point(110, 9);
             this.labelUsuario.Name = "labelUsuario";
-            this.labelUsuario.Size = new System.Drawing.Size(98, 20);
+            this.labelUsuario.Size = new System.Drawing.Size(149, 20);
             this.labelUsuario.TabIndex = 0;
-            this.labelUsuario.Text = "Usuario: Luis";
-            this.labelUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelUsuario.Text = "Usuario: EstelaUS02";
+            this.labelUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.labelUsuario.Click += new System.EventHandler(this.labelUsuario_Click);
             // 
             // pictureBox1
@@ -245,6 +245,7 @@
             this.Name = "frmAdministrador";
             this.Text = "Administrador";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmAdministrador_Load);
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
             this.panelTopRight.ResumeLayout(false);

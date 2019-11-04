@@ -32,13 +32,21 @@ namespace Clases
         {
             return obje.mostrarCliente("cliente", p);
         }
+        //Mostrar idEmpleado
+        public string mostrar_IdEmpleado(string p) {
+            return obje.mostrarIdEmpleado("empleado", p);
+        }
 
         //Agregar Orden
         public string agrega_orden(string IdEmpleado, string Fecha, string IdCliente, string Total) {
             Orden o = new Orden(1, int.Parse(IdEmpleado), DateTime.Parse(Fecha), int.Parse(IdCliente), double.Parse(Total));
             return obje.agregarOrden(o);
         }
+        //Seleccionar ultima orden
+        public string mostrar_ultOrden() {
+            return obje.mostrarUltOrden("orden");
+        }
 
-        
+
     }
 }

@@ -12,7 +12,7 @@ namespace SistemaComidaRapida
 {
     public partial class frmAdministrador : Form
     {
-        
+        public string userEmp;
         public frmAdministrador()
         {
             InitializeComponent();
@@ -58,6 +58,11 @@ namespace SistemaComidaRapida
             frmDatosOrdenes frmOrd = new frmDatosOrdenes();
             frmOrd.MdiParent = this;
             frmOrd.Show();
+        }
+
+        private void frmAdministrador_Load(object sender, EventArgs e)
+        {
+            labelUsuario.Text = "Usuario: " + this.userEmp;
         }
     }
 }

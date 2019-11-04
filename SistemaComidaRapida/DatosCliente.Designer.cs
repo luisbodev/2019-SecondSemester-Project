@@ -50,6 +50,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnSelecClie = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,10 +94,11 @@
             // 
             // mskDui
             // 
+            this.mskDui.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
             this.mskDui.Location = new System.Drawing.Point(122, 256);
             this.mskDui.Mask = "00000000-0";
             this.mskDui.Name = "mskDui";
-            this.mskDui.Size = new System.Drawing.Size(176, 20);
+            this.mskDui.Size = new System.Drawing.Size(176, 25);
             this.mskDui.TabIndex = 89;
             // 
             // label3
@@ -186,7 +188,7 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(243, 347);
+            this.btnEliminar.Location = new System.Drawing.Point(277, 313);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(91, 26);
             this.btnEliminar.TabIndex = 83;
@@ -201,7 +203,7 @@
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
             this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(356, 347);
+            this.btnModificar.Location = new System.Drawing.Point(390, 313);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(104, 26);
             this.btnModificar.TabIndex = 82;
@@ -216,7 +218,7 @@
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
             this.btnNuevo.ForeColor = System.Drawing.Color.White;
-            this.btnNuevo.Location = new System.Drawing.Point(6, 347);
+            this.btnNuevo.Location = new System.Drawing.Point(40, 313);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(91, 26);
             this.btnNuevo.TabIndex = 81;
@@ -281,7 +283,7 @@
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(126, 347);
+            this.btnAgregar.Location = new System.Drawing.Point(160, 313);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(91, 26);
             this.btnAgregar.TabIndex = 75;
@@ -289,12 +291,30 @@
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // btnSelecClie
+            // 
+            this.btnSelecClie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
+            this.btnSelecClie.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSelecClie.Enabled = false;
+            this.btnSelecClie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelecClie.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
+            this.btnSelecClie.ForeColor = System.Drawing.Color.White;
+            this.btnSelecClie.Location = new System.Drawing.Point(77, 359);
+            this.btnSelecClie.Name = "btnSelecClie";
+            this.btnSelecClie.Size = new System.Drawing.Size(322, 43);
+            this.btnSelecClie.TabIndex = 115;
+            this.btnSelecClie.Text = "Seleccionar Cliente";
+            this.btnSelecClie.UseVisualStyleBackColor = false;
+            this.btnSelecClie.Visible = false;
+            this.btnSelecClie.Click += new System.EventHandler(this.btnSelecClie_Click);
+            // 
             // DatosCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
-            this.ClientSize = new System.Drawing.Size(966, 508);
+            this.ClientSize = new System.Drawing.Size(966, 428);
+            this.Controls.Add(this.btnSelecClie);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.label5);
@@ -314,8 +334,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAgregar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "DatosCliente";
-            this.Text = "DatosCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Datos Clientes";
             this.Load += new System.EventHandler(this.DatosCliente_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();
             this.ResumeLayout(false);
@@ -335,8 +357,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.DataGridView dgvCliente;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtIdCliente;
@@ -344,5 +364,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAgregar;
+        public System.Windows.Forms.Button btnSelecClie;
+        public System.Windows.Forms.Button btnEliminar;
+        public System.Windows.Forms.Button btnModificar;
     }
 }
