@@ -64,5 +64,10 @@ namespace SistemaComidaRapida
         {
             labelUsuario.Text = "Usuario: " + this.userEmp;
         }
+
+        private void frmAdministrador_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

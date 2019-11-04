@@ -78,11 +78,12 @@ namespace SistemaComidaRapida
                 else if (cadena == "chef"){
                     frmCocinero chef = new frmCocinero();
                     chef.userEmp = txtNomUsu.Text;
-                    this.Hide();
-                    chef.ShowDialog();
+                    
+                    chef.Show();
                     //this.Close();
 
                     chef.FormClosed += desLoguear; //Funcion de deslogeo-----------------------------------
+                    this.Hide();
                 }
                 
             }
