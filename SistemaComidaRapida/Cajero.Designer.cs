@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCajero));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelTop = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelTopRight = new System.Windows.Forms.Panel();
@@ -54,8 +54,6 @@
             this.btnSelecCliente = new System.Windows.Forms.Button();
             this.dgvDetalleOrden = new System.Windows.Forms.DataGridView();
             this.btnEnviarCocina = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnExtras = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
@@ -64,10 +62,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.txtNoOrden = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.checkPlatos = new System.Windows.Forms.CheckBox();
-            this.checkBebidas = new System.Windows.Forms.CheckBox();
-            this.checkCombos = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.dgvMenu = new System.Windows.Forms.DataGridView();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.txtCantidad = new System.Windows.Forms.NumericUpDown();
@@ -86,9 +80,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.txtExtra = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtTotalFinal = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.panelTop.SuspendLayout();
             this.panelTopRight.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -271,11 +267,10 @@
             // 
             // panelOrden
             // 
+            this.panelOrden.Controls.Add(this.label17);
             this.panelOrden.Controls.Add(this.btnSelecCliente);
             this.panelOrden.Controls.Add(this.dgvDetalleOrden);
             this.panelOrden.Controls.Add(this.btnEnviarCocina);
-            this.panelOrden.Controls.Add(this.btnModificar);
-            this.panelOrden.Controls.Add(this.btnExtras);
             this.panelOrden.Controls.Add(this.button3);
             this.panelOrden.Controls.Add(this.label3);
             this.panelOrden.Controls.Add(this.txtNombreCliente);
@@ -284,6 +279,7 @@
             this.panelOrden.Controls.Add(this.label13);
             this.panelOrden.Controls.Add(this.txtNoOrden);
             this.panelOrden.Controls.Add(this.label12);
+            this.panelOrden.Controls.Add(this.txtTotalFinal);
             this.panelOrden.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelOrden.Location = new System.Drawing.Point(854, 60);
             this.panelOrden.Name = "panelOrden";
@@ -303,9 +299,9 @@
             this.btnSelecCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnSelecCliente.Location = new System.Drawing.Point(62, 67);
             this.btnSelecCliente.Name = "btnSelecCliente";
-            this.btnSelecCliente.Size = new System.Drawing.Size(102, 52);
+            this.btnSelecCliente.Size = new System.Drawing.Size(105, 52);
             this.btnSelecCliente.TabIndex = 49;
-            this.btnSelecCliente.Text = "Seleccionar Cliente";
+            this.btnSelecCliente.Text = "Nueva Orden";
             this.btnSelecCliente.UseVisualStyleBackColor = false;
             this.btnSelecCliente.Click += new System.EventHandler(this.btnSelecCliente_Click);
             // 
@@ -314,37 +310,37 @@
             this.dgvDetalleOrden.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(39)))), ((int)(((byte)(67)))));
             this.dgvDetalleOrden.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvDetalleOrden.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDetalleOrden.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle31.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDetalleOrden.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
             this.dgvDetalleOrden.ColumnHeadersHeight = 35;
             this.dgvDetalleOrden.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDetalleOrden.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle32.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle32.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDetalleOrden.DefaultCellStyle = dataGridViewCellStyle32;
             this.dgvDetalleOrden.EnableHeadersVisualStyles = false;
             this.dgvDetalleOrden.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
             this.dgvDetalleOrden.Location = new System.Drawing.Point(10, 125);
             this.dgvDetalleOrden.Name = "dgvDetalleOrden";
             this.dgvDetalleOrden.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDetalleOrden.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle33.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle33.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
+            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDetalleOrden.RowHeadersDefaultCellStyle = dataGridViewCellStyle33;
             this.dgvDetalleOrden.RowHeadersVisible = false;
             this.dgvDetalleOrden.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDetalleOrden.Size = new System.Drawing.Size(510, 458);
@@ -354,6 +350,7 @@
             // 
             this.btnEnviarCocina.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
             this.btnEnviarCocina.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEnviarCocina.Enabled = false;
             this.btnEnviarCocina.FlatAppearance.BorderSize = 0;
             this.btnEnviarCocina.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.btnEnviarCocina.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -361,49 +358,13 @@
             this.btnEnviarCocina.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
             this.btnEnviarCocina.ForeColor = System.Drawing.Color.White;
             this.btnEnviarCocina.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnEnviarCocina.Location = new System.Drawing.Point(137, 642);
+            this.btnEnviarCocina.Location = new System.Drawing.Point(97, 643);
             this.btnEnviarCocina.Name = "btnEnviarCocina";
-            this.btnEnviarCocina.Size = new System.Drawing.Size(266, 43);
+            this.btnEnviarCocina.Size = new System.Drawing.Size(369, 50);
             this.btnEnviarCocina.TabIndex = 8;
             this.btnEnviarCocina.Text = "Enviar a Cocina";
             this.btnEnviarCocina.UseVisualStyleBackColor = false;
             this.btnEnviarCocina.Click += new System.EventHandler(this.btnEnviarCocina_Click);
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
-            this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModificar.FlatAppearance.BorderSize = 0;
-            this.btnModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.btnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
-            this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnModificar.Location = new System.Drawing.Point(120, 589);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(102, 35);
-            this.btnModificar.TabIndex = 7;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = false;
-            // 
-            // btnExtras
-            // 
-            this.btnExtras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
-            this.btnExtras.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExtras.FlatAppearance.BorderSize = 0;
-            this.btnExtras.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.btnExtras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.btnExtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExtras.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
-            this.btnExtras.ForeColor = System.Drawing.Color.White;
-            this.btnExtras.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnExtras.Location = new System.Drawing.Point(332, 589);
-            this.btnExtras.Name = "btnExtras";
-            this.btnExtras.Size = new System.Drawing.Size(102, 35);
-            this.btnExtras.TabIndex = 6;
-            this.btnExtras.Text = "Extras";
-            this.btnExtras.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
@@ -488,95 +449,43 @@
             this.label12.TabIndex = 45;
             this.label12.Text = "No. Orden";
             // 
-            // checkPlatos
-            // 
-            this.checkPlatos.AutoSize = true;
-            this.checkPlatos.Font = new System.Drawing.Font("Trebuchet MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.checkPlatos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
-            this.checkPlatos.Location = new System.Drawing.Point(526, 697);
-            this.checkPlatos.Name = "checkPlatos";
-            this.checkPlatos.Size = new System.Drawing.Size(75, 26);
-            this.checkPlatos.TabIndex = 3;
-            this.checkPlatos.Text = "Platos";
-            this.checkPlatos.UseVisualStyleBackColor = true;
-            this.checkPlatos.CheckedChanged += new System.EventHandler(this.checkPlatos_CheckedChanged);
-            // 
-            // checkBebidas
-            // 
-            this.checkBebidas.AutoSize = true;
-            this.checkBebidas.Font = new System.Drawing.Font("Trebuchet MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.checkBebidas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
-            this.checkBebidas.Location = new System.Drawing.Point(426, 695);
-            this.checkBebidas.Name = "checkBebidas";
-            this.checkBebidas.Size = new System.Drawing.Size(88, 26);
-            this.checkBebidas.TabIndex = 3;
-            this.checkBebidas.Text = "Bebidas";
-            this.checkBebidas.UseVisualStyleBackColor = true;
-            this.checkBebidas.CheckedChanged += new System.EventHandler(this.checkBebidas_CheckedChanged);
-            // 
-            // checkCombos
-            // 
-            this.checkCombos.AutoSize = true;
-            this.checkCombos.Font = new System.Drawing.Font("Trebuchet MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkCombos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
-            this.checkCombos.Location = new System.Drawing.Point(327, 695);
-            this.checkCombos.Name = "checkCombos";
-            this.checkCombos.Size = new System.Drawing.Size(87, 26);
-            this.checkCombos.TabIndex = 3;
-            this.checkCombos.Text = "Combos";
-            this.checkCombos.UseVisualStyleBackColor = true;
-            this.checkCombos.CheckedChanged += new System.EventHandler(this.checkCombos_CheckedChanged);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Trebuchet MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
-            this.checkBox1.Location = new System.Drawing.Point(249, 695);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(66, 26);
-            this.checkBox1.TabIndex = 3;
-            this.checkBox1.Text = "Todo";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkCombos_CheckedChanged);
-            // 
             // dgvMenu
             // 
             this.dgvMenu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMenu.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(39)))), ((int)(((byte)(67)))));
             this.dgvMenu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvMenu.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMenu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMenu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle34;
             this.dgvMenu.ColumnHeadersHeight = 35;
             this.dgvMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMenu.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle35.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle35.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
+            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMenu.DefaultCellStyle = dataGridViewCellStyle35;
             this.dgvMenu.EnableHeadersVisualStyles = false;
             this.dgvMenu.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
             this.dgvMenu.Location = new System.Drawing.Point(12, 36);
             this.dgvMenu.Name = "dgvMenu";
             this.dgvMenu.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMenu.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle36.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle36.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle36.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
+            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMenu.RowHeadersDefaultCellStyle = dataGridViewCellStyle36;
             this.dgvMenu.RowHeadersVisible = false;
             this.dgvMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMenu.Size = new System.Drawing.Size(631, 609);
@@ -586,6 +495,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.Transparent;
+            this.panelMenu.Controls.Add(this.label16);
             this.panelMenu.Controls.Add(this.txtCantidad);
             this.panelMenu.Controls.Add(this.txtExtra);
             this.panelMenu.Controls.Add(this.txtDesc);
@@ -604,12 +514,7 @@
             this.panelMenu.Controls.Add(this.label4);
             this.panelMenu.Controls.Add(this.txtBuscar);
             this.panelMenu.Controls.Add(this.dgvMenu);
-            this.panelMenu.Controls.Add(this.checkBox1);
-            this.panelMenu.Controls.Add(this.checkCombos);
             this.panelMenu.Controls.Add(this.label9);
-            this.panelMenu.Controls.Add(this.label2);
-            this.panelMenu.Controls.Add(this.checkBebidas);
-            this.panelMenu.Controls.Add(this.checkPlatos);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 60);
             this.panelMenu.Name = "panelMenu";
@@ -725,10 +630,11 @@
             // 
             this.txtPrecio.Enabled = false;
             this.txtPrecio.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txtPrecio.Location = new System.Drawing.Point(649, 186);
+            this.txtPrecio.Location = new System.Drawing.Point(668, 186);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(161, 25);
+            this.txtPrecio.Size = new System.Drawing.Size(142, 25);
             this.txtPrecio.TabIndex = 49;
+            this.txtPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label10
             // 
@@ -799,20 +705,9 @@
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
             this.label9.Location = new System.Drawing.Point(50, 663);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(59, 22);
+            this.label9.Size = new System.Drawing.Size(153, 22);
             this.label9.TabIndex = 5;
-            this.label9.Text = "Buscar";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
-            this.label2.Location = new System.Drawing.Point(245, 670);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 22);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Categoría";
+            this.label9.Text = "Buscar Por Nombre";
             // 
             // label15
             // 
@@ -836,6 +731,39 @@
             this.txtExtra.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtExtra.Size = new System.Drawing.Size(176, 76);
             this.txtExtra.TabIndex = 51;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Trebuchet MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
+            this.label16.Location = new System.Drawing.Point(649, 187);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(19, 22);
+            this.label16.TabIndex = 53;
+            this.label16.Text = "$";
+            // 
+            // txtTotalFinal
+            // 
+            this.txtTotalFinal.Enabled = false;
+            this.txtTotalFinal.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txtTotalFinal.Location = new System.Drawing.Point(378, 589);
+            this.txtTotalFinal.Name = "txtTotalFinal";
+            this.txtTotalFinal.Size = new System.Drawing.Size(142, 25);
+            this.txtTotalFinal.TabIndex = 49;
+            this.txtTotalFinal.Text = "0";
+            this.txtTotalFinal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Trebuchet MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
+            this.label17.Location = new System.Drawing.Point(305, 590);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(73, 22);
+            this.label17.TabIndex = 53;
+            this.label17.Text = "TOTAL $";
             // 
             // frmCajero
             // 
@@ -887,21 +815,14 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnEnviarCocina;
-        private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button btnExtras;
         private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Button btnCerrarT;
         public System.Windows.Forms.Panel panelTop;
         private System.Windows.Forms.Label labelTipodeCuenta;
         private System.Windows.Forms.Label labelUsuario;
         private System.Windows.Forms.DataGridView dgvDetalleOrden;
-        private System.Windows.Forms.CheckBox checkPlatos;
-        private System.Windows.Forms.CheckBox checkBebidas;
-        private System.Windows.Forms.CheckBox checkCombos;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.DataGridView dgvMenu;
         private System.Windows.Forms.Panel panelMenu;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.NumericUpDown txtCantidad;
@@ -927,5 +848,8 @@
         public System.Windows.Forms.TextBox txtIdCliente;
         private System.Windows.Forms.TextBox txtExtra;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txtTotalFinal;
+        private System.Windows.Forms.Label label16;
     }
 }

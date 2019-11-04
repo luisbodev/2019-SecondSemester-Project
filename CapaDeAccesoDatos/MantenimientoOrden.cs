@@ -111,7 +111,7 @@ namespace CapaDeAccesoDatos
         //Agregar Orden
        public string agregarOrden(Orden o)
         {
-             cmd = new SqlCommand(string.Format("Insert Into orden(idEmpleado, fecha, idCliente, total) Values('{0}', '{1}', '{2}', '{3}')", o.IdEmpleado, o.Fecha, o.IdCliente, o.Total), conn.conex);
+             cmd = new SqlCommand(string.Format("Insert Into orden(idEmpleado, fecha, idCliente, totalFinal) Values('{0}', '{1}', '{2}', '{3}')", o.IdEmpleado, o.Fecha, o.IdCliente, o.Total), conn.conex);
             
         try{
            conn.abrir_conexion();
@@ -147,6 +147,26 @@ namespace CapaDeAccesoDatos
             }
             return res;
 
+        }
+        //Agregar Total a orden
+        public string totalFinalOrden(string t, string o) {
+            cmd = new SqlCommand(string.Format("update orden set totalFinal = " + t + "where noOrden = " + o), conn.conex);
+
+            try
+            {
+                conn.abrir_conexion();
+                respuesta = cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception e)
+            {
+                error = "Error " + e.Message;
+            }
+            finally
+            {
+                conn.cerrar_conexion();
+            }
+            return "" + respuesta;
         }
 
     }

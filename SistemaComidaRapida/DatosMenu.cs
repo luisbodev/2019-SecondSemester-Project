@@ -44,7 +44,7 @@ namespace SistemaComidaRapida
                 MessageBox.Show("Registro Insertado Correctamente");
             }
             else
-                MessageBox.Show("Datono Incertado" + respuesta);
+                MessageBox.Show("Dato No Incertado" + respuesta);
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
