@@ -111,7 +111,7 @@ namespace SistemaComidaRapida
             txtTotalFinal.Text = totalFinal.ToString();
             if (res == "1")
             {
-                MessageBox.Show("Registro Insertado Correctamente");
+                
             }
             else
                 MessageBox.Show("Dato No Incertado" + res);
