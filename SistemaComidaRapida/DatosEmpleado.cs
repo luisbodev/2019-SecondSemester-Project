@@ -115,8 +115,20 @@ namespace SistemaComidaRapida
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            dgvEmpleado.DataSource = objE.buscar_Empleado(txtBuscar.Text);
+            dgbEmpleado200.DataSource = objE.buscar_Empleado(txtBuscar.Text);
         }
+
+        private void txtUbuscar_TextChanged(object sender, EventArgs e)
+        {
+            dgvUsuario.DataSource = objU.buscar_Usuario(txtUbuscar.Text);
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            dgvEmpleado.DataSource = objE.buscar_Empleado(textBox1.Text);
+        }
+        ///>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>
+
 
         private void dgvEmpleado_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -135,6 +147,7 @@ namespace SistemaComidaRapida
             btnUeliminar.Enabled = false;
             btnUmodificar.Enabled = false;
             btnCrearUsuario.Enabled = false;
+            btnCrearUsuario.Enabled = true;
             //txtRol.Clear();
 
         }
@@ -180,7 +193,9 @@ namespace SistemaComidaRapida
 
         private void btnUnuevo_Click(object sender, EventArgs e)
         {
-            
+            btnUeliminar.Enabled = true;
+            btnUmodificar.Enabled = true;
+            btnCrearUsuario.Enabled = true;
             txtRol.Clear();
             txtUser.Clear();
             txtPass.Clear();
@@ -191,9 +206,7 @@ namespace SistemaComidaRapida
         {
             if (MessageBox.Show("¿Está seguro de Eliminar el registro?", "Eliminar Registro", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                respuestaE = objU.eliminar_Usuario(txtUser.Text);
-               
-                
+                respuestaE = objU.eliminar_Usuario(txtUser.Text);               
                 txtRol.Clear();
                 txtUser.Clear();
                 txtPass.Clear();
@@ -239,5 +252,7 @@ namespace SistemaComidaRapida
 
 
         }
+
+  
     }
 }

@@ -26,7 +26,7 @@ namespace CapaDeAccesoDatos
             if (p == "")
                 this.sql = "select * from " + tabla;
             else
-                this.sql = "select * from " + tabla + " where usuario like '%" + p + "%'";
+                this.sql = "select * from " + tabla + " where usuario like '%" + p + "%' or idEmpleado like '%" + p + "%'";
 
             try
             {
