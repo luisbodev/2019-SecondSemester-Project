@@ -16,20 +16,20 @@ namespace CapaDeAccesoDatos
         SqlCommand cmd;
         String error;
         int res = 0;
-        public DataTable mostrar(string tabla, string p)
+        public DataTable mostrar(String tabla, String p)
         {
             DataTable datos = new DataTable();
-            SqlDataAdapter adap;
+            SqlDataAdapter adapt;
             if (p == "")
                 this.sql = "select * from " + tabla;
             else
-                this.sql = "select * from " + tabla + " where nombre like '%" + p + "%' or apellido like '%" + p + "%'";
+                this.sql = "select * from " + tabla + " where nombre like '%" + p + "%' or idCliente like '%" + p + "%'";
 
             try
             {
                 conn.abrir_conexion();
-                adap = new SqlDataAdapter(this.sql, conn.conex);
-                adap.Fill(datos);
+                adapt = new SqlDataAdapter(this.sql, conn.conex);
+                adapt.Fill(datos);
             }
             catch (Exception e)
             {
@@ -45,7 +45,7 @@ namespace CapaDeAccesoDatos
 
 
         //Insertar datos
-        public string agregar(Cliente c)//Creamos el objeto  = a 
+        public string agregar(Cliente c)//Creamos el objeto  = c
         {
             cmd = new SqlCommand(string.Format("Insert Into cliente(nombre, apellido, correo, telefono,dui) values('{0}','{1}','{2}','{3}','{4}')",
            c.Nombre, c.Apellido, c.Correo, c.Telefono, c.Dui), conn.conex);
@@ -70,7 +70,7 @@ namespace CapaDeAccesoDatos
 
         public string modificar(Cliente c)
         {
-            cmd = new SqlCommand(string.Format("Update cliente set nombre = '{0}', apellido = '{1}', correo = '{2}', telefono = '{3}', dui = '{4}', where idCliente ='{5}'",
+            cmd = new SqlCommand(string.Format("Update cliente set nombre = '{0}',apellido = '{1}',correo = '{2}',telefono = '{3}',dui = '{4}' where idCliente ='{5}'",
                 c.Nombre, c.Apellido, c.Correo, c.Telefono, c.Dui, c.IdCliente), conn.conex);
 
             try
