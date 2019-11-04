@@ -14,6 +14,7 @@ namespace SistemaComidaRapida
     public partial class DatosCliente : Form
     {
         public string idCliente, nombre;
+        public int bandera = 0;
 
         TransacCliente obj = new TransacCliente();
         string res = "";
@@ -116,8 +117,8 @@ namespace SistemaComidaRapida
             txtCorreo.Text = dgvCliente.CurrentRow.Cells[3].Value.ToString();
             txtTelefono.Text = dgvCliente.CurrentRow.Cells[4].Value.ToString();
             mskDui.Text = dgvCliente.CurrentRow.Cells[5].Value.ToString();
-            btnSelecClie.Enabled = true;
-
+            if(!(txtIdCliente.Text == ""))
+                btnSelecClie.Enabled = true;
         }
 
         private void dgvCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -133,6 +134,7 @@ namespace SistemaComidaRapida
 
         public void btnSelecClie_Click(object sender, EventArgs e)
         {
+            bandera = 1;
             idCliente = this.txtIdCliente.Text;
             nombre = this.txtNombre.Text+" " + this.txtApellido.Text;
             this.Close();

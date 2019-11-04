@@ -152,27 +152,31 @@ namespace SistemaComidaRapida
         {
             DatosCliente selecClie = new DatosCliente();
             selecClie.btnSelecClie.Visible = true;
+            selecClie.lbltitulo.Visible = true;
             selecClie.btnModificar.Visible = false;
             selecClie.btnEliminar.Visible = false;
             selecClie.ShowDialog();
-            txtIdCliente.Text = selecClie.idCliente;
-            txtNombreCliente.Text = selecClie.nombre;
 
-            fecha = DateTime.Today;
-            totalFinal = 0;
-            res = objOrden.agrega_orden(idEmp, fecha.ToString(), txtIdCliente.Text, totalFinal.ToString());
-            if (res == "1")
+            if (selecClie.bandera == 1)
             {
-                MessageBox.Show("Orden Creada Exitosamente");
-                noOrden = objOrden.mostrar_ultOrden();
-                txtNoOrden.Text = noOrden;
+                txtIdCliente.Text = selecClie.idCliente;
+                txtNombreCliente.Text = selecClie.nombre;
+
+                fecha = DateTime.Today;
+                totalFinal = 0;
+                res = objOrden.agrega_orden(idEmp, fecha.ToString(), txtIdCliente.Text, totalFinal.ToString());
+                if (res == "1")
+                {
+                    MessageBox.Show("Orden Creada Exitosamente");
+                    noOrden = objOrden.mostrar_ultOrden();
+                    txtNoOrden.Text = noOrden;
+                }
+                else
+                {
+                    MessageBox.Show("Fallo en crear orden " + res);
+                }
+                btnSelecCliente.Enabled = false;
             }
-            else
-            {
-                MessageBox.Show("Fallo en crear orden " + res);
-            }
-            btnSelecCliente.Enabled = false;
-            
         }
     }
 }

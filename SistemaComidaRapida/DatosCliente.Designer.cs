@@ -51,6 +51,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnSelecClie = new System.Windows.Forms.Button();
+            this.lbltitulo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -308,12 +309,25 @@
             this.btnSelecClie.Visible = false;
             this.btnSelecClie.Click += new System.EventHandler(this.btnSelecClie_Click);
             // 
+            // lbltitulo
+            // 
+            this.lbltitulo.AutoSize = true;
+            this.lbltitulo.Font = new System.Drawing.Font("Trebuchet MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.lbltitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
+            this.lbltitulo.Location = new System.Drawing.Point(273, 2);
+            this.lbltitulo.Name = "lbltitulo";
+            this.lbltitulo.Size = new System.Drawing.Size(155, 22);
+            this.lbltitulo.TabIndex = 116;
+            this.lbltitulo.Text = "Seleccionar Cliente";
+            this.lbltitulo.Visible = false;
+            // 
             // DatosCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(55)))), ((int)(((byte)(77)))));
             this.ClientSize = new System.Drawing.Size(966, 428);
+            this.Controls.Add(this.lbltitulo);
             this.Controls.Add(this.btnSelecClie);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.txtCorreo);
@@ -367,5 +381,6 @@
         public System.Windows.Forms.Button btnSelecClie;
         public System.Windows.Forms.Button btnEliminar;
         public System.Windows.Forms.Button btnModificar;
+        public System.Windows.Forms.Label lbltitulo;
     }
 }
