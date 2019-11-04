@@ -133,9 +133,10 @@ namespace SistemaComidaRapida
             txtPass.Clear();
 
             btnUeliminar.Enabled = false;
+            btnUmodificar.Enabled = false;
 
             //txtRol.Clear();
-          
+
 
         }
 
@@ -223,8 +224,10 @@ namespace SistemaComidaRapida
             txtRol.Text = dgvUsuario.CurrentRow.Cells[3].Value.ToString();
 
             btnUeliminar.Enabled = true;
+            btnUmodificar.Enabled = true;
 
-           
+
+
 
         }
 
