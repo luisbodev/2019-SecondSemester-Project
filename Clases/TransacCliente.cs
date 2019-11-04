@@ -15,12 +15,12 @@ namespace Clases
 
         public DataTable mostrar_Cliente()
         {
-            return obj.mostrar("Cliente", "");
+            return obj.mostrar("cliente", "");
         }
 
         public DataTable buscar_Cliente(string p)
         {
-            return obj.mostrar("Cliente", p); //Select * from where>>>>>>>>>>>>>>>>>>>>>>>>alumnos
+            return obj.mostrar("cliente", p); //Select * from where>>>>>>>>>>>>>>>>>>>>>>>>alumnos
 
         }
 
@@ -39,7 +39,7 @@ namespace Clases
 
         public string eliminar_Cliente(string idCliente)
         {
-            Cliente c = new Cliente(int.Parse(idCliente), "", "", "", "", "");
+            Cliente c = new Cliente(int.Parse(idCliente),"", "", "", "", "");
             return obj.eliminar(c);
         }
     }
