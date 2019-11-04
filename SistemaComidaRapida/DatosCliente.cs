@@ -24,9 +24,11 @@ namespace SistemaComidaRapida
 
             dgvCliente.DataSource = obj.mostrar_Cliente();
         }
+
+       
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            txtIdCliente.Clear();
+             txtIdCliente.Clear();
             txtNombre.Clear();
             txtApellido.Clear();
             txtCorreo.Clear();
@@ -42,6 +44,7 @@ namespace SistemaComidaRapida
         }
 
 
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             res = obj.agregar_Cliente(txtNombre.Text, txtApellido.Text, txtCorreo.Text, txtTelefono.Text, mskDui.Text);
@@ -54,6 +57,29 @@ namespace SistemaComidaRapida
             else
                 MessageBox.Show("Dato no insertado" + res);
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            res = obj.modificar_Cliente(txtIdCliente.Text, txtNombre.Text, txtApellido.Text, txtCorreo.Text, txtTelefono.Text, mskDui.Text);
+            llenar();
+            if (res == "1")
+            {
+                MessageBox.Show("Registro Modificado Correctamente");
+                txtIdCliente.Clear();
+                txtNombre.Clear();
+                txtApellido.Clear();
+                txtCorreo.Clear();
+                txtTelefono.Clear();
+                mskDui.Clear();
+            }
+
+            else
+            {
+                MessageBox.Show("Registro no modificado" + res);
+            }
+        }
+
+
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
@@ -74,16 +100,7 @@ namespace SistemaComidaRapida
             }
         }
 
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-            res = obj.modificar_Cliente(txtIdCliente.Text, txtNombre.Text, txtApellido.Text, txtCorreo.Text, txtTelefono.Text, mskDui.Text);
-            llenar();
-            if (res == "1")
-                MessageBox.Show("Registro Modificado Correctamente");
-            else
-                MessageBox.Show("Registro no modificado" + res);
-        }
-
+      
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             dgvCliente.DataSource = obj.buscar_Cliente(txtBuscar.Text);
@@ -109,7 +126,7 @@ namespace SistemaComidaRapida
 
         private void DatosCliente_Load_1(object sender, EventArgs e)
         {
-
+            llenar();
         }
     }
 }
