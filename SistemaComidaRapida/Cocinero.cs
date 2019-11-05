@@ -71,29 +71,37 @@ namespace SistemaComidaRapida
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if(ocupado1==0) {
-                ocupado1 = 1;
-                btnTerminado1.Enabled = true;
-                noOrdenIni = obj.mostrar_UltOrdenNoIni();
-                obj.modi_estadoOrden(noOrdenIni, 1.ToString());
-                txtNoOrden1.Text = noOrdenIni;
-                dgvDetalleOrden1.DataSource = obj.mostrar_detalleOrdPro(noOrdenIni);
-            }
-            else if(ocupado2==0) {
-                ocupado2 = 1;
-                btnTerminado2.Enabled = true;
-                noOrdenIni = obj.mostrar_UltOrdenNoIni();
-                obj.modi_estadoOrden(noOrdenIni, 1.ToString());
-                txtNoOrden2.Text = noOrdenIni;
-                dgvDetalleOrden2.DataSource = obj.mostrar_detalleOrdPro(noOrdenIni);
-            }
-            else if(ocupado3==0) {
-                ocupado3 = 1;
-                btnTerminado3.Enabled = true;
-                noOrdenIni = obj.mostrar_UltOrdenNoIni();
-                obj.modi_estadoOrden(noOrdenIni, 1.ToString());
-                txtNoOrden3.Text = noOrdenIni;
-                dgvDetalleOrden3.DataSource = obj.mostrar_detalleOrdPro(noOrdenIni);
+            if(ocupado1 == 0 || ocupado2 == 0 || ocupado3 == 0){
+                    string noOrdenIni;
+                    noOrdenIni = obj.mostrar_UltOrdenNoIni();
+                if (!(noOrdenIni == null))
+                {
+                    if (ocupado1 == 0 && noOrdenIni == "0")
+                    {
+                        ocupado1 = 1;
+                        btnTerminado1.Enabled = true;
+                        obj.modi_estadoOrden(noOrdenIni, 1.ToString());
+
+                        txtNoOrden1.Text = noOrdenIni;
+                        dgvDetalleOrden1.DataSource = obj.mostrar_detalleOrdPro(txtNoOrden1.Text);
+                    }
+                    else if (ocupado2 == 0 && int.Parse(noOrdenIni) == 0)
+                    {
+                        ocupado2 = 1;
+                        btnTerminado2.Enabled = true;
+
+                        txtNoOrden2.Text = noOrdenIni;
+                        dgvDetalleOrden2.DataSource = obj.mostrar_detalleOrdPro(txtNoOrden1.Text);
+                    }
+                    else if (ocupado3 == 0 && int.Parse(noOrdenIni) == 0)
+                    {
+                        ocupado3 = 1;
+                        btnTerminado3.Enabled = true;
+
+                        txtNoOrden3.Text = noOrdenIni;
+                        dgvDetalleOrden3.DataSource = obj.mostrar_detalleOrdPro(txtNoOrden1.Text);
+                    }
+                }
             }
         }
     }

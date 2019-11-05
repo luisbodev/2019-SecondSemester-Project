@@ -172,7 +172,7 @@ namespace CapaDeAccesoDatos
         public string mostrarUltOrdenNoIni()
         {
 
-            this.sql = "select top 1 o.noOrden from orden o where o.estado = 0; ";
+            this.sql = "select top 1 o.noOrden from orden o where o.estado = 0";
             try
             {
                 conn.abrir_conexion();
