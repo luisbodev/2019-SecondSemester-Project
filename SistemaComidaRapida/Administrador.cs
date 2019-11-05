@@ -75,5 +75,22 @@ namespace SistemaComidaRapida
             DatosCategoria frmCat = new DatosCategoria();
             frmCat.Show();
         }
+
+        private void verToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listaDeEmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReportEmpleados reporEmple = new ReportEmpleados();
+            reporEmple.ShowDialog();
+        }
+
+        private void generarReporteDeUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReporteUsuario repUsuario = new ReporteUsuario();
+            repUsuario.ShowDialog();
+        }
     }
 }
