@@ -14,6 +14,7 @@ namespace SistemaComidaRapida
     public partial class frmDatosMenu : Form
     {
         TransacMenu obje = new TransacMenu();
+        TransacCategoria objecd =  new TransacCategoria();
 
         string respuesta = "";
 
@@ -34,9 +35,16 @@ namespace SistemaComidaRapida
         private void frmDatosMenu_Load(object sender, EventArgs e)
         {
             llenar();
+            listarCategorias();
         }
 
-
+        private void listarCategorias()
+        {
+            TransacCategoria objeC = new TransacCategoria();
+            cobCategoria.DataSource = objeC.Listar_Cat("categoria");
+            cobCategoria.DisplayMember = "nombreCate";
+            cobCategoria.ValueMember = "idCategoria";
+        }
       
 
 
@@ -49,7 +57,7 @@ namespace SistemaComidaRapida
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            respuesta = obje.agregar_menu(txtNom.Text,txtDesc.Text, txtPrec.Text, cobCategoria.Text);
+            respuesta = obje.agregar_menu(txtNom.Text,txtDesc.Text, txtPrec.Text, int.Parse(cobCategoria.SelectedValue));
             btnAgregar.Enabled = false;
             llenar();
             if (respuesta == "1")
@@ -114,6 +122,7 @@ namespace SistemaComidaRapida
             txtNom.Text = dgvAlumnos.CurrentRow.Cells[1].Value.ToString();
             txtDesc.Text = dgvAlumnos.CurrentRow.Cells[2].Value.ToString();
             txtPrec.Text = dgvAlumnos.CurrentRow.Cells[3].Value.ToString();
+            cobCategoria.Text = dgvAlumnos.CurrentRow.Cells[4].Value.ToString();
             
         }
 

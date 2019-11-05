@@ -42,5 +42,11 @@ namespace Clases
             categoria a = new categoria(int.Parse(idCategoria), "");
             return obj.eliminar(a);
         }
+
+        public DataTable Listar_Cat(string categorie)
+        {
+           
+            return obj.ListarCategorias("categoria");
+        }
     }
 }

@@ -114,5 +114,22 @@ namespace CapaDeAccesoDatos
 
 
         }
+
+        public SqlDataReader Leerfilas;
+
+        public DataTable ListarCategorias(string tabla)
+        {
+            DataTable Tabla = new DataTable();
+            conn.abrir_conexion();
+            //cmd.CommandText = "select * from " + tabla;
+            cmd = new SqlCommand(string.Format("select * from " + tabla), conn.conex);
+            Leerfilas = cmd.ExecuteReader();
+            Tabla.Load(Leerfilas);
+            Leerfilas.Close();
+            conn.cerrar_conexion();
+            return Tabla;
+           
+
+        }
     }
 }
