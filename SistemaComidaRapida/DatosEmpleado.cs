@@ -34,6 +34,7 @@ namespace SistemaComidaRapida
         private void DatosEmpleado_Load(object sender, EventArgs e)
         {
             llenar();
+            cmbCargo.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)

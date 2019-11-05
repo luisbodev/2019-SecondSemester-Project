@@ -57,7 +57,7 @@ namespace SistemaComidaRapida
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            respuesta = obje.agregar_menu(txtNom.Text,txtDesc.Text, txtPrec.Text, int.Parse(cobCategoria.SelectedValue));
+            respuesta = obje.agregar_menu(txtNom.Text,txtDesc.Text, txtPrec.Text, cobCategoria.SelectedValue.ToString());
             btnAgregar.Enabled = false;
             llenar();
             if (respuesta == "1")
