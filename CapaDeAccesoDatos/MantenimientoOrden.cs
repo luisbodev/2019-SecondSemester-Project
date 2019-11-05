@@ -168,6 +168,75 @@ namespace CapaDeAccesoDatos
             }
             return "" + respuesta;
         }
+        //Mostar noOrden de ultima orden realizada que este en proceso
+        public string mostrarUltOrdenNoIni()
+        {
 
+            this.sql = "select top 1 o.noOrden from orden o where o.estado = 0; ";
+            try
+            {
+                conn.abrir_conexion();
+                SqlCommand com = new SqlCommand(sql, conn.conex);
+                res = com.ExecuteScalar().ToString();
+            }
+            catch (Exception e)
+            {
+                error = "Error " + e.Message;
+            }
+            finally
+            {
+                conn.cerrar_conexion();
+            }
+            return res;
+
+        }
+        //Cambiar el estado de la orden
+        public string modiEstadoOrden(string p, string es)
+        {
+            cmd = new SqlCommand(string.Format("update orden set estado = " + es + " where noOrden =" + p), conn.conex);
+
+            try
+            {
+                conn.abrir_conexion();
+                respuesta = cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception e)
+            {
+                error = "Error " + e.Message;
+            }
+            finally
+            {
+                conn.cerrar_conexion();
+            }
+            return "" + respuesta;
+        }
+        //Seleccionar Detalle Orden en proceso
+        public DataTable mostrarDetalleOrdPro(string p)
+        {
+            DataTable datos = new DataTable();
+            SqlDataAdapter adap;
+
+            this.sql = "select m.idMenu as 'ID', m.nombre as 'Nombre', m.descripcion as 'Descripción', d.extra as 'Extra', d.cantidad as 'Cantidad'" +
+            "from orden o" +
+            "inner join detalle_orden d on d.noOrden = o.noOrden and o.noOrden = " + p +
+            "inner join menu m on m.idMenu = d.idMenu";
+            try
+            {
+                conn.abrir_conexion();
+                adap = new SqlDataAdapter(this.sql, conn.conex);
+                adap.Fill(datos);
+            }
+            catch (Exception e)
+            {
+                error = "Error " + e.ToString();
+            }
+            finally
+            {
+                conn.cerrar_conexion();
+            }
+            return datos;
+
+        }
     }
 }

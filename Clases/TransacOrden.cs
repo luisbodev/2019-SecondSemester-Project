@@ -50,6 +50,17 @@ namespace Clases
         public string total_FinalOrden(string t, string o) {
             return obje.totalFinalOrden(t, o);
         }
-
+        //Muestra 
+        public string mostrar_UltOrdenNoIni() {
+            return obje.mostrarUltOrdenNoIni();
+        }
+        //Cambia el estado de la orden
+        public string modi_estadoOrden(string p, string es) {
+            return obje.modiEstadoOrden(p, es);
+        }
+        //Seleccionar Detalle Orden en proceso
+        public DataTable mostrar_detalleOrdPro(string p) {
+            return obje.mostrarDetalleOrdPro(p);
+        }
     }
 }
