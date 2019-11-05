@@ -241,8 +241,9 @@ namespace CapaDeAccesoDatos
 
             this.sql = "select m.idMenu as 'ID', m.nombre as 'Nombre', m.descripcion as 'Descripción', d.extra as 'Extra', d.cantidad as 'Cantidad'" +
             "from orden o" +
-            "inner join detalle_orden d on d.noOrden = o.noOrden and o.noOrden = " + p +
-            "inner join menu m on m.idMenu = d.idMenu";
+            "inner join detalle_orden d on d.noOrden = o.noOrden" +
+            "inner join menu m on m.idMenu = d.idMenu" +
+            "where o.noOrden = " + p;
             try
             {
                 conn.abrir_conexion();
@@ -258,6 +259,7 @@ namespace CapaDeAccesoDatos
                 conn.cerrar_conexion();
             }
             return datos;
+            
 
         }
     }
