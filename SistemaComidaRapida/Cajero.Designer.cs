@@ -82,9 +82,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.panelTop.SuspendLayout();
             this.panelTopRight.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -735,6 +735,17 @@
             this.label5.TabIndex = 44;
             this.label5.Text = "Nombre";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Trebuchet MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
+            this.label4.Location = new System.Drawing.Point(649, 35);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(24, 22);
+            this.label4.TabIndex = 45;
+            this.label4.Text = "Id";
+            // 
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
@@ -755,17 +766,6 @@
             this.label9.TabIndex = 5;
             this.label9.Text = "Buscar Por Nombre";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Trebuchet MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(47)))));
-            this.label4.Location = new System.Drawing.Point(649, 35);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(24, 22);
-            this.label4.TabIndex = 45;
-            this.label4.Text = "Id";
-            // 
             // frmCajero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -777,7 +777,7 @@
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panelBottom);
             this.Controls.Add(this.panelTop);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCajero";
             this.Text = " Cajero";
