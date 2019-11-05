@@ -190,6 +190,28 @@ namespace CapaDeAccesoDatos
             return res;
 
         }
+        //Mostar estado de orden seleccionada
+        public string mostrarUltOrdenEsta(string p )
+        {
+
+            this.sql = "select estado from orden where noOrden = " + p;
+            try
+            {
+                conn.abrir_conexion();
+                SqlCommand com = new SqlCommand(sql, conn.conex);
+                res = com.ExecuteScalar().ToString();
+            }
+            catch (Exception e)
+            {
+                error = "Error " + e.Message;
+            }
+            finally
+            {
+                conn.cerrar_conexion();
+            }
+            return res;
+
+        }
         //Cambiar el estado de la orden
         public string modiEstadoOrden(string p, string es)
         {

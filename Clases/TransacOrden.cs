@@ -46,6 +46,10 @@ namespace Clases
         public string mostrar_ultOrden() {
             return obje.mostrarUltOrden("orden");
         }
+        //Seleccionar estado
+        public string mostrar_UltOrdenEsta(string p) {
+            return obje.mostrarUltOrdenEsta(p);
+        }
         //Agregar total a orden
         public string total_FinalOrden(string t, string o) {
             return obje.totalFinalOrden(t, o);

@@ -15,7 +15,6 @@ namespace SistemaComidaRapida
     {
         public string userEmp;
         int ocupado1 = 0, ocupado2 = 0, ocupado3 = 0;
-        string noOrdenIni;
 
         TransacOrden obj = new TransacOrden();
 
@@ -57,9 +56,9 @@ namespace SistemaComidaRapida
 
         private void btnTerminado3_Click(object sender, EventArgs e)
         {
-            obj.modi_estadoOrden(txtNoOrden1.Text, 2.ToString());
-            txtNoOrden2.Clear();
-            dgvDetalleOrden2.DataSource = null;
+            obj.modi_estadoOrden(txtNoOrden3.Text, 2.ToString());
+            txtNoOrden3.Clear();
+            dgvDetalleOrden3.DataSource = null;
             btnTerminado3.Enabled = false;
             ocupado3 = 0;
         }
@@ -71,38 +70,68 @@ namespace SistemaComidaRapida
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if(ocupado1 == 0 || ocupado2 == 0 || ocupado3 == 0){
-                    string noOrdenIni;
-                    noOrdenIni = obj.mostrar_UltOrdenNoIni();
-                if (!(noOrdenIni == null))
+            if (ocupado1 == 0)
+            {
+                string noOrden, estado;
+
+                noOrden = obj.mostrar_UltOrdenNoIni();
+                if (!(noOrden == null || noOrden=="0"))
                 {
-                    if (ocupado1 == 0 && noOrdenIni == "0")
+                    estado = obj.mostrar_UltOrdenEsta(noOrden);
+
+                    if (int.Parse(estado) == 0)
                     {
-                        ocupado1 = 1;
                         btnTerminado1.Enabled = true;
-                        obj.modi_estadoOrden(noOrdenIni, 1.ToString());
-
-                        txtNoOrden1.Text = noOrdenIni;
-                        dgvDetalleOrden1.DataSource = obj.mostrar_detalleOrdPro(txtNoOrden1.Text);
-                    }
-                    else if (ocupado2 == 0 && int.Parse(noOrdenIni) == 0)
-                    {
-                        ocupado2 = 1;
-                        btnTerminado2.Enabled = true;
-
-                        txtNoOrden2.Text = noOrdenIni;
-                        dgvDetalleOrden2.DataSource = obj.mostrar_detalleOrdPro(txtNoOrden1.Text);
-                    }
-                    else if (ocupado3 == 0 && int.Parse(noOrdenIni) == 0)
-                    {
-                        ocupado3 = 1;
-                        btnTerminado3.Enabled = true;
-
-                        txtNoOrden3.Text = noOrdenIni;
-                        dgvDetalleOrden3.DataSource = obj.mostrar_detalleOrdPro(txtNoOrden1.Text);
+                        obj.modi_estadoOrden(noOrden, 1.ToString());
+                        ocupado1 = 1;
+                        txtNoOrden1.Text = noOrden;
+                        dgvDetalleOrden1.DataSource = obj.mostrar_detalleOrdPro(noOrden);
                     }
                 }
             }
+            else if (ocupado2 == 0)
+            {
+                string noOrden, estado;
+
+                noOrden = obj.mostrar_UltOrdenNoIni();
+                if (!(noOrden == null || noOrden == "0"))
+                {
+                    estado = obj.mostrar_UltOrdenEsta(noOrden);
+
+                    if (int.Parse(estado) == 0)
+                    {
+                        btnTerminado2.Enabled = true;
+                        obj.modi_estadoOrden(noOrden, 1.ToString());
+                        ocupado2 = 1;
+                        txtNoOrden2.Text = noOrden;
+                        dgvDetalleOrden2.DataSource = obj.mostrar_detalleOrdPro(noOrden);
+                    }
+                }
+            }
+            else if (ocupado3 == 0)
+            {
+                string noOrden, estado;
+
+                noOrden = obj.mostrar_UltOrdenNoIni();
+
+                if (!(noOrden == null || noOrden == "0"))
+                {
+                    estado = obj.mostrar_UltOrdenEsta(noOrden);
+
+                    if (int.Parse(estado) == 0)
+                    {
+                        btnTerminado3.Enabled = true;
+                        obj.modi_estadoOrden(noOrden, 1.ToString());
+                        ocupado3 = 1;
+                        txtNoOrden3.Text = noOrden;
+                        dgvDetalleOrden3.DataSource = obj.mostrar_detalleOrdPro(noOrden);
+                    }
+                }
+            }
+
+
+
+           
         }
     }
 }
