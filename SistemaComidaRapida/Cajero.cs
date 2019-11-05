@@ -68,20 +68,7 @@ namespace SistemaComidaRapida
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void checkCombos_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBebidas_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkPlatos_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
 
         private void dgvMenu_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
