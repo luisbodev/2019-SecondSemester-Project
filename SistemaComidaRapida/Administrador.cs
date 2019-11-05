@@ -89,8 +89,7 @@ namespace SistemaComidaRapida
 
         private void generarReporteDeUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ReporteUsuario repUsuario = new ReporteUsuario();
-            repUsuario.ShowDialog();
+            
         }
 
         private void btnMinimizar_Click(object sender, EventArgs e)
