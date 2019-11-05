@@ -39,7 +39,6 @@
             this.menuStripAdmin = new System.Windows.Forms.MenuStrip();
             this.verToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaDeEmpleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.generarReporteDeUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.historialDePedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaDeClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -170,19 +169,10 @@
             // 
             // listaDeEmpleadosToolStripMenuItem
             // 
-            this.listaDeEmpleadosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.generarReporteDeUsuarioToolStripMenuItem});
             this.listaDeEmpleadosToolStripMenuItem.Name = "listaDeEmpleadosToolStripMenuItem";
             this.listaDeEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(237, 24);
             this.listaDeEmpleadosToolStripMenuItem.Text = "Reporte de empleados";
             this.listaDeEmpleadosToolStripMenuItem.Click += new System.EventHandler(this.listaDeEmpleadosToolStripMenuItem_Click);
-            // 
-            // generarReporteDeUsuarioToolStripMenuItem
-            // 
-            this.generarReporteDeUsuarioToolStripMenuItem.Name = "generarReporteDeUsuarioToolStripMenuItem";
-            this.generarReporteDeUsuarioToolStripMenuItem.Size = new System.Drawing.Size(271, 24);
-            this.generarReporteDeUsuarioToolStripMenuItem.Text = "Generar reporte de usuario";
-            this.generarReporteDeUsuarioToolStripMenuItem.Click += new System.EventHandler(this.generarReporteDeUsuarioToolStripMenuItem_Click);
             // 
             // menuToolStripMenuItem
             // 
@@ -302,6 +292,5 @@
         private System.Windows.Forms.ToolStripMenuItem historialToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem categoriasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem generarReporteDeUsuarioToolStripMenuItem;
     }
 }

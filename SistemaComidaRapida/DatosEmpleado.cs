@@ -33,6 +33,10 @@ namespace SistemaComidaRapida
 
         private void DatosEmpleado_Load(object sender, EventArgs e)
         {
+            btnUeliminar.Enabled = false;
+            btnUmodificar.Enabled = false;
+            btnCrearUsuario.Enabled = false;
+            btnReporte.Enabled = false;
             llenar();
             cmbCargo.DropDownStyle = ComboBoxStyle.DropDownList;
         }
@@ -130,6 +134,7 @@ namespace SistemaComidaRapida
         }
         ///>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>
 
+        public int parametro;
 
         private void dgvEmpleado_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -142,6 +147,7 @@ namespace SistemaComidaRapida
 
             txtIdUsuario.Text = dgvEmpleado.CurrentRow.Cells[0].Value.ToString();
             txtRol.Text = dgvEmpleado.CurrentRow.Cells[4].Value.ToString();
+            parametro = int.Parse(dgvEmpleado.CurrentRow.Cells[0].Value.ToString());
             txtUser.Clear();
             txtPass.Clear();
 
@@ -149,6 +155,7 @@ namespace SistemaComidaRapida
             btnUmodificar.Enabled = false;
             btnCrearUsuario.Enabled = false;
             btnCrearUsuario.Enabled = true;
+            btnReporte.Enabled = true; 
             //txtRol.Clear();
 
         }
@@ -194,9 +201,10 @@ namespace SistemaComidaRapida
 
         private void btnUnuevo_Click(object sender, EventArgs e)
         {
-            btnUeliminar.Enabled = true;
-            btnUmodificar.Enabled = true;
-            btnCrearUsuario.Enabled = true;
+            btnUeliminar.Enabled = false;
+            btnUmodificar.Enabled = false;
+            btnCrearUsuario.Enabled = false;
+            btnReporte.Enabled = false;
             txtRol.Clear();
             txtUser.Clear();
             txtPass.Clear();
@@ -250,10 +258,17 @@ namespace SistemaComidaRapida
             btnUeliminar.Enabled = true;
             btnUmodificar.Enabled = true;
             btnCrearUsuario.Enabled = false;
+            btnReporte.Enabled = false;
 
 
         }
 
-  
+        
+
+        public void btnReporte_Click(object sender, EventArgs e)
+        {
+            ReporteUsuario repUsuario = new ReporteUsuario();
+            repUsuario.ShowDialog();
+        }
     }
 }
