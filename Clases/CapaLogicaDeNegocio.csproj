@@ -43,6 +43,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TransacAutenticacion.cs" />
+    <Compile Include="TransacCategoria.cs" />
     <Compile Include="TransacCliente.cs" />
     <Compile Include="TransacDetalleOrden.cs" />
     <Compile Include="TransacEmpleado.cs" />

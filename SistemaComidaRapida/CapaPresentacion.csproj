@@ -64,6 +64,12 @@
     <Compile Include="Cocinero.Designer.cs">
       <DependentUpon>Cocinero.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatosCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatosCategoria.Designer.cs">
+      <DependentUpon>DatosCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatosCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cocinero.resx">
       <DependentUpon>Cocinero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatosCategoria.resx">
+      <DependentUpon>DatosCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DatosCliente.resx">
       <DependentUpon>DatosCliente.cs</DependentUpon>

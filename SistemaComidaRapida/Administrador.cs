@@ -69,5 +69,11 @@ namespace SistemaComidaRapida
         {
             Application.Exit();
         }
+
+        private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DatosCategoria frmCat = new DatosCategoria();
+            frmCat.Show();
+        }
     }
 }

@@ -14,6 +14,7 @@ namespace CapaDeAccesoDatos
         private string nombre;
         private string descipcion;
         private double precio;
+        private int categoria;
         
 
         public int IdMenu
@@ -68,18 +69,31 @@ namespace CapaDeAccesoDatos
             }
         }
 
+        public int Categoria
+        {
+            get
+            {
+                return categoria;
+            }
+
+            set
+            {
+                categoria = value;
+            }
+        }
 
         public Menu()
         {
 
         }
 
-        public Menu(int pIdMenu, string pNombre, string pDescripcion, double pPrecio)
+        public Menu(int pIdMenu, string pNombre, string pDescripcion, double pPrecio, int pCategoria)
         {
             this.IdMenu = pIdMenu;
             this.Descipcion = pDescripcion;
             this.Precio = pPrecio;
             this.Nombre = pNombre;
+            this.Categoria = pCategoria;
         }
 
 

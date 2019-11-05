@@ -41,11 +41,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Autenticacion.cs" />
+    <Compile Include="categoria.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="DetalleOrden.cs" />
     <Compile Include="Empleado.cs" />
+    <Compile Include="MantenimientoCategoria.cs" />
     <Compile Include="MantenimientoCliente.cs" />
     <Compile Include="MantenimientoDetOrden.cs" />
     <Compile Include="MantenimientoEmpleado.cs" />

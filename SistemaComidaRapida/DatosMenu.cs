@@ -22,6 +22,8 @@ namespace SistemaComidaRapida
         public frmDatosMenu()
         {
             InitializeComponent();
+
+            cobCategoria.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         void llenar()
@@ -34,9 +36,20 @@ namespace SistemaComidaRapida
             llenar();
         }
 
+
+      
+
+
+
+ 
+
+    
+
+
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            respuesta = obje.agregar_menu(txtNom.Text,txtDesc.Text, txtPrec.Text);
+            respuesta = obje.agregar_menu(txtNom.Text,txtDesc.Text, txtPrec.Text, cobCategoria.Text);
             btnAgregar.Enabled = false;
             llenar();
             if (respuesta == "1")
@@ -59,7 +72,7 @@ namespace SistemaComidaRapida
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            respuesta = obje.modificar_menu(txtIdMenu.Text, txtNom.Text, txtDesc.Text, txtPrec.Text);
+            respuesta = obje.modificar_menu(txtIdMenu.Text, txtNom.Text, txtDesc.Text, txtPrec.Text, cobCategoria.Text);
             llenar();
             if (respuesta == "1")
             {
