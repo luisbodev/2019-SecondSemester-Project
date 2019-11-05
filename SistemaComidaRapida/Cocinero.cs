@@ -33,7 +33,7 @@ namespace SistemaComidaRapida
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Está seguro que quiere cerrar Sesión?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes) this.Close(); 
+            if (MessageBox.Show("¿Está seguro que quiere cerrar Sesión?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes) this.Close();
         }
 
         private void btnTerminado1_Click(object sender, EventArgs e)
@@ -54,6 +54,17 @@ namespace SistemaComidaRapida
             ocupado2 = 0;
         }
 
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnCerrarT_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿En realidad desea Cerrar la aplicación?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                Application.Exit();
+        }
+
         private void btnTerminado3_Click(object sender, EventArgs e)
         {
             obj.modi_estadoOrden(txtNoOrden3.Text, 2.ToString());
@@ -63,11 +74,7 @@ namespace SistemaComidaRapida
             ocupado3 = 0;
         }
 
-        private void frmCocinero_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
-        }
-
+      
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (ocupado1 == 0)
@@ -85,7 +92,7 @@ namespace SistemaComidaRapida
                         obj.modi_estadoOrden(noOrden, 1.ToString());
                         ocupado1 = 1;
                         txtNoOrden1.Text = noOrden;
-                        dgvDetalleOrden1.DataSource = obj.mostrar_detalleOrdPro(noOrden);
+                        dgvDetalleOrden1.DataSource = obj.mostrar_detalleOrdPro(txtNoOrden1.Text);
                     }
                 }
             }
@@ -104,7 +111,7 @@ namespace SistemaComidaRapida
                         obj.modi_estadoOrden(noOrden, 1.ToString());
                         ocupado2 = 1;
                         txtNoOrden2.Text = noOrden;
-                        dgvDetalleOrden2.DataSource = obj.mostrar_detalleOrdPro(noOrden);
+                        dgvDetalleOrden2.DataSource = obj.mostrar_detalleOrdPro(txtNoOrden2.Text);
                     }
                 }
             }
@@ -124,7 +131,7 @@ namespace SistemaComidaRapida
                         obj.modi_estadoOrden(noOrden, 1.ToString());
                         ocupado3 = 1;
                         txtNoOrden3.Text = noOrden;
-                        dgvDetalleOrden3.DataSource = obj.mostrar_detalleOrdPro(noOrden);
+                        dgvDetalleOrden3.DataSource = obj.mostrar_detalleOrdPro(txtNoOrden3.Text);
                     }
                 }
             }
