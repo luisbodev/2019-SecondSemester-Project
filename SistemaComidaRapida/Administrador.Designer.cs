@@ -216,7 +216,8 @@
             // 
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(237, 24);
-            this.menuToolStripMenuItem.Text = "Menu";
+            this.menuToolStripMenuItem.Text = "Reporte de Menu";
+            this.menuToolStripMenuItem.Click += new System.EventHandler(this.menuToolStripMenuItem_Click);
             // 
             // historialDePedidosToolStripMenuItem
             // 
@@ -229,6 +230,7 @@
             this.listaDeClientesToolStripMenuItem.Name = "listaDeClientesToolStripMenuItem";
             this.listaDeClientesToolStripMenuItem.Size = new System.Drawing.Size(237, 24);
             this.listaDeClientesToolStripMenuItem.Text = "Lista de Clientes";
+            this.listaDeClientesToolStripMenuItem.Click += new System.EventHandler(this.listaDeClientesToolStripMenuItem_Click);
             // 
             // modificarToolStripMenuItem
             // 

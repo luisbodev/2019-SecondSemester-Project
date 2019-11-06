@@ -71,10 +71,28 @@
     <Compile Include="Cocinero.Designer.cs">
       <DependentUpon>Cocinero.cs</DependentUpon>
     </Compile>
+    <Compile Include="CrystalReport1Menu.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1Menu.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReportClientes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportClientes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CrystalReportEmpleados_NoUser.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CrystalReportEmpleados_NoUser.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReportMenu.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportMenu.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CrystalReportUsuario.cs">
@@ -121,6 +139,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReporteClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteClientes.Designer.cs">
+      <DependentUpon>ReporteClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteMenu.Designer.cs">
+      <DependentUpon>ReporteMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,9 +172,21 @@
     <EmbeddedResource Include="Cocinero.resx">
       <DependentUpon>Cocinero.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1Menu.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1Menu.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportClientes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportClientes.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrystalReportEmpleados_NoUser.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReportEmpleados_NoUser.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportMenu.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportMenu.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="CrystalReportUsuario.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -181,6 +223,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ReporteClientes.resx">
+      <DependentUpon>ReporteClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteMenu.resx">
+      <DependentUpon>ReporteMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportEmpleados.resx">
       <DependentUpon>ReportEmpleados.cs</DependentUpon>
     </EmbeddedResource>
