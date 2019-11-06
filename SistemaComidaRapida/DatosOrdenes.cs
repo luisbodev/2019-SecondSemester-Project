@@ -74,6 +74,7 @@ namespace SistemaComidaRapida
         {
             respuesta = detaOrden.modificar_DetalleOrden(txtNoOrden.Text, txtIdMenu.Text, txtExtra.Text, txtCantidad.Value.ToString(), txtPrecioUni.Text, txtTotalMe.Text);
             llenardaosorden();
+
             if (respuesta=="1") {
                 MessageBox.Show("Registro Modificado Correctamente");
                 btnModificarDeta.Enabled = false;
@@ -90,6 +91,11 @@ namespace SistemaComidaRapida
             else {
                 MessageBox.Show("Registro no modificado" + respuesta);
             }
+        }
+
+        private void btnAgregarDeta_Click(object sender, EventArgs e)
+        {
+           
         }
     }
     
