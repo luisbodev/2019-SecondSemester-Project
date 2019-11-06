@@ -109,5 +109,29 @@ namespace CapaDeAccesoDatos
             }
             return datos;
         }
+        //Actualizar detalle orden
+        public string modificarDetalleOrden(DetalleOrden d)
+        {
+            cmd = new SqlCommand(string.Format("update detalle_orden "+
+                                    "set extra = '{2}', cantidad = '{3}', precioUnidad = '{4}', total = '{5}', o.totaFinal = '{3}' "+
+                                    "where noOrden = '{0}' and idMenu = '{1}'",
+                d.NoOrden, d.IdMenu, d.Extra, d.Cantidad, d.PrecioUnidad, d.Total), conn.conex);
+
+            try
+            {
+                conn.abrir_conexion();
+                res = cmd.ExecuteNonQuery(); //Ejecutar la consulta a el SQL //Si hace la incersion va valer 1 y si no la hace va valer 0
+            }
+            catch (Exception a)
+            {
+                error = "Error" + a.Message;
+                return error;
+            }
+            finally
+            {
+                conn.cerrar_conexion();
+            }
+            return "" + res;
+        }
     }
 }

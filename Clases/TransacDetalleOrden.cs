@@ -12,10 +12,7 @@ namespace Clases
     {
         MantenimientoDetOrden obj = new MantenimientoDetOrden();
 
-        public DataTable mostrar_detalleOrden() {
-            return obj.mostrarDetalleOrden("detalle_orden", "");
-        }
-
+        
         public DataTable mostrar_detOrdenEspe(string p) {
             return obj.mostrarDetalleOrden("detalle_orden", p);
         }
@@ -31,6 +28,11 @@ namespace Clases
         public DataTable mostrar_detalleOrdPro(string p)
         {
             return obj.mostrarDetalleOrdPro(p);
+        }
+        //Modificar detalle orden
+        public string modificar_DetalleOrden(string noOrden, string idMenu, string extra, string cantidad, string precioUnidad, string total) {
+            DetalleOrden d = new DetalleOrden(int.Parse(noOrden), int.Parse(idMenu), extra, int.Parse(cantidad), double.Parse(precioUnidad), double.Parse(total));
+            return obj.modificarDetalleOrden(d);
         }
     }
 }
