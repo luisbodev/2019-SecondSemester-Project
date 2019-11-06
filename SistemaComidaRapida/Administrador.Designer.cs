@@ -41,7 +41,6 @@
             this.menuStripAdmin = new System.Windows.Forms.MenuStrip();
             this.verToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaDeEmpleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.generarReporteDeUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.historialDePedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaDeClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -212,25 +211,17 @@
             // 
             // listaDeEmpleadosToolStripMenuItem
             // 
-            this.listaDeEmpleadosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.generarReporteDeUsuarioToolStripMenuItem});
             this.listaDeEmpleadosToolStripMenuItem.Name = "listaDeEmpleadosToolStripMenuItem";
             this.listaDeEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(237, 24);
             this.listaDeEmpleadosToolStripMenuItem.Text = "Reporte de empleados";
             this.listaDeEmpleadosToolStripMenuItem.Click += new System.EventHandler(this.listaDeEmpleadosToolStripMenuItem_Click);
             // 
-            // generarReporteDeUsuarioToolStripMenuItem
-            // 
-            this.generarReporteDeUsuarioToolStripMenuItem.Name = "generarReporteDeUsuarioToolStripMenuItem";
-            this.generarReporteDeUsuarioToolStripMenuItem.Size = new System.Drawing.Size(271, 24);
-            this.generarReporteDeUsuarioToolStripMenuItem.Text = "Generar reporte de usuario";
-            this.generarReporteDeUsuarioToolStripMenuItem.Click += new System.EventHandler(this.generarReporteDeUsuarioToolStripMenuItem_Click);
-            // 
             // menuToolStripMenuItem
             // 
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(237, 24);
-            this.menuToolStripMenuItem.Text = "Menu";
+            this.menuToolStripMenuItem.Text = "Reporte de Menu";
+            this.menuToolStripMenuItem.Click += new System.EventHandler(this.menuToolStripMenuItem_Click);
             // 
             // historialDePedidosToolStripMenuItem
             // 
@@ -243,6 +234,7 @@
             this.listaDeClientesToolStripMenuItem.Name = "listaDeClientesToolStripMenuItem";
             this.listaDeClientesToolStripMenuItem.Size = new System.Drawing.Size(237, 24);
             this.listaDeClientesToolStripMenuItem.Text = "Lista de Clientes";
+            this.listaDeClientesToolStripMenuItem.Click += new System.EventHandler(this.listaDeClientesToolStripMenuItem_Click);
             // 
             // modificarToolStripMenuItem
             // 
@@ -294,29 +286,39 @@
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
-            // verPantallasToolStripMenuItem
+            // btnMinimizar
             // 
-            this.verPantallasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pantallaCajeroToolStripMenuItem,
-            this.cocineroToolStripMenuItem});
-            this.verPantallasToolStripMenuItem.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.verPantallasToolStripMenuItem.Name = "verPantallasToolStripMenuItem";
-            this.verPantallasToolStripMenuItem.Size = new System.Drawing.Size(110, 24);
-            this.verPantallasToolStripMenuItem.Text = "Ver Pantallas";
+            this.btnMinimizar.BackColor = System.Drawing.Color.Transparent;
+            this.btnMinimizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.BackgroundImage")));
+            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimizar.FlatAppearance.BorderSize = 0;
+            this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimizar.Location = new System.Drawing.Point(268, -2);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(25, 33);
+            this.btnMinimizar.TabIndex = 13;
+            this.btnMinimizar.UseVisualStyleBackColor = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
-            // pantallaCajeroToolStripMenuItem
+            // btnCerrarT
             // 
-            this.pantallaCajeroToolStripMenuItem.Name = "pantallaCajeroToolStripMenuItem";
-            this.pantallaCajeroToolStripMenuItem.Size = new System.Drawing.Size(199, 24);
-            this.pantallaCajeroToolStripMenuItem.Text = "Pantalla Cajero";
-            this.pantallaCajeroToolStripMenuItem.Click += new System.EventHandler(this.pantallaCajeroToolStripMenuItem_Click);
-            // 
-            // cocineroToolStripMenuItem
-            // 
-            this.cocineroToolStripMenuItem.Name = "cocineroToolStripMenuItem";
-            this.cocineroToolStripMenuItem.Size = new System.Drawing.Size(199, 24);
-            this.cocineroToolStripMenuItem.Text = "Pantalla Cocinero";
-            this.cocineroToolStripMenuItem.Click += new System.EventHandler(this.cocineroToolStripMenuItem_Click);
+            this.btnCerrarT.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrarT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrarT.BackgroundImage")));
+            this.btnCerrarT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCerrarT.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarT.FlatAppearance.BorderSize = 0;
+            this.btnCerrarT.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnCerrarT.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnCerrarT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarT.Location = new System.Drawing.Point(303, -2);
+            this.btnCerrarT.Name = "btnCerrarT";
+            this.btnCerrarT.Size = new System.Drawing.Size(25, 33);
+            this.btnCerrarT.TabIndex = 12;
+            this.btnCerrarT.UseVisualStyleBackColor = false;
+            this.btnCerrarT.Click += new System.EventHandler(this.btnCerrarT_Click);
             // 
             // frmAdministrador
             // 
@@ -368,7 +370,6 @@
         private System.Windows.Forms.ToolStripMenuItem historialToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem categoriasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem generarReporteDeUsuarioToolStripMenuItem;
         private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Button btnCerrarT;
         private System.Windows.Forms.ToolStripMenuItem verPantallasToolStripMenuItem;

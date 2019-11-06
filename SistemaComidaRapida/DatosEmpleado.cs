@@ -267,8 +267,15 @@ namespace SistemaComidaRapida
 
         public void btnReporte_Click(object sender, EventArgs e)
         {
-            ReporteUsuario repUsuario = new ReporteUsuario();
-            repUsuario.ShowDialog();
+            int idUsario = Convert.ToInt32(txtIdUsuario.Text);
+            ReporteUsuario RP_empleados = new ReporteUsuario(idUsario);
+            RP_empleados.ShowDialog();
+
+        }
+
+        private void btnGenerarReporte_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

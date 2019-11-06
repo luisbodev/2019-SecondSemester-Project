@@ -12,20 +12,38 @@ namespace SistemaComidaRapida
 {
     public partial class ReporteUsuario : Form
     {
-        frmDatosEmpleado objE = new frmDatosEmpleado();
+       
 
 
-        public ReporteUsuario()
+        public ReporteUsuario(int idUsuario)
         {
-            MessageBox.Show("ES. " + objE.parametro);
+
             InitializeComponent();
+
+            CrystalReportUsuario1.SetParameterValue("@IDEmpleado", idUsuario);
+           
         }
 
-        private void ReporteUsuario_Load(object sender, EventArgs e)
+   
+        
+        
+
+        public void ReporteUsuario_Load(object sender, EventArgs e)
         {
+
+
+
+
+
+
+
+
+
+            /*MessageBox.Show("ES. " + objE.parametro);
+            
             CrystalReportUsuario crystlUs = new CrystalReportUsuario();
-            crystlUs.SetParameterValue("@IDEmpleado", objE.parametro); //<<<<<<<<<<<<<<<<<<<<<<<
-            crystalReportViewer1.ReportSource = crystlUs;
+            crystlUs.SetParameterValue("@IDEmpleado", isma); //<<<<<<<<<<<<<<<<<<<<<<<
+            crystalReportViewer1.ReportSource = crystlUs;*/
 
 
         }
