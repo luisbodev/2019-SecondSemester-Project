@@ -320,6 +320,7 @@
             this.lbltitulo.TabIndex = 116;
             this.lbltitulo.Text = "Seleccionar Cliente";
             this.lbltitulo.Visible = false;
+            this.lbltitulo.Click += new System.EventHandler(this.lbltitulo_Click);
             // 
             // DatosCliente
             // 

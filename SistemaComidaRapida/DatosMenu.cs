@@ -13,6 +13,8 @@ namespace SistemaComidaRapida
 {
     public partial class frmDatosMenu : Form
     {
+        
+        
         TransacMenu obje = new TransacMenu();
         TransacCategoria objecd =  new TransacCategoria();
 
@@ -123,7 +125,7 @@ namespace SistemaComidaRapida
             txtDesc.Text = dgvAlumnos.CurrentRow.Cells[2].Value.ToString();
             txtPrec.Text = dgvAlumnos.CurrentRow.Cells[3].Value.ToString();
             cobCategoria.Text = dgvAlumnos.CurrentRow.Cells[4].Value.ToString();
-            
+            btnSelecPlato.Enabled = true;
         }
 
         private void txtPrec_KeyPress(object sender, KeyPressEventArgs e)
@@ -170,7 +172,17 @@ namespace SistemaComidaRapida
 
         private void dgvAlumnos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+        }
 
+        private void btnSelecPlato_Click(object sender, EventArgs e)
+        {
+            frmDatosOrdenes datoOrd = new frmDatosOrdenes();
+            datoOrd.idMenu = this.txtIdMenu.Text;
+            datoOrd.precioUnidad = this.txtPrec.Text;
+            datoOrd.total = this.txtPrec.Text;
+            
+            this.Close();
         }
     }
 }

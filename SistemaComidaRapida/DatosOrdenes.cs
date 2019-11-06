@@ -13,6 +13,9 @@ namespace SistemaComidaRapida
 {
     public partial class frmDatosOrdenes : Form
     {
+        int cantidad;
+        public string idMenu, precioUnidad, total;
+
         TransacOrden obje = new TransacOrden();
         TransacDetalleOrden detaOrden = new TransacDetalleOrden();
         string respuesta = "";
@@ -46,22 +49,28 @@ namespace SistemaComidaRapida
             llenardaosorden();
             dgvCliente.DataSource = obje.mostrar_ClienteEspecifico(dgvOrden.CurrentRow.Cells[3].Value.ToString());
             dgvEmpleado.DataSource = obje.mostrar_EmpleadoEspecifico(dgvOrden.CurrentRow.Cells[1].Value.ToString());
+            btnAgregarDeta.Enabled = true;
         }
 
         private void dgvDetalleOrden_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             double total;
-            
+
+
+            if (!(dgvDetalleOrden.CurrentRow.Cells[0].Value.ToString() == "")){
                 txtIdMenu.Text = dgvDetalleOrden.CurrentRow.Cells[0].Value.ToString();
                 txtNombreMenu.Text = dgvDetalleOrden.CurrentRow.Cells[1].Value.ToString();
                 txtExtra.Text = dgvDetalleOrden.CurrentRow.Cells[2].Value.ToString();
                 txtCantidad.Text = dgvDetalleOrden.CurrentRow.Cells[3].Value.ToString();
                 txtPrecioUni.Text = dgvDetalleOrden.CurrentRow.Cells[4].Value.ToString();
+
                 total = double.Parse(txtPrecioUni.Text) * int.Parse(txtCantidad.Text);
                 txtTotalMe.Text = total.ToString();
 
+
                 btnModificarDeta.Enabled = true;
                 btnEliminarDeta.Enabled = true;
+            }
             
         }
 
@@ -72,14 +81,24 @@ namespace SistemaComidaRapida
 
         private void btnModificarDeta_Click(object sender, EventArgs e)
         {
+            double totalFinal;
+            if(int.Parse(txtCantidad.Text)>cantidad) {
+                totalFinal = double.Parse(txtTotal.Text) + double.Parse(txtTotalMe.Text);
+            }
+            else {
+                totalFinal = double.Parse(txtTotal.Text) - double.Parse(txtTotalMe.Text);
+            }
+            obje.total_FinalOrden(totalFinal.ToString(), txtNoOrden.Text);
             respuesta = detaOrden.modificar_DetalleOrden(txtNoOrden.Text, txtIdMenu.Text, txtExtra.Text, txtCantidad.Value.ToString(), txtPrecioUni.Text, txtTotalMe.Text);
-            llenardaosorden();
+            
 
             if (respuesta=="1") {
                 MessageBox.Show("Registro Modificado Correctamente");
                 btnModificarDeta.Enabled = false;
                 btnEliminarDeta.Enabled = false;
-
+                llenardaosorden();
+                llenar();
+                txtTotal.Text = dgvOrden.CurrentRow.Cells[4].Value.ToString();
 
                 txtIdMenu.Clear();
                 txtNombreMenu.Clear();
@@ -95,7 +114,68 @@ namespace SistemaComidaRapida
 
         private void btnAgregarDeta_Click(object sender, EventArgs e)
         {
-           
+            frmDatosMenu objMenu = new frmDatosMenu();
+            objMenu.labalcate.Visible = false;
+            objMenu.cobCategoria.Visible = false;
+            objMenu.btnAgregar.Visible = false;
+            objMenu.btnEliminar.Visible = false;
+            objMenu.btnModificar.Visible = false;
+            objMenu.btnNuevo.Visible = false;
+            objMenu.btnSelecPlato.Visible = true;
+            objMenu.ShowDialog();
+            string extra = "";
+            respuesta = detaOrden.agregar_platoDetalle(txtNoOrden.Text, idMenu, extra, 1.ToString(), precioUnidad, total);
+            if (respuesta == "1")
+            {
+                MessageBox.Show("Orden Creada Exitosamente");
+                
+                llenardaosorden();
+            }
+            else
+            {
+                MessageBox.Show("Fallo en crear orden " + respuesta);
+            }
+            
+        }
+
+        private void txtCantidad_ValueChanged(object sender, EventArgs e)
+        {
+            
+            if (!(dgvDetalleOrden.CurrentRow.Cells[0].Value.ToString() == ""))
+            {
+                cantidad = int.Parse(txtCantidad.Text);
+            }
+
+        }
+
+        private void btnEliminarDeta_Click(object sender, EventArgs e)
+        {
+            double totalFinal;
+            if (MessageBox.Show("¿Está seguro de Eliminar el registro?", "Eliminar Registro", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                
+                respuesta = detaOrden.eliminar_Detalle(txtNoOrden.Text, txtIdMenu.Text);
+                btnModificarDeta.Enabled = false;
+                btnEliminarDeta.Enabled = false;
+
+                
+                totalFinal = double.Parse(txtTotal.Text) - double.Parse(txtTotalMe.Text);
+
+                obje.total_FinalOrden(totalFinal.ToString(), txtNoOrden.Text);
+                txtIdMenu.Clear();
+                txtNombreMenu.Clear();
+                txtExtra.Clear();
+                txtCantidad.Text = "1";
+                txtPrecioUni.Clear();
+                txtTotalMe.Clear();
+                llenardaosorden();
+                llenar();
+                txtTotal.Text= dgvOrden.CurrentRow.Cells[4].Value.ToString();
+                if (respuesta == "1")
+                    MessageBox.Show("Registro Eliminado Correctamente");
+                else
+                    MessageBox.Show("Registro No eliminado" + respuesta);
+            }
         }
     }
     

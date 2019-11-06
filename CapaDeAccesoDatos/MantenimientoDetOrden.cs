@@ -82,6 +82,7 @@ namespace CapaDeAccesoDatos
                 }
                 return "" + res;
             }
+
         //Seleccionar Detalle Orden en proceso
         public DataTable mostrarDetalleOrdPro(string p)
         {
@@ -131,5 +132,27 @@ namespace CapaDeAccesoDatos
             }
             return "" + res;
         }
+        //Eliminar Detalle
+        public string eliminarDetalle(DetalleOrden d)
+        {
+            cmd = new SqlCommand(string.Format("Delete from detalle_orden where noOrden = '{0}' and idMenu = '{1}'", d.NoOrden, d.IdMenu), conn.conex);
+            try
+            {
+                conn.abrir_conexion();
+                res = cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                error = "Error " + e.Message;
+                return error;
+            }
+            finally
+            {
+                conn.cerrar_conexion();
+            }
+            return "" + res;
+        }
+        //Agregar Detalle
+        
     }
 }

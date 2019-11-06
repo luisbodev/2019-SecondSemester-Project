@@ -34,5 +34,10 @@ namespace Clases
             DetalleOrden d = new DetalleOrden(int.Parse(noOrden), int.Parse(idMenu), extra, int.Parse(cantidad), double.Parse(precioUnidad), double.Parse(total));
             return obj.modificarDetalleOrden(d);
         }
+        //Eliminar detalle orden
+        public string eliminar_Detalle(string noOrden, string idMenu) {
+            DetalleOrden d = new DetalleOrden(int.Parse(noOrden), int.Parse(idMenu), "", 0, 0.0, 0.0);
+            return obj.eliminarDetalle(d);
+        }
     }
 }

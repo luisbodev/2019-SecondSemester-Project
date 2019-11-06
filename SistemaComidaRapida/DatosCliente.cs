@@ -132,6 +132,11 @@ namespace SistemaComidaRapida
             llenar();
         }
 
+        private void lbltitulo_Click(object sender, EventArgs e)
+        {
+
+        }
+
         public void btnSelecClie_Click(object sender, EventArgs e)
         {
             bandera = 1;
