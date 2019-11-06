@@ -53,6 +53,8 @@
             this.verPantallasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pantallaCajeroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cocineroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pantallaCajeroToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pantallaCocineroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelTop.SuspendLayout();
             this.panelTopRight.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -289,8 +291,13 @@
             // 
             // verPantallasToolStripMenuItem
             // 
+            this.verPantallasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pantallaCajeroToolStripMenuItem1,
+            this.pantallaCocineroToolStripMenuItem});
+            this.verPantallasToolStripMenuItem.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
             this.verPantallasToolStripMenuItem.Name = "verPantallasToolStripMenuItem";
-            this.verPantallasToolStripMenuItem.Size = new System.Drawing.Size(12, 24);
+            this.verPantallasToolStripMenuItem.Size = new System.Drawing.Size(110, 24);
+            this.verPantallasToolStripMenuItem.Text = "Ver Pantallas";
             // 
             // pantallaCajeroToolStripMenuItem
             // 
@@ -302,6 +309,20 @@
             this.cocineroToolStripMenuItem.Name = "cocineroToolStripMenuItem";
             this.cocineroToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
             // 
+            // pantallaCajeroToolStripMenuItem1
+            // 
+            this.pantallaCajeroToolStripMenuItem1.Name = "pantallaCajeroToolStripMenuItem1";
+            this.pantallaCajeroToolStripMenuItem1.Size = new System.Drawing.Size(199, 24);
+            this.pantallaCajeroToolStripMenuItem1.Text = "Pantalla Cajero";
+            this.pantallaCajeroToolStripMenuItem1.Click += new System.EventHandler(this.pantallaCajeroToolStripMenuItem1_Click);
+            // 
+            // pantallaCocineroToolStripMenuItem
+            // 
+            this.pantallaCocineroToolStripMenuItem.Name = "pantallaCocineroToolStripMenuItem";
+            this.pantallaCocineroToolStripMenuItem.Size = new System.Drawing.Size(199, 24);
+            this.pantallaCocineroToolStripMenuItem.Text = "Pantalla Cocinero";
+            this.pantallaCocineroToolStripMenuItem.Click += new System.EventHandler(this.pantallaCocineroToolStripMenuItem_Click);
+            // 
             // frmAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -311,10 +332,9 @@
             this.ControlBox = false;
             this.Controls.Add(this.menuStripAdmin);
             this.Controls.Add(this.panelTop);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "frmAdministrador";
             this.Text = "Administrador";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -357,5 +377,7 @@
         private System.Windows.Forms.ToolStripMenuItem verPantallasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pantallaCajeroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cocineroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pantallaCajeroToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem pantallaCocineroToolStripMenuItem;
     }
 }
