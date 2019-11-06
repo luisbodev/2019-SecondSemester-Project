@@ -228,6 +228,7 @@
             this.historialDePedidosToolStripMenuItem.Name = "historialDePedidosToolStripMenuItem";
             this.historialDePedidosToolStripMenuItem.Size = new System.Drawing.Size(237, 24);
             this.historialDePedidosToolStripMenuItem.Text = "Historial de Pedidos";
+            this.historialDePedidosToolStripMenuItem.Click += new System.EventHandler(this.historialDePedidosToolStripMenuItem_Click);
             // 
             // listaDeClientesToolStripMenuItem
             // 
@@ -286,39 +287,20 @@
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
-            // btnMinimizar
+            // verPantallasToolStripMenuItem
             // 
-            this.btnMinimizar.BackColor = System.Drawing.Color.Transparent;
-            this.btnMinimizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.BackgroundImage")));
-            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinimizar.FlatAppearance.BorderSize = 0;
-            this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.Location = new System.Drawing.Point(268, -2);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(25, 33);
-            this.btnMinimizar.TabIndex = 13;
-            this.btnMinimizar.UseVisualStyleBackColor = false;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            this.verPantallasToolStripMenuItem.Name = "verPantallasToolStripMenuItem";
+            this.verPantallasToolStripMenuItem.Size = new System.Drawing.Size(12, 24);
             // 
-            // btnCerrarT
+            // pantallaCajeroToolStripMenuItem
             // 
-            this.btnCerrarT.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrarT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrarT.BackgroundImage")));
-            this.btnCerrarT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCerrarT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrarT.FlatAppearance.BorderSize = 0;
-            this.btnCerrarT.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnCerrarT.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnCerrarT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarT.Location = new System.Drawing.Point(303, -2);
-            this.btnCerrarT.Name = "btnCerrarT";
-            this.btnCerrarT.Size = new System.Drawing.Size(25, 33);
-            this.btnCerrarT.TabIndex = 12;
-            this.btnCerrarT.UseVisualStyleBackColor = false;
-            this.btnCerrarT.Click += new System.EventHandler(this.btnCerrarT_Click);
+            this.pantallaCajeroToolStripMenuItem.Name = "pantallaCajeroToolStripMenuItem";
+            this.pantallaCajeroToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
+            // 
+            // cocineroToolStripMenuItem
+            // 
+            this.cocineroToolStripMenuItem.Name = "cocineroToolStripMenuItem";
+            this.cocineroToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
             // 
             // frmAdministrador
             // 

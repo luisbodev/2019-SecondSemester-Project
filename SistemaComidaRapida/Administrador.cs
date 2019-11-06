@@ -106,5 +106,22 @@ namespace SistemaComidaRapida
             if (MessageBox.Show("¿En realidad desea Cerrar la aplicación?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 Application.Exit();
         }
+
+        private void menuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReporteMenu RPmenu = new ReporteMenu();
+            RPmenu.ShowDialog();
+        }
+
+        private void historialDePedidosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void listaDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReporteClientes RPClientes = new ReporteClientes();
+            RPClientes.ShowDialog();
+        }
     }
 }
