@@ -172,7 +172,7 @@ namespace CapaDeAccesoDatos
         public string mostrarUltOrdenNoIni()
         {
 
-            this.sql = "select top 1 o.noOrden from orden o where o.estado = 0";
+            this.sql = "select top 1 o.noOrden from orden o where o.estado = 1";
             try
             {
                 conn.abrir_conexion();
@@ -233,34 +233,6 @@ namespace CapaDeAccesoDatos
             }
             return "" + respuesta;
         }
-        //Seleccionar Detalle Orden en proceso
-        public DataTable mostrarDetalleOrdPro(string p)
-        {
-            DataTable datos = new DataTable();
-            SqlDataAdapter adap;
-
-            this.sql = "select m.idMenu as 'ID', m.nombre as 'Nombre', m.descripcion as 'Descripción', d.extra as 'Extra', d.cantidad as 'Cantidad'" +
-            "from orden o" +
-            "inner join detalle_orden d on d.noOrden = o.noOrden" +
-            "inner join menu m on m.idMenu = d.idMenu" +
-            "where o.noOrden = " + p;
-            try
-            {
-                conn.abrir_conexion();
-                adap = new SqlDataAdapter(this.sql, conn.conex);
-                adap.Fill(datos);
-            }
-            catch (Exception e)
-            {
-                error = "Error " + e.ToString();
-            }
-            finally
-            {
-                conn.cerrar_conexion();
-            }
-            return datos;
-            
-
-        }
+      
     }
 }

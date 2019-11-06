@@ -62,9 +62,6 @@ namespace Clases
         public string modi_estadoOrden(string p, string es) {
             return obje.modiEstadoOrden(p, es);
         }
-        //Seleccionar Detalle Orden en proceso
-        public DataTable mostrar_detalleOrdPro(string p) {
-            return obje.mostrarDetalleOrdPro(p);
-        }
+        
     }
 }

@@ -14,21 +14,27 @@ namespace SistemaComidaRapida
     public partial class frmCocinero : Form
     {
         public string userEmp;
+        public int formulario = 0;
         int ocupado1 = 0, ocupado2 = 0, ocupado3 = 0;
 
         TransacOrden obj = new TransacOrden();
+        TransacDetalleOrden objDeta = new TransacDetalleOrden();
 
         string res = "";
         public frmCocinero()
         {
             InitializeComponent();
         }
-
+        
         
 
         private void frmCocinero_Load(object sender, EventArgs e)
         {
-            labelUsuario.Text = "Usuario: " + this.userEmp;
+            if (formulario == 0)
+            {
+                labelUsuario.Text = "Usuario: " + this.userEmp;
+            }
+            
         }
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
@@ -36,24 +42,7 @@ namespace SistemaComidaRapida
             if (MessageBox.Show("¿Está seguro que quiere cerrar Sesión?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes) this.Close();
         }
 
-        private void btnTerminado1_Click(object sender, EventArgs e)
-        {
-            obj.modi_estadoOrden(txtNoOrden1.Text, 2.ToString());
-            txtNoOrden1.Clear();
-            dgvDetalleOrden1.DataSource = null;
-            btnTerminado1.Enabled = false;
-            ocupado1 = 0;
-        }
-
-        private void btnTerminado2_Click(object sender, EventArgs e)
-        {
-            obj.modi_estadoOrden(txtNoOrden2.Text, 2.ToString());
-            txtNoOrden2.Clear();
-            dgvDetalleOrden2.DataSource = null;
-            btnTerminado2.Enabled = false;
-            ocupado2 = 0;
-        }
-
+        
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -64,10 +53,32 @@ namespace SistemaComidaRapida
             if (MessageBox.Show("¿En realidad desea Cerrar la aplicación?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 Application.Exit();
         }
+        private void btnTerminado1_Click(object sender, EventArgs e)
+        {
+            obj.modi_estadoOrden(txtNoOrden1.Text, 3.ToString());
+            txtNoOrden1.Clear();
+            dgvDetalleOrden1.DataSource = null;
+            btnTerminado1.Enabled = false;
+            ocupado1 = 0;
+        }
+
+        private void btnTerminado2_Click(object sender, EventArgs e)
+        {
+            obj.modi_estadoOrden(txtNoOrden2.Text, 3.ToString());
+            txtNoOrden2.Clear();
+            dgvDetalleOrden2.DataSource = null;
+            btnTerminado2.Enabled = false;
+            ocupado2 = 0;
+        }
+
+        private void btnCerrarFrm_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
 
         private void btnTerminado3_Click(object sender, EventArgs e)
         {
-            obj.modi_estadoOrden(txtNoOrden3.Text, 2.ToString());
+            obj.modi_estadoOrden(txtNoOrden3.Text, 3.ToString());
             txtNoOrden3.Clear();
             dgvDetalleOrden3.DataSource = null;
             btnTerminado3.Enabled = false;
@@ -86,13 +97,13 @@ namespace SistemaComidaRapida
                 {
                     estado = obj.mostrar_UltOrdenEsta(noOrden);
 
-                    if (int.Parse(estado) == 0)
+                    if (int.Parse(estado) == 1)
                     {
                         btnTerminado1.Enabled = true;
-                        obj.modi_estadoOrden(noOrden, 1.ToString());
+                        obj.modi_estadoOrden(noOrden, 2.ToString());
                         ocupado1 = 1;
                         txtNoOrden1.Text = noOrden;
-                        dgvDetalleOrden1.DataSource = obj.mostrar_detalleOrdPro(txtNoOrden1.Text);
+                        dgvDetalleOrden1.DataSource = objDeta.mostrar_detalleOrdPro(noOrden);
                     }
                 }
             }
@@ -105,13 +116,13 @@ namespace SistemaComidaRapida
                 {
                     estado = obj.mostrar_UltOrdenEsta(noOrden);
 
-                    if (int.Parse(estado) == 0)
+                    if (int.Parse(estado) == 1)
                     {
                         btnTerminado2.Enabled = true;
-                        obj.modi_estadoOrden(noOrden, 1.ToString());
+                        obj.modi_estadoOrden(noOrden, 2.ToString());
                         ocupado2 = 1;
                         txtNoOrden2.Text = noOrden;
-                        dgvDetalleOrden2.DataSource = obj.mostrar_detalleOrdPro(txtNoOrden2.Text);
+                        dgvDetalleOrden2.DataSource = objDeta.mostrar_detalleOrdPro(txtNoOrden2.Text);
                     }
                 }
             }
@@ -125,13 +136,13 @@ namespace SistemaComidaRapida
                 {
                     estado = obj.mostrar_UltOrdenEsta(noOrden);
 
-                    if (int.Parse(estado) == 0)
+                    if (int.Parse(estado) == 1)
                     {
                         btnTerminado3.Enabled = true;
-                        obj.modi_estadoOrden(noOrden, 1.ToString());
+                        obj.modi_estadoOrden(noOrden, 2.ToString());
                         ocupado3 = 1;
                         txtNoOrden3.Text = noOrden;
-                        dgvDetalleOrden3.DataSource = obj.mostrar_detalleOrdPro(txtNoOrden3.Text);
+                        dgvDetalleOrden3.DataSource = objDeta.mostrar_detalleOrdPro(txtNoOrden3.Text);
                     }
                 }
             }

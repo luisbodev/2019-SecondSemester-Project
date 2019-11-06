@@ -32,7 +32,9 @@
             this.panelTop = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelTopRight = new System.Windows.Forms.Panel();
+            this.btnMinimizar = new System.Windows.Forms.Button();
             this.labelTipodeCuenta = new System.Windows.Forms.Label();
+            this.btnCerrarT = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.labelUsuario = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -49,8 +51,9 @@
             this.categoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.historialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnMinimizar = new System.Windows.Forms.Button();
-            this.btnCerrarT = new System.Windows.Forms.Button();
+            this.verPantallasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pantallaCajeroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cocineroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelTop.SuspendLayout();
             this.panelTopRight.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -94,6 +97,23 @@
             this.panelTopRight.Size = new System.Drawing.Size(328, 60);
             this.panelTopRight.TabIndex = 10;
             // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.BackColor = System.Drawing.Color.Transparent;
+            this.btnMinimizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.BackgroundImage")));
+            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimizar.FlatAppearance.BorderSize = 0;
+            this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimizar.Location = new System.Drawing.Point(268, -2);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(25, 33);
+            this.btnMinimizar.TabIndex = 13;
+            this.btnMinimizar.UseVisualStyleBackColor = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            // 
             // labelTipodeCuenta
             // 
             this.labelTipodeCuenta.AutoSize = true;
@@ -105,6 +125,23 @@
             this.labelTipodeCuenta.TabIndex = 0;
             this.labelTipodeCuenta.Text = "Administrador";
             this.labelTipodeCuenta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnCerrarT
+            // 
+            this.btnCerrarT.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrarT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrarT.BackgroundImage")));
+            this.btnCerrarT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCerrarT.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarT.FlatAppearance.BorderSize = 0;
+            this.btnCerrarT.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnCerrarT.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnCerrarT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarT.Location = new System.Drawing.Point(303, -2);
+            this.btnCerrarT.Name = "btnCerrarT";
+            this.btnCerrarT.Size = new System.Drawing.Size(25, 33);
+            this.btnCerrarT.TabIndex = 12;
+            this.btnCerrarT.UseVisualStyleBackColor = false;
+            this.btnCerrarT.Click += new System.EventHandler(this.btnCerrarT_Click);
             // 
             // btnCerrarSesion
             // 
@@ -151,7 +188,8 @@
             this.menuStripAdmin.BackColor = System.Drawing.Color.White;
             this.menuStripAdmin.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.verToolStripMenuItem,
-            this.modificarToolStripMenuItem});
+            this.modificarToolStripMenuItem,
+            this.verPantallasToolStripMenuItem});
             this.menuStripAdmin.Location = new System.Drawing.Point(0, 60);
             this.menuStripAdmin.Name = "menuStripAdmin";
             this.menuStripAdmin.Size = new System.Drawing.Size(1005, 28);
@@ -256,39 +294,29 @@
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
-            // btnMinimizar
+            // verPantallasToolStripMenuItem
             // 
-            this.btnMinimizar.BackColor = System.Drawing.Color.Transparent;
-            this.btnMinimizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.BackgroundImage")));
-            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinimizar.FlatAppearance.BorderSize = 0;
-            this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.Location = new System.Drawing.Point(268, -2);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(25, 33);
-            this.btnMinimizar.TabIndex = 13;
-            this.btnMinimizar.UseVisualStyleBackColor = false;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            this.verPantallasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pantallaCajeroToolStripMenuItem,
+            this.cocineroToolStripMenuItem});
+            this.verPantallasToolStripMenuItem.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.verPantallasToolStripMenuItem.Name = "verPantallasToolStripMenuItem";
+            this.verPantallasToolStripMenuItem.Size = new System.Drawing.Size(110, 24);
+            this.verPantallasToolStripMenuItem.Text = "Ver Pantallas";
             // 
-            // btnCerrarT
+            // pantallaCajeroToolStripMenuItem
             // 
-            this.btnCerrarT.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrarT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrarT.BackgroundImage")));
-            this.btnCerrarT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCerrarT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrarT.FlatAppearance.BorderSize = 0;
-            this.btnCerrarT.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnCerrarT.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnCerrarT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarT.Location = new System.Drawing.Point(303, -2);
-            this.btnCerrarT.Name = "btnCerrarT";
-            this.btnCerrarT.Size = new System.Drawing.Size(25, 33);
-            this.btnCerrarT.TabIndex = 12;
-            this.btnCerrarT.UseVisualStyleBackColor = false;
-            this.btnCerrarT.Click += new System.EventHandler(this.btnCerrarT_Click);
+            this.pantallaCajeroToolStripMenuItem.Name = "pantallaCajeroToolStripMenuItem";
+            this.pantallaCajeroToolStripMenuItem.Size = new System.Drawing.Size(199, 24);
+            this.pantallaCajeroToolStripMenuItem.Text = "Pantalla Cajero";
+            this.pantallaCajeroToolStripMenuItem.Click += new System.EventHandler(this.pantallaCajeroToolStripMenuItem_Click);
+            // 
+            // cocineroToolStripMenuItem
+            // 
+            this.cocineroToolStripMenuItem.Name = "cocineroToolStripMenuItem";
+            this.cocineroToolStripMenuItem.Size = new System.Drawing.Size(199, 24);
+            this.cocineroToolStripMenuItem.Text = "Pantalla Cocinero";
+            this.cocineroToolStripMenuItem.Click += new System.EventHandler(this.cocineroToolStripMenuItem_Click);
             // 
             // frmAdministrador
             // 
@@ -343,5 +371,8 @@
         private System.Windows.Forms.ToolStripMenuItem generarReporteDeUsuarioToolStripMenuItem;
         private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Button btnCerrarT;
+        private System.Windows.Forms.ToolStripMenuItem verPantallasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pantallaCajeroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cocineroToolStripMenuItem;
     }
 }

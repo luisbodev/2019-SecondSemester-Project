@@ -16,6 +16,7 @@ namespace SistemaComidaRapida
         public string id_cliente, nombre_cliente, userEmp, idEmp, noOrden;
         DateTime fecha;
         double totalFinal;
+        public int formulario = 0;
         
 
         
@@ -47,27 +48,14 @@ namespace SistemaComidaRapida
 
             llenarMenu();
 
-            
-            labelUsuario.Text ="Usuario: " + this.userEmp;
-            idEmp = objOrden.mostrar_IdEmpleado(this.userEmp);
+            if (formulario == 0)
+            {
+                labelUsuario.Text = "Usuario: " + this.userEmp;
+                idEmp = objOrden.mostrar_IdEmpleado(this.userEmp);
+            }
         }
-
-        private void btnCerrarSesion_Click(object sender, EventArgs e)
-        {
-           if (MessageBox.Show("¿Está seguro que quiere cerrar Sesión?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes) this.Close();
-        }
-
-        private void btnCerrarT_Click(object sender, EventArgs e) //Cerrar la ventana Para que funcione el deslogeo
-        {
-            if(MessageBox.Show("¿En realidad desea Cerrar la aplicación?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-            Application.Exit();
-        }
-
-        private void btnMinimizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
+        
+        
         
 
 
@@ -84,6 +72,40 @@ namespace SistemaComidaRapida
             else {
                 btnAgregar.Enabled = false;
             }
+        }
+
+        private void btnCerrarSesion_Click_1(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Está seguro que quiere cerrar Sesión?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes) this.Close();
+        }
+
+        private void btnCerrarT_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿En realidad desea Cerrar la aplicación?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                Application.Exit();
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pantallaCocineroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCocinero objCoci = new frmCocinero();
+            objCoci.btnCerrarT.Visible = false;
+            objCoci.btnCerrarFrm.Visible = true;
+            objCoci.formulario = 1;
+            objCoci.labelUsuario.Text= "Usuario: " + this.userEmp;
+            objCoci.labelTipodeCuenta.Text = "Cajero";
+            objCoci.btnCerrarSesion.Visible = false;
+            objCoci.Show();
+        }
+
+        
+        private void btnCerrarFrm_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
         }
 
         private void btnAgregar_Click_1(object sender, EventArgs e)
@@ -125,6 +147,7 @@ namespace SistemaComidaRapida
         private void btnEnviarCocina_Click(object sender, EventArgs e)
         {
             objOrden.total_FinalOrden(totalFinal.ToString(), txtNoOrden.Text);
+            objOrden.modi_estadoOrden(txtNoOrden.Text, 1.ToString());
             txtTotalFinal.Text = "0";
             txtNoOrden.Clear();
             txtIdCliente.Clear();

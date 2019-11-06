@@ -27,5 +27,10 @@ namespace Clases
             DetalleOrden d = new DetalleOrden(int.Parse(noOrden), int.Parse(idMenu), extra, int.Parse(cantidad), double.Parse(precioUnidad), double.Parse(total));
             return obj.agregarPlatoDetalle(d);
         }
+        //Seleccionar Detalle Orden en proceso
+        public DataTable mostrar_detalleOrdPro(string p)
+        {
+            return obj.mostrarDetalleOrdPro(p);
+        }
     }
 }

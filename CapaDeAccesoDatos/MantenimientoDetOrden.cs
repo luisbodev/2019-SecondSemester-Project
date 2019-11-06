@@ -82,5 +82,32 @@ namespace CapaDeAccesoDatos
                 }
                 return "" + res;
             }
+        //Seleccionar Detalle Orden en proceso
+        public DataTable mostrarDetalleOrdPro(string p)
+        {
+            DataTable datos = new DataTable();
+            SqlDataAdapter adap;
+
+            this.sql = "select m.idMenu as 'ID', m.nombre as 'Nombre', m.descripcion as 'Descripción', d.extra as 'Extra', d.cantidad as 'Cantidad'" +
+            " from detalle_orden d" +
+            " inner join orden o on d.noOrden = o.noOrden" +
+            " inner join menu m on m.idMenu = d.idMenu" +
+            " where o.noOrden = " + p;
+            try
+            {
+                conn.abrir_conexion();
+                adap = new SqlDataAdapter(this.sql, conn.conex);
+                adap.Fill(datos);
+            }
+            catch (Exception e)
+            {
+                error = "Error " + e.ToString();
+            }
+            finally
+            {
+                conn.cerrar_conexion();
+            }
+            return datos;
+        }
     }
 }

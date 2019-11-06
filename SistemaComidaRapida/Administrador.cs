@@ -7,12 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Clases;
 
 namespace SistemaComidaRapida
 {
     public partial class frmAdministrador : Form
     {
         public string userEmp;
+
+        TransacOrden objOrden = new TransacOrden();
+        
         public frmAdministrador()
         {
             InitializeComponent();
@@ -101,6 +105,31 @@ namespace SistemaComidaRapida
         {
             if (MessageBox.Show("¿En realidad desea Cerrar la aplicación?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 Application.Exit();
+        }
+
+        private void cocineroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCocinero objCoci = new frmCocinero();
+            objCoci.btnCerrarT.Visible = false;
+            objCoci.btnCerrarFrm.Visible = true;
+            objCoci.formulario = 1;
+            objCoci.labelUsuario.Text = "Usuario: " + this.userEmp;
+            objCoci.labelTipodeCuenta.Text = "Administrador";
+            objCoci.btnCerrarSesion.Visible = false;
+            objCoci.Show();
+        }
+
+        private void pantallaCajeroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCajero objCaje = new frmCajero();
+            objCaje.btnCerrarT.Visible = false;
+            objCaje.btnCerrarFrm.Visible = true;
+            objCaje.formulario = 1;
+            objCaje.labelUsuario.Text = "Usuario: " + this.userEmp;
+            objOrden.mostrar_IdEmpleado(this.userEmp);
+            objCaje.labelTipodeCuenta.Text = "Administrador";
+            objCaje.btnCerrarSesion.Visible = false;
+            objCaje.Show();
         }
     }
 }

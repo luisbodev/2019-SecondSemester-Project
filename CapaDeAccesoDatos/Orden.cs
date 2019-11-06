@@ -78,6 +78,9 @@ namespace CapaDeAccesoDatos
                 total = value;
             }
         }
+
+   
+
         public Orden() {
 
         }
