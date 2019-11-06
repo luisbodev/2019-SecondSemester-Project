@@ -32,13 +32,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCocinero));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCocinero));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvDetalleOrden1 = new System.Windows.Forms.DataGridView();
             this.btnTerminado1 = new System.Windows.Forms.Button();
@@ -48,6 +48,7 @@
             this.panelTop = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelTopRight = new System.Windows.Forms.Panel();
+            this.btnCerrarFrm = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnCerrarT = new System.Windows.Forms.Button();
             this.labelTipodeCuenta = new System.Windows.Forms.Label();
@@ -65,7 +66,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dgvDetalleOrden3 = new System.Windows.Forms.DataGridView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnCerrarFrm = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleOrden1)).BeginInit();
             this.panelTop.SuspendLayout();
@@ -222,6 +222,24 @@
             this.panelTopRight.Name = "panelTopRight";
             this.panelTopRight.Size = new System.Drawing.Size(435, 60);
             this.panelTopRight.TabIndex = 10;
+            // 
+            // btnCerrarFrm
+            // 
+            this.btnCerrarFrm.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrarFrm.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrarFrm.BackgroundImage")));
+            this.btnCerrarFrm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCerrarFrm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarFrm.FlatAppearance.BorderSize = 0;
+            this.btnCerrarFrm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnCerrarFrm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnCerrarFrm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarFrm.Location = new System.Drawing.Point(410, -4);
+            this.btnCerrarFrm.Name = "btnCerrarFrm";
+            this.btnCerrarFrm.Size = new System.Drawing.Size(25, 33);
+            this.btnCerrarFrm.TabIndex = 52;
+            this.btnCerrarFrm.UseVisualStyleBackColor = false;
+            this.btnCerrarFrm.Visible = false;
+            this.btnCerrarFrm.Click += new System.EventHandler(this.btnCerrarFrm_Click);
             // 
             // btnMinimizar
             // 
@@ -504,24 +522,6 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // btnCerrarFrm
-            // 
-            this.btnCerrarFrm.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrarFrm.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrarFrm.BackgroundImage")));
-            this.btnCerrarFrm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCerrarFrm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrarFrm.FlatAppearance.BorderSize = 0;
-            this.btnCerrarFrm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnCerrarFrm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnCerrarFrm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarFrm.Location = new System.Drawing.Point(410, -4);
-            this.btnCerrarFrm.Name = "btnCerrarFrm";
-            this.btnCerrarFrm.Size = new System.Drawing.Size(25, 33);
-            this.btnCerrarFrm.TabIndex = 52;
-            this.btnCerrarFrm.UseVisualStyleBackColor = false;
-            this.btnCerrarFrm.Visible = false;
-            this.btnCerrarFrm.Click += new System.EventHandler(this.btnCerrarFrm_Click);
-            // 
             // frmCocinero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -536,6 +536,7 @@
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCocinero";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cocinero";

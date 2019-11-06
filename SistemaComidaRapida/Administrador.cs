@@ -123,5 +123,31 @@ namespace SistemaComidaRapida
             ReporteClientes RPClientes = new ReporteClientes();
             RPClientes.ShowDialog();
         }
+
+        private void pantallaCajeroToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmCajero objCaje = new frmCajero();
+            objCaje.btnCerrarT.Visible = false;
+            objCaje.mstCajero.Visible = false;
+            objCaje.btnCerrarFrm.Visible = true;
+            objCaje.formulario = 1;
+            objCaje.labelUsuario.Text = "Usuario: " + this.userEmp;
+            objOrden.mostrar_IdEmpleado(this.userEmp);
+            objCaje.labelTipodeCuenta.Text = "Administrador";
+            objCaje.btnCerrarSesion.Visible = false;
+            objCaje.Show();
+        }
+
+        private void pantallaCocineroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCocinero objCoci = new frmCocinero();
+            objCoci.btnCerrarT.Visible = false;
+            objCoci.btnCerrarFrm.Visible = true;
+            objCoci.formulario = 1;
+            objCoci.labelUsuario.Text = "Usuario: " + this.userEmp;
+            objCoci.labelTipodeCuenta.Text = "Administrador";
+            objCoci.btnCerrarSesion.Visible = false;
+            objCoci.Show();
+        }
     }
 }
