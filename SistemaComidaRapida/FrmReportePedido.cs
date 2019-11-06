@@ -24,8 +24,7 @@ namespace SistemaComidaRapida
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
-            string date = dateTime.Text;
-            MessageBox.Show("Es: " + date);
+           
              
         }
     }

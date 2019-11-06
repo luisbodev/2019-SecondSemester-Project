@@ -115,7 +115,8 @@ namespace SistemaComidaRapida
 
         private void historialDePedidosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+            FrmReportePedido repPedido = new FrmReportePedido();
+            repPedido.ShowDialog();
         }
 
         private void listaDeClientesToolStripMenuItem_Click(object sender, EventArgs e)

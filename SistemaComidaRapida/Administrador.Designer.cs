@@ -51,10 +51,10 @@
             this.historialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verPantallasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pantallaCajeroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cocineroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pantallaCajeroToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pantallaCocineroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pantallaCajeroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cocineroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelTop.SuspendLayout();
             this.panelTopRight.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -299,16 +299,6 @@
             this.verPantallasToolStripMenuItem.Size = new System.Drawing.Size(110, 24);
             this.verPantallasToolStripMenuItem.Text = "Ver Pantallas";
             // 
-            // pantallaCajeroToolStripMenuItem
-            // 
-            this.pantallaCajeroToolStripMenuItem.Name = "pantallaCajeroToolStripMenuItem";
-            this.pantallaCajeroToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
-            // 
-            // cocineroToolStripMenuItem
-            // 
-            this.cocineroToolStripMenuItem.Name = "cocineroToolStripMenuItem";
-            this.cocineroToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
-            // 
             // pantallaCajeroToolStripMenuItem1
             // 
             this.pantallaCajeroToolStripMenuItem1.Name = "pantallaCajeroToolStripMenuItem1";
@@ -322,6 +312,16 @@
             this.pantallaCocineroToolStripMenuItem.Size = new System.Drawing.Size(199, 24);
             this.pantallaCocineroToolStripMenuItem.Text = "Pantalla Cocinero";
             this.pantallaCocineroToolStripMenuItem.Click += new System.EventHandler(this.pantallaCocineroToolStripMenuItem_Click);
+            // 
+            // pantallaCajeroToolStripMenuItem
+            // 
+            this.pantallaCajeroToolStripMenuItem.Name = "pantallaCajeroToolStripMenuItem";
+            this.pantallaCajeroToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
+            // 
+            // cocineroToolStripMenuItem
+            // 
+            this.cocineroToolStripMenuItem.Name = "cocineroToolStripMenuItem";
+            this.cocineroToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
             // 
             // frmAdministrador
             // 
