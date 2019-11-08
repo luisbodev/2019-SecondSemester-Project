@@ -39,7 +39,7 @@ namespace Clases
 
         //Agregar Orden
         public string agrega_orden(string IdEmpleado, string Fecha, string IdCliente, string totalFinal) {
-            Orden o = new Orden(1,int.Parse(IdEmpleado), DateTime.Parse(Fecha), int.Parse(IdCliente), double.Parse(totalFinal));
+            Orden o = new Orden(1, int.Parse(IdEmpleado), DateTime.Parse(Fecha), int.Parse(IdCliente), double.Parse(totalFinal));
             return obje.agregarOrden(o);
         }
         //Seleccionar ultima orden

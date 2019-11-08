@@ -39,5 +39,9 @@ namespace Clases
             DetalleOrden d = new DetalleOrden(int.Parse(noOrden), int.Parse(idMenu), "", 0, 0.0, 0.0);
             return obj.eliminarDetalle(d);
         }
+        //Actualizar Detalle Orden total
+        public string actualizar_Det(string t, string id, string o) {
+            return obj.actualizarDeta(t, id, o);
+        }
     }
 }

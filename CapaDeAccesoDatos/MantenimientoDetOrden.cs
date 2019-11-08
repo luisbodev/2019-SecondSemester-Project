@@ -152,7 +152,25 @@ namespace CapaDeAccesoDatos
             }
             return "" + res;
         }
-        //Agregar Detalle
-        
+        //actualizar DetalleOrden total
+        public string actualizarDeta(string t, string id, string o)
+        {
+            cmd = new SqlCommand(string.Format("update detalle_orden set total = " + t + " where idMenu = " + id + " and noOrden = " + o), conn.conex);
+            try
+            {
+                conn.abrir_conexion();
+                res = cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                error = "Error " + e.Message;
+            }
+            finally
+            {
+                conn.cerrar_conexion();
+            }
+            return "" + res;
+        }
+
     }
 }

@@ -53,6 +53,9 @@ namespace SistemaComidaRapida
                 labelUsuario.Text = "Usuario: " + this.userEmp;
                 idEmp = objOrden.mostrar_IdEmpleado(this.userEmp);
             }
+            else {
+                idEmp = objOrden.mostrar_IdEmpleado(this.userEmp);
+            }
         }
         
         

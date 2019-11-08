@@ -132,6 +132,7 @@ namespace SistemaComidaRapida
             objCaje.mstCajero.Visible = false;
             objCaje.btnCerrarFrm.Visible = true;
             objCaje.formulario = 1;
+            objCaje.userEmp = this.userEmp;
             objCaje.labelUsuario.Text = "Usuario: " + this.userEmp;
             objOrden.mostrar_IdEmpleado(this.userEmp);
             objCaje.labelTipodeCuenta.Text = "Administrador";

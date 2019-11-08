@@ -15,6 +15,7 @@ namespace SistemaComidaRapida
     {
         int cantidad;
         public string idMenu, precioUnidad, total;
+        double totalDeta;
 
         TransacOrden obje = new TransacOrden();
         TransacDetalleOrden detaOrden = new TransacDetalleOrden();
@@ -49,7 +50,6 @@ namespace SistemaComidaRapida
             llenardaosorden();
             dgvCliente.DataSource = obje.mostrar_ClienteEspecifico(dgvOrden.CurrentRow.Cells[3].Value.ToString());
             dgvEmpleado.DataSource = obje.mostrar_EmpleadoEspecifico(dgvOrden.CurrentRow.Cells[1].Value.ToString());
-            btnAgregarDeta.Enabled = true;
         }
 
         private void dgvDetalleOrden_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -89,17 +89,21 @@ namespace SistemaComidaRapida
                 totalFinal = double.Parse(txtTotal.Text) - double.Parse(txtTotalMe.Text);
             }
             obje.total_FinalOrden(totalFinal.ToString(), txtNoOrden.Text);
+            detaOrden.actualizar_Det(totalDeta.ToString(), txtIdMenu.Text, txtNoOrden.Text);
             respuesta = detaOrden.modificar_DetalleOrden(txtNoOrden.Text, txtIdMenu.Text, txtExtra.Text, txtCantidad.Value.ToString(), txtPrecioUni.Text, txtTotalMe.Text);
             
+
+
 
             if (respuesta=="1") {
                 MessageBox.Show("Registro Modificado Correctamente");
                 btnModificarDeta.Enabled = false;
                 btnEliminarDeta.Enabled = false;
+                
                 llenardaosorden();
                 llenar();
                 txtTotal.Text = dgvOrden.CurrentRow.Cells[4].Value.ToString();
-
+               
                 txtIdMenu.Clear();
                 txtNombreMenu.Clear();
                 txtExtra.Clear();
@@ -112,38 +116,15 @@ namespace SistemaComidaRapida
             }
         }
 
-        private void btnAgregarDeta_Click(object sender, EventArgs e)
-        {
-            frmDatosMenu objMenu = new frmDatosMenu();
-            objMenu.labalcate.Visible = false;
-            objMenu.cobCategoria.Visible = false;
-            objMenu.btnAgregar.Visible = false;
-            objMenu.btnEliminar.Visible = false;
-            objMenu.btnModificar.Visible = false;
-            objMenu.btnNuevo.Visible = false;
-            objMenu.btnSelecPlato.Visible = true;
-            objMenu.ShowDialog();
-            string extra = "";
-            respuesta = detaOrden.agregar_platoDetalle(txtNoOrden.Text, idMenu, extra, 1.ToString(), precioUnidad, total);
-            if (respuesta == "1")
-            {
-                MessageBox.Show("Orden Creada Exitosamente");
-                
-                llenardaosorden();
-            }
-            else
-            {
-                MessageBox.Show("Fallo en crear orden " + respuesta);
-            }
-            
-        }
-
+        
         private void txtCantidad_ValueChanged(object sender, EventArgs e)
         {
             
             if (!(dgvDetalleOrden.CurrentRow.Cells[0].Value.ToString() == ""))
             {
                 cantidad = int.Parse(txtCantidad.Text);
+                totalDeta = double.Parse(dgvDetalleOrden.CurrentRow.Cells[3].Value.ToString()) * cantidad;
+                txtTotalMe.Text = totalDeta.ToString();
             }
 
         }
