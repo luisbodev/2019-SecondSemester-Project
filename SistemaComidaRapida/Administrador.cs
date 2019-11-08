@@ -16,7 +16,10 @@ namespace SistemaComidaRapida
         public string userEmp;
 
         TransacOrden objOrden = new TransacOrden();
-        
+
+        frmCajero objCaje = new frmCajero();
+        frmCocinero objCoci = new frmCocinero();
+
         public frmAdministrador()
         {
             InitializeComponent();
@@ -35,7 +38,17 @@ namespace SistemaComidaRapida
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Está seguro que quiere cerrar Sesión?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes) this.Close();
+            if (MessageBox.Show("¿Está seguro que quiere cerrar Sesión?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            { 
+                this.Close();
+                if (objCoci.formulario == 1)
+                {
+                    objCoci.Close();
+                }
+                if(objCaje.formulario==1) {
+                    objCaje.Close();
+                }
+            }
         }
 
         private void labelUsuario_Click(object sender, EventArgs e)
@@ -127,7 +140,7 @@ namespace SistemaComidaRapida
 
         private void pantallaCajeroToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmCajero objCaje = new frmCajero();
+            
             objCaje.btnCerrarT.Visible = false;
             objCaje.mstCajero.Visible = false;
             objCaje.btnCerrarFrm.Visible = true;
@@ -142,7 +155,7 @@ namespace SistemaComidaRapida
 
         private void pantallaCocineroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCocinero objCoci = new frmCocinero();
+            
             objCoci.btnCerrarT.Visible = false;
             objCoci.btnCerrarFrm.Visible = true;
             objCoci.formulario = 1;
