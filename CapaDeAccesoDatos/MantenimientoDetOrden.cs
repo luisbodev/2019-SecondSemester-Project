@@ -15,7 +15,7 @@ namespace CapaDeAccesoDatos
         SqlCommand cmd;
         string error;
         int res = 0;
-
+        //Mostrar Detalle Orden normal
         public DataTable mostrarDetalleOrden(string tabla, string p)
         {
             DataTable datos = new DataTable();

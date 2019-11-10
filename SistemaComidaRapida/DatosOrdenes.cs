@@ -25,12 +25,12 @@ namespace SistemaComidaRapida
         {
             InitializeComponent();
         }
-
+        //Carga las ordenes realizadas hasta ese momento
         void llenar()
         {
             dgvOrden.DataSource = obje.mostrar_Orden();
         }
-
+        //Carga el destalle de la orden seleccionada en el DataGrid correspondiente
         void llenardaosorden()
         {
             dgvDetalleOrden.DataSource = detaOrden.mostrar_DetalleOrdenCaje(dgvOrden.CurrentRow.Cells[0].Value.ToString());
@@ -41,7 +41,7 @@ namespace SistemaComidaRapida
         }
 
 
-
+        //Cargar detalle de orden seleccionada
         private void dgvOrden_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             txtNoOrden.Text = dgvOrden.CurrentRow.Cells[0].Value.ToString();
@@ -53,7 +53,7 @@ namespace SistemaComidaRapida
             dgvCliente.DataSource = obje.mostrar_ClienteEspecifico(dgvOrden.CurrentRow.Cells[3].Value.ToString());
             dgvEmpleado.DataSource = obje.mostrar_EmpleadoEspecifico(dgvOrden.CurrentRow.Cells[1].Value.ToString());
         }
-
+        //cargar informacion de fila de detalle seleccionado
         private void dgvDetalleOrden_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             double total;
@@ -81,7 +81,7 @@ namespace SistemaComidaRapida
         {
 
         }
-
+        //Modificar detalle de orden
         private void btnModificarDeta_Click(object sender, EventArgs e)
         {
             double totalFinal;
@@ -130,14 +130,10 @@ namespace SistemaComidaRapida
         }
 
         int cantidadDetalle;
-
-        private void txtCantidad_ValueChanged(object sender, EventArgs e)
-        {
-            
-        }
-
+        
         private void btnCambiar_Click(object sender, EventArgs e)
         {
+        //Calcular el total del precioUnitario * cantidad modificada
             cantidadDetalle = int.Parse(txtCantidad.Text);
             totalDeta = double.Parse(txtPrecioUni.Text) * cantidadDetalle;///--------------<><<<<>>>>><<<<>
             txtTotalMe.Text = totalDeta.ToString();
@@ -145,7 +141,7 @@ namespace SistemaComidaRapida
 
         }
 
-        
+        //Eliminar un detalle de Orden
         private void btnEliminarDeta_Click(object sender, EventArgs e)
         {
             double totalFinal;

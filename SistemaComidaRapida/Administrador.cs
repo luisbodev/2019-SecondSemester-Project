@@ -28,14 +28,14 @@ namespace SistemaComidaRapida
         
 
        
-
+        //Mostrar formualio de Datos de Menu
         private void menuToolStripMenuItem1_Click_1(object sender, EventArgs e)
         {
             frmDatosMenu crudmenu = new frmDatosMenu();//Mostrar Crud Menu  
             crudmenu.MdiParent = this;
             crudmenu.Show();
         }
-
+        //Boton Cerrar Sesion
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Está seguro que quiere cerrar Sesión?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
@@ -55,21 +55,21 @@ namespace SistemaComidaRapida
         {
 
         }
-
+        //Mostrar formulario Datos de Empleado
         private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmDatosEmpleado frmDE = new frmDatosEmpleado();
             frmDE.MdiParent = this;
             frmDE.Show();
         }
-
+        //Mostrar formulario de Clientes
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DatosCliente frmCli = new DatosCliente();
             frmCli.MdiParent = this;
             frmCli.Show();
         }
-
+        //Mostrar el Historial de Ordenes
         private void historialToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmDatosOrdenes frmOrd = new frmDatosOrdenes();
@@ -79,6 +79,7 @@ namespace SistemaComidaRapida
 
         private void frmAdministrador_Load(object sender, EventArgs e)
         {
+            //Colocar Nombre de Usuario en label
             labelUsuario.Text = "Usuario: " + this.userEmp;
         }
 
@@ -86,7 +87,7 @@ namespace SistemaComidaRapida
         {
             Application.Exit();
         }
-
+        //Mostrar Categorias de Menu
         private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DatosCategoria frmCat = new DatosCategoria();
@@ -97,7 +98,7 @@ namespace SistemaComidaRapida
         {
 
         }
-
+        //Mostrar Reporte de Empleado
         private void listaDeEmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ReportEmpleados reporEmple = new ReportEmpleados();
@@ -108,36 +109,36 @@ namespace SistemaComidaRapida
         {
             
         }
-
+        //Boton Minimizar Ventana
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
+        //Boton cerrar app
         private void btnCerrarT_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿En realidad desea Cerrar la aplicación?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 Application.Exit();
         }
-
+        //Mostrar Reporte de Menu
         private void menuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ReporteMenu RPmenu = new ReporteMenu();
             RPmenu.ShowDialog();
         }
-
+        //Mostrar Reporte de Historial de Pedidos
         private void historialDePedidosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmReportePedido repPedido = new FrmReportePedido();
             repPedido.ShowDialog();
         }
-
+        //Mostrar Lista de Clientes
         private void listaDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ReporteClientes RPClientes = new ReporteClientes();
             RPClientes.ShowDialog();
         }
-
+        //Mostrar Ventana de Cajero
         private void pantallaCajeroToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             
@@ -152,7 +153,7 @@ namespace SistemaComidaRapida
             objCaje.btnCerrarSesion.Visible = false;
             objCaje.Show();
         }
-
+        //Mostrar Ventana de Cocinero
         private void pantallaCocineroToolStripMenuItem_Click(object sender, EventArgs e)
         {
             

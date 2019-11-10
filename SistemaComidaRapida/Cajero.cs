@@ -32,7 +32,7 @@ namespace SistemaComidaRapida
             InitializeComponent();
         }
 
-        //Llenar Formulario
+        //Llenar Datagrid Menu
         public void llenarMenu() {
             dgvMenu.DataSource = objMenu.mostrar_menuOrden();
         }
@@ -62,7 +62,7 @@ namespace SistemaComidaRapida
         
         
 
-
+        //Mostrar detalles en texboxd de item del menu seleccionado
         private void dgvMenu_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             txtId.Text = dgvMenu.CurrentRow.Cells[0].Value.ToString();
@@ -77,7 +77,7 @@ namespace SistemaComidaRapida
                 btnAgregar.Enabled = false;
             }
         }
-
+        //Boton Cerrar Sesion
         private void btnCerrarSesion_Click_1(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Está seguro que quiere cerrar Sesión?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
@@ -88,7 +88,7 @@ namespace SistemaComidaRapida
                 }
             }
         }
-
+        //Boton cerrar App
         private void btnCerrarT_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿En realidad desea Cerrar la aplicación?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
@@ -99,7 +99,7 @@ namespace SistemaComidaRapida
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
+        //Mostrar Pantalla de Cocinero
         private void pantallaCocineroToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
@@ -112,12 +112,12 @@ namespace SistemaComidaRapida
             objCoci.Show();
         }
 
-        
+        //Boton Cerrar ventana si se ha abierto desde pantalla de administrador
         private void btnCerrarFrm_Click_1(object sender, EventArgs e)
         {
             this.Hide();
         }
-
+        //Boton Agregar Plato a detalle de orden
         private void btnAgregar_Click_1(object sender, EventArgs e)
         {
             double total;
@@ -148,12 +148,12 @@ namespace SistemaComidaRapida
 
 
         }
-
+        //Texbox para buscar en el menu
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             dgvMenu.DataSource = objMenu.buscar_menu(txtBuscar.Text);
         }
-
+        //boton para finalizar orden y enviar a cocina
         private void btnEnviarCocina_Click(object sender, EventArgs e)
         {
             objOrden.total_FinalOrden(totalFinal.ToString(), txtNoOrden.Text);
@@ -167,7 +167,7 @@ namespace SistemaComidaRapida
             dgvDetalleOrden.DataSource = null;
 
         }
-
+        //Boton para abrir frm y seleccionar cliente
         private void btnSelecCliente_Click(object sender, EventArgs e)
         {
             DatosCliente selecClie = new DatosCliente();
